@@ -1,0 +1,41 @@
+{
+  "step": 3,
+  "checks": [
+    {
+      "name": "Sequence immediate branch",
+      "passed": true
+    },
+    {
+      "name": "Delay ignores repeat while pending",
+      "passed": true
+    },
+    {
+      "name": "Retriggerable Delay restarts countdown",
+      "passed": true
+    },
+    {
+      "name": "Retriggerable Delay eventually completes",
+      "passed": true
+    },
+    {
+      "name": "Normal Delay timing",
+      "passed": true
+    },
+    {
+      "name": "Retriggerable Delay timing",
+      "passed": true
+    },
+    {
+      "name": "Three second Delay completed",
+      "passed": true
+    },
+    {
+      "name": "Looping two second timer fired",
+      "passed": true
+    }
+  ],
+  "finished": true,
+  "started": 11.985693797469139,
+  "initial_timer_count": 5,
+  "passed": 8
+}

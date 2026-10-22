@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "name": "Three row names",
+      "passed": true
+    },
+    {
+      "name": "Three typed rows read",
+      "passed": true
+    },
+    {
+      "name": "Iteration completed",
+      "passed": true
+    },
+    {
+      "name": "Expected named profiles exist",
+      "passed": true
+    },
+    {
+      "name": "Missing row is reported as not found",
+      "passed": true
+    },
+    {
+      "name": "Missing row retains ColorSettings",
+      "passed": true
+    }
+  ],
+  "passed": 6
+}

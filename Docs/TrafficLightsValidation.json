@@ -1,0 +1,473 @@
+{
+  "checks": [
+    {
+      "name": "Data Table row loaded",
+      "passed": true
+    },
+    {
+      "name": "Four supplied traffic light actors",
+      "passed": true
+    },
+    {
+      "name": "Configured Green Yellow Red key sequence",
+      "passed": true
+    },
+    {
+      "name": "Every light has its dynamic material",
+      "passed": true
+    },
+    {
+      "name": "equal cycle follows configured order 57",
+      "passed": true
+    },
+    {
+      "name": "equal light 1 matches Map 57",
+      "passed": true
+    },
+    {
+      "name": "equal light 2 matches Map 57",
+      "passed": true
+    },
+    {
+      "name": "equal light 3 matches Map 57",
+      "passed": true
+    },
+    {
+      "name": "equal light 4 matches Map 57",
+      "passed": true
+    },
+    {
+      "name": "equal cycle follows configured order 58",
+      "passed": true
+    },
+    {
+      "name": "equal light 1 matches Map 58",
+      "passed": true
+    },
+    {
+      "name": "equal light 2 matches Map 58",
+      "passed": true
+    },
+    {
+      "name": "equal light 3 matches Map 58",
+      "passed": true
+    },
+    {
+      "name": "equal light 4 matches Map 58",
+      "passed": true
+    },
+    {
+      "name": "equal timer spacing 58",
+      "passed": true
+    },
+    {
+      "name": "equal cycle follows configured order 59",
+      "passed": true
+    },
+    {
+      "name": "equal light 1 matches Map 59",
+      "passed": true
+    },
+    {
+      "name": "equal light 2 matches Map 59",
+      "passed": true
+    },
+    {
+      "name": "equal light 3 matches Map 59",
+      "passed": true
+    },
+    {
+      "name": "equal light 4 matches Map 59",
+      "passed": true
+    },
+    {
+      "name": "equal timer spacing 59",
+      "passed": true
+    },
+    {
+      "name": "equal cycle follows configured order 60",
+      "passed": true
+    },
+    {
+      "name": "equal light 1 matches Map 60",
+      "passed": true
+    },
+    {
+      "name": "equal light 2 matches Map 60",
+      "passed": true
+    },
+    {
+      "name": "equal light 3 matches Map 60",
+      "passed": true
+    },
+    {
+      "name": "equal light 4 matches Map 60",
+      "passed": true
+    },
+    {
+      "name": "equal timer spacing 60",
+      "passed": true
+    },
+    {
+      "name": "equal cycle follows configured order 61",
+      "passed": true
+    },
+    {
+      "name": "equal light 1 matches Map 61",
+      "passed": true
+    },
+    {
+      "name": "equal light 2 matches Map 61",
+      "passed": true
+    },
+    {
+      "name": "equal light 3 matches Map 61",
+      "passed": true
+    },
+    {
+      "name": "equal light 4 matches Map 61",
+      "passed": true
+    },
+    {
+      "name": "equal timer spacing 61",
+      "passed": true
+    },
+    {
+      "name": "equal cycle follows configured order 62",
+      "passed": true
+    },
+    {
+      "name": "equal light 1 matches Map 62",
+      "passed": true
+    },
+    {
+      "name": "equal light 2 matches Map 62",
+      "passed": true
+    },
+    {
+      "name": "equal light 3 matches Map 62",
+      "passed": true
+    },
+    {
+      "name": "equal light 4 matches Map 62",
+      "passed": true
+    },
+    {
+      "name": "equal timer spacing 62",
+      "passed": true
+    },
+    {
+      "name": "equal cycle follows configured order 63",
+      "passed": true
+    },
+    {
+      "name": "equal light 1 matches Map 63",
+      "passed": true
+    },
+    {
+      "name": "equal light 2 matches Map 63",
+      "passed": true
+    },
+    {
+      "name": "equal light 3 matches Map 63",
+      "passed": true
+    },
+    {
+      "name": "equal light 4 matches Map 63",
+      "passed": true
+    },
+    {
+      "name": "equal timer spacing 63",
+      "passed": true
+    },
+    {
+      "name": "variable cycle follows configured order 64",
+      "passed": true
+    },
+    {
+      "name": "variable light 1 matches Map 64",
+      "passed": true
+    },
+    {
+      "name": "variable light 2 matches Map 64",
+      "passed": true
+    },
+    {
+      "name": "variable light 3 matches Map 64",
+      "passed": true
+    },
+    {
+      "name": "variable light 4 matches Map 64",
+      "passed": true
+    },
+    {
+      "name": "variable cycle follows configured order 65",
+      "passed": true
+    },
+    {
+      "name": "variable light 1 matches Map 65",
+      "passed": true
+    },
+    {
+      "name": "variable light 2 matches Map 65",
+      "passed": true
+    },
+    {
+      "name": "variable light 3 matches Map 65",
+      "passed": true
+    },
+    {
+      "name": "variable light 4 matches Map 65",
+      "passed": true
+    },
+    {
+      "name": "variable timer spacing 65",
+      "passed": true
+    },
+    {
+      "name": "variable cycle follows configured order 66",
+      "passed": true
+    },
+    {
+      "name": "variable light 1 matches Map 66",
+      "passed": true
+    },
+    {
+      "name": "variable light 2 matches Map 66",
+      "passed": true
+    },
+    {
+      "name": "variable light 3 matches Map 66",
+      "passed": true
+    },
+    {
+      "name": "variable light 4 matches Map 66",
+      "passed": true
+    },
+    {
+      "name": "variable timer spacing 66",
+      "passed": true
+    },
+    {
+      "name": "variable cycle follows configured order 67",
+      "passed": true
+    },
+    {
+      "name": "variable light 1 matches Map 67",
+      "passed": true
+    },
+    {
+      "name": "variable light 2 matches Map 67",
+      "passed": true
+    },
+    {
+      "name": "variable light 3 matches Map 67",
+      "passed": true
+    },
+    {
+      "name": "variable light 4 matches Map 67",
+      "passed": true
+    },
+    {
+      "name": "variable timer spacing 67",
+      "passed": true
+    },
+    {
+      "name": "variable cycle follows configured order 68",
+      "passed": true
+    },
+    {
+      "name": "variable light 1 matches Map 68",
+      "passed": true
+    },
+    {
+      "name": "variable light 2 matches Map 68",
+      "passed": true
+    },
+    {
+      "name": "variable light 3 matches Map 68",
+      "passed": true
+    },
+    {
+      "name": "variable light 4 matches Map 68",
+      "passed": true
+    },
+    {
+      "name": "variable timer spacing 68",
+      "passed": true
+    },
+    {
+      "name": "variable cycle follows configured order 69",
+      "passed": true
+    },
+    {
+      "name": "variable light 1 matches Map 69",
+      "passed": true
+    },
+    {
+      "name": "variable light 2 matches Map 69",
+      "passed": true
+    },
+    {
+      "name": "variable light 3 matches Map 69",
+      "passed": true
+    },
+    {
+      "name": "variable light 4 matches Map 69",
+      "passed": true
+    },
+    {
+      "name": "variable timer spacing 69",
+      "passed": true
+    },
+    {
+      "name": "variable cycle follows configured order 70",
+      "passed": true
+    },
+    {
+      "name": "variable light 1 matches Map 70",
+      "passed": true
+    },
+    {
+      "name": "variable light 2 matches Map 70",
+      "passed": true
+    },
+    {
+      "name": "variable light 3 matches Map 70",
+      "passed": true
+    },
+    {
+      "name": "variable light 4 matches Map 70",
+      "passed": true
+    },
+    {
+      "name": "variable timer spacing 70",
+      "passed": true
+    },
+    {
+      "name": "Variable intervals select Green 3 Yellow 1 Red 5",
+      "passed": true
+    }
+  ],
+  "transitions": [
+    {
+      "mode": "equal",
+      "cycle": 57,
+      "color": "<E_LightColor.RED: 0>",
+      "value": 0,
+      "time": 114.6285691447556,
+      "next_delay": 2.0
+    },
+    {
+      "mode": "equal",
+      "cycle": 58,
+      "color": "<E_LightColor.GREEN: 2>",
+      "value": 2,
+      "time": 116.62857036665082,
+      "next_delay": 2.0
+    },
+    {
+      "mode": "equal",
+      "cycle": 59,
+      "color": "<E_LightColor.YELLOW: 1>",
+      "value": 1,
+      "time": 118.6285720653832,
+      "next_delay": 2.0
+    },
+    {
+      "mode": "equal",
+      "cycle": 60,
+      "color": "<E_LightColor.RED: 0>",
+      "value": 0,
+      "time": 120.6285736747086,
+      "next_delay": 2.0
+    },
+    {
+      "mode": "equal",
+      "cycle": 61,
+      "color": "<E_LightColor.GREEN: 2>",
+      "value": 2,
+      "time": 122.62857489660382,
+      "next_delay": 2.0
+    },
+    {
+      "mode": "equal",
+      "cycle": 62,
+      "color": "<E_LightColor.YELLOW: 1>",
+      "value": 1,
+      "time": 124.62857611849904,
+      "next_delay": 2.0
+    },
+    {
+      "mode": "equal",
+      "cycle": 63,
+      "color": "<E_LightColor.RED: 0>",
+      "value": 0,
+      "time": 126.62859581783414,
+      "next_delay": 2.0
+    },
+    {
+      "mode": "variable",
+      "cycle": 64,
+      "color": "<E_LightColor.GREEN: 2>",
+      "value": 2,
+      "time": 128.62859784439206,
+      "next_delay": 3.0
+    },
+    {
+      "mode": "variable",
+      "cycle": 65,
+      "color": "<E_LightColor.YELLOW: 1>",
+      "value": 1,
+      "time": 131.62860076501966,
+      "next_delay": 1.0
+    },
+    {
+      "mode": "variable",
+      "cycle": 66,
+      "color": "<E_LightColor.RED: 0>",
+      "value": 0,
+      "time": 132.62860106304288,
+      "next_delay": 5.0
+    },
+    {
+      "mode": "variable",
+      "cycle": 67,
+      "color": "<E_LightColor.GREEN: 2>",
+      "value": 2,
+      "time": 137.62880228832364,
+      "next_delay": 3.0
+    },
+    {
+      "mode": "variable",
+      "cycle": 68,
+      "color": "<E_LightColor.YELLOW: 1>",
+      "value": 1,
+      "time": 140.62880446389318,
+      "next_delay": 1.0
+    },
+    {
+      "mode": "variable",
+      "cycle": 69,
+      "color": "<E_LightColor.RED: 0>",
+      "value": 0,
+      "time": 141.62880505993962,
+      "next_delay": 5.0
+    },
+    {
+      "mode": "variable",
+      "cycle": 70,
+      "color": "<E_LightColor.GREEN: 2>",
+      "value": 2,
+      "time": 146.6288074143231,
+      "next_delay": 3.0
+    }
+  ],
+  "mode": "variable",
+  "observed": 7,
+  "previous_count": 70,
+  "previous_time": 146.6288074143231,
+  "previous_delay": 3.0,
+  "finished": true,
+  "passed": 87
+}

@@ -1,0 +1,159 @@
+{
+  "project": "StealthShooter",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "checks": [
+    {
+      "name": "Array count",
+      "passed": true
+    },
+    {
+      "name": "Array completed",
+      "passed": true
+    },
+    {
+      "name": "Array cube 1 material",
+      "passed": true
+    },
+    {
+      "name": "Array cube 2 material",
+      "passed": true
+    },
+    {
+      "name": "Array cube 3 material",
+      "passed": true
+    },
+    {
+      "name": "Set count",
+      "passed": true
+    },
+    {
+      "name": "Set completed",
+      "passed": true
+    },
+    {
+      "name": "Set cube 1 material",
+      "passed": true
+    },
+    {
+      "name": "Set cube 2 material",
+      "passed": true
+    },
+    {
+      "name": "Set cube 3 material",
+      "passed": true
+    },
+    {
+      "name": "Structure mesh Sphere",
+      "passed": true
+    },
+    {
+      "name": "Structure mesh Cone",
+      "passed": true
+    },
+    {
+      "name": "Structure mesh Cylinder",
+      "passed": true
+    },
+    {
+      "name": "Set Members cost",
+      "passed": true
+    },
+    {
+      "name": "Set Members keeps name",
+      "passed": true
+    },
+    {
+      "name": "Structure completed",
+      "passed": true
+    },
+    {
+      "name": "Set Members keeps description",
+      "passed": true
+    },
+    {
+      "name": "Array preserves duplicate and order",
+      "passed": true
+    },
+    {
+      "name": "Add Unique duplicate result in UE 5.8",
+      "passed": true
+    },
+    {
+      "name": "Set difference",
+      "passed": true
+    },
+    {
+      "name": "Set intersection",
+      "passed": true
+    },
+    {
+      "name": "Set union",
+      "passed": true
+    },
+    {
+      "name": "Map visits every key",
+      "passed": true
+    },
+    {
+      "name": "Map key/value pairs",
+      "passed": true
+    },
+    {
+      "name": "Break stops at first 2",
+      "passed": true
+    },
+    {
+      "name": "MapCompleted",
+      "passed": true
+    },
+    {
+      "name": "BreakCompleted",
+      "passed": true
+    },
+    {
+      "name": "BreakFound",
+      "passed": true
+    },
+    {
+      "name": "Completed",
+      "passed": true
+    },
+    {
+      "name": "Empty array count",
+      "passed": true
+    },
+    {
+      "name": "Empty array completed",
+      "passed": true
+    },
+    {
+      "name": "Invalid reference skipped",
+      "passed": true
+    },
+    {
+      "name": "Empty map count",
+      "passed": true
+    },
+    {
+      "name": "Empty map lines",
+      "passed": true
+    },
+    {
+      "name": "Empty map completed",
+      "passed": true
+    },
+    {
+      "name": "No break target visits all",
+      "passed": true
+    },
+    {
+      "name": "No break target flag",
+      "passed": true
+    },
+    {
+      "name": "Normal loop completion",
+      "passed": true
+    }
+  ],
+  "passed": 38
+}

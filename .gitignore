@@ -1,0 +1,40 @@
+# Unreal Engine generated folders
+**/Binaries/
+**/DerivedDataCache/
+**/Intermediate/
+**/Saved/
+
+# Local IDE and editor state
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.opensdf
+*.sdf
+*.ipch
+
+# Local build output
+/Builds/
+/Deliverables/
+*.pdb
+*.obj
+*.log
+*.tmp
+*.bak
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local development diagnostics
+**/__pycache__/
+/Tools/editor_api.json
+/Tools/probe_editor.py
+/Tools/WaitEditorTask.ps1
