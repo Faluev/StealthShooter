@@ -1,0 +1,1153 @@
+{
+  "scope": "Interaction module 3.8 and shared 4.4 assets; project content organization",
+  "assets": 28,
+  "checks": [
+    {
+      "name": "All 28 project assets retained",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: WBP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: WBP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "No redirector: WBP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_SwitchCap",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_SwitchCap",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_SwitchCap",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_LampBulb_Off",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_LampBulb_Off",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_LampBulb_Off",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_LightFixture",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_LightFixture",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_LightFixture",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_LabRoom_Wall",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_LabRoom_Wall",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_LabRoom_Wall",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_LabRoom_Text",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_LabRoom_Text",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_LabRoom_Text",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_LabRoom_Floor",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_LabRoom_Floor",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_LabRoom_Floor",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_LabRoom_Accent",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_LabRoom_Accent",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_LabRoom_Accent",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: L_SwitchableRoom",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: L_SwitchableRoom",
+      "passed": true
+    },
+    {
+      "name": "No redirector: L_SwitchableRoom",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_LightSwitch",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_LightSwitch",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_LightSwitch",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_LampBulb_On",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_LampBulb_On",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_LampBulb_On",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_SwitchableLamp",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_SwitchableLamp",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_SwitchableLamp",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: L_GroupControl",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: L_GroupControl",
+      "passed": true
+    },
+    {
+      "name": "No redirector: L_GroupControl",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: L_BlueprintLab",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: L_BlueprintLab",
+      "passed": true
+    },
+    {
+      "name": "No redirector: L_BlueprintLab",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_Example_White",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_Example_White",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_Example_White",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_Example_Floor",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_Example_Floor",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_Example_Floor",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: M_Example_Cyan",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: M_Example_Cyan",
+      "passed": true
+    },
+    {
+      "name": "No redirector: M_Example_Cyan",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_TimingExamples",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_TimingExamples",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_TimingExamples",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_StructureExamples",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_StructureExamples",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_StructureExamples",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: S_Example",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: S_Example",
+      "passed": true
+    },
+    {
+      "name": "No redirector: S_Example",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_StaticObject",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_StaticObject",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_StaticObject",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_DataTableExamples",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_DataTableExamples",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_DataTableExamples",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_ColorControl",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_ColorControl",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_ColorControl",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: S_StaticObjInfo",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: S_StaticObjInfo",
+      "passed": true
+    },
+    {
+      "name": "No redirector: S_StaticObjInfo",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_Cube",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_Cube",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_Cube",
+      "passed": true
+    },
+    {
+      "name": "ASCII package identifier: BP_ContainerExamples",
+      "passed": true
+    },
+    {
+      "name": "Asset prefix: BP_ContainerExamples",
+      "passed": true
+    },
+    {
+      "name": "No redirector: BP_ContainerExamples",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Core/BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Interaction/Lighting/BP_LightSwitch",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Interaction/Lighting/BP_SwitchableLamp",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Interaction/GroupControl/BP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Interaction/GroupControl/WBP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Lighting/M_LampBulb_On",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Lighting/M_LampBulb_Off",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Lighting/M_LightFixture",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Lighting/M_SwitchCap",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Environment/M_LabRoom_Floor",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Environment/M_LabRoom_Wall",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Environment/M_LabRoom_Accent",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Environment/M_LabRoom_Text",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Examples/M_Example_White",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Examples/M_Example_Cyan",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/MaterialLibrary/Examples/M_Example_Floor",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/BP_TimingExamples",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/BP_StructureExamples",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/BP_StaticObject",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/BP_DataTableExamples",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/BP_Cube",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/BP_ContainerExamples",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/BP_ColorControl",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/S_StaticObjInfo",
+      "passed": true
+    },
+    {
+      "name": "Moved package exists: /Game/StealthShooter/Examples/Foundations/S_Example",
+      "passed": true
+    },
+    {
+      "name": "Compile: WBP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.RefreshDisplay no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnEnableClicked no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnDisableClicked no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "BPI_Switchable.SwitchOn no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BPI_Switchable.SwitchOff no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BPI_Switchable.IsSwitchOn no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_GroupSwitch",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.ShowControls no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.HideControls no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.UpdateProximity no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.SetGroupState no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.InitializeControls no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.IsSwitchOn no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_LightSwitch",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.TryInteract no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.OnSwitched no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.IsSwitchOn no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_SwitchableLamp",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.BindToButton no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.OnSwitchChanged no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.UnbindFromButton no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.IsSwitchOn no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_TimingExamples",
+      "passed": true
+    },
+    {
+      "name": "BP_TimingExamples.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_TimingExamples.PrintHello no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_TimingExamples.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_StructureExamples",
+      "passed": true
+    },
+    {
+      "name": "BP_StructureExamples.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_StructureExamples.InitializeItem no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_StructureExamples.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_StaticObject",
+      "passed": true
+    },
+    {
+      "name": "BP_StaticObject.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_StaticObject.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_DataTableExamples",
+      "passed": true
+    },
+    {
+      "name": "BP_DataTableExamples.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_DataTableExamples.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_ColorControl",
+      "passed": true
+    },
+    {
+      "name": "BP_ColorControl.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_ColorControl.ApplyColors no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_ColorControl.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_Cube",
+      "passed": true
+    },
+    {
+      "name": "BP_Cube.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_Cube.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "Compile: BP_ContainerExamples",
+      "passed": true
+    },
+    {
+      "name": "BP_ContainerExamples.UserConstructionScript no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_ContainerExamples.RunExamples no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BP_ContainerExamples.EventGraph no errors or warnings",
+      "passed": true
+    },
+    {
+      "name": "BPI_Switchable.SwitchOn has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BPI_Switchable.SwitchOff has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BPI_Switchable.IsSwitchOn has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.InteractionRadius follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.InteractionRadius has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.PressCount follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.PressCount has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.BroadcastCount follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.BroadcastCount has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.OnSwitched follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.OnSwitched has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.bOn follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.bOn has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.TryInteract has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.TryInteract at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.TryInteract explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.EventGraph has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.IsSwitchOn has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.IsSwitchOn at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_LightSwitch.IsSwitchOn explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.ControlButton follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.ControlButton has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.SwitchCount follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.SwitchCount has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.bOn follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.bOn has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.bBound follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.bBound has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.BindToButton has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.BindToButton at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.BindToButton explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.OnSwitchChanged has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.OnSwitchChanged at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.OnSwitchChanged explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.UnbindFromButton has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.UnbindFromButton at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.UnbindFromButton explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.EventGraph has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.IsSwitchOn has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.IsSwitchOn at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_SwitchableLamp.IsSwitchOn explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.InteractionRadius follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.InteractionRadius has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.SwitchTargets follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.SwitchTargets has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.GroupLabel follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.GroupLabel has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.ControlWidget follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.ControlWidget has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.bOn follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.bOn has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.bNearby follows naming",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.bNearby has a category",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.ShowControls has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.ShowControls at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.ShowControls explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.HideControls has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.HideControls at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.HideControls explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.UpdateProximity has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.UpdateProximity at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.UpdateProximity explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.SetGroupState has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.SetGroupState at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.SetGroupState explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.InitializeControls has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.InitializeControls at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.InitializeControls explicit Return",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.EventGraph has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.IsSwitchOn has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.IsSwitchOn at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "BP_GroupSwitch.IsSwitchOn explicit Return",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OwnerSwitch follows naming",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OwnerSwitch has a category",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.UseRadius follows naming",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.UseRadius has a category",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.PanelLabel follows naming",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.PanelLabel has a category",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.RefreshDisplay has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.RefreshDisplay at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.RefreshDisplay explicit Return",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnEnableClicked has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnEnableClicked at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnEnableClicked explicit Return",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnDisableClicked has a logical comment",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnDisableClicked at most 30 nodes",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.OnDisableClicked explicit Return",
+      "passed": true
+    },
+    {
+      "name": "WBP_GroupSwitch.EventGraph has a logical comment",
+      "passed": true
+    }
+  ],
+  "graphs": [
+    {
+      "asset": "BPI_Switchable",
+      "graph": "SwitchOn",
+      "nodes": 1,
+      "comments": 1
+    },
+    {
+      "asset": "BPI_Switchable",
+      "graph": "SwitchOff",
+      "nodes": 1,
+      "comments": 1
+    },
+    {
+      "asset": "BPI_Switchable",
+      "graph": "IsSwitchOn",
+      "nodes": 2,
+      "comments": 1
+    },
+    {
+      "asset": "BP_LightSwitch",
+      "graph": "TryInteract",
+      "nodes": 21,
+      "comments": 1
+    },
+    {
+      "asset": "BP_LightSwitch",
+      "graph": "EventGraph",
+      "nodes": 27,
+      "comments": 3
+    },
+    {
+      "asset": "BP_LightSwitch",
+      "graph": "IsSwitchOn",
+      "nodes": 3,
+      "comments": 1
+    },
+    {
+      "asset": "BP_SwitchableLamp",
+      "graph": "BindToButton",
+      "nodes": 17,
+      "comments": 1
+    },
+    {
+      "asset": "BP_SwitchableLamp",
+      "graph": "OnSwitchChanged",
+      "nodes": 8,
+      "comments": 1
+    },
+    {
+      "asset": "BP_SwitchableLamp",
+      "graph": "UnbindFromButton",
+      "nodes": 11,
+      "comments": 1
+    },
+    {
+      "asset": "BP_SwitchableLamp",
+      "graph": "EventGraph",
+      "nodes": 22,
+      "comments": 4
+    },
+    {
+      "asset": "BP_SwitchableLamp",
+      "graph": "IsSwitchOn",
+      "nodes": 3,
+      "comments": 1
+    },
+    {
+      "asset": "BP_GroupSwitch",
+      "graph": "ShowControls",
+      "nodes": 13,
+      "comments": 1
+    },
+    {
+      "asset": "BP_GroupSwitch",
+      "graph": "HideControls",
+      "nodes": 11,
+      "comments": 1
+    },
+    {
+      "asset": "BP_GroupSwitch",
+      "graph": "UpdateProximity",
+      "nodes": 24,
+      "comments": 1
+    },
+    {
+      "asset": "BP_GroupSwitch",
+      "graph": "SetGroupState",
+      "nodes": 21,
+      "comments": 1
+    },
+    {
+      "asset": "BP_GroupSwitch",
+      "graph": "InitializeControls",
+      "nodes": 18,
+      "comments": 1
+    },
+    {
+      "asset": "BP_GroupSwitch",
+      "graph": "EventGraph",
+      "nodes": 12,
+      "comments": 4
+    },
+    {
+      "asset": "BP_GroupSwitch",
+      "graph": "IsSwitchOn",
+      "nodes": 3,
+      "comments": 1
+    },
+    {
+      "asset": "WBP_GroupSwitch",
+      "graph": "RefreshDisplay",
+      "nodes": 28,
+      "comments": 1
+    },
+    {
+      "asset": "WBP_GroupSwitch",
+      "graph": "OnEnableClicked",
+      "nodes": 19,
+      "comments": 1
+    },
+    {
+      "asset": "WBP_GroupSwitch",
+      "graph": "OnDisableClicked",
+      "nodes": 19,
+      "comments": 1
+    },
+    {
+      "asset": "WBP_GroupSwitch",
+      "graph": "EventGraph",
+      "nodes": 9,
+      "comments": 1
+    }
+  ],
+  "passed": 253
+}

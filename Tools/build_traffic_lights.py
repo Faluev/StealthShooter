@@ -1,6 +1,7 @@
 """Complete the supplied traffic-light exercise and related lesson examples."""
 import json
 import unreal
+from project_paths import load_asset,resolve_reference
 import lab_graph as g
 from build_blueprint_lab import variable, after, store, ref, struct_node, field, finalize
 
@@ -8,13 +9,13 @@ B=unreal.BlueprintEditorLibrary
 ROOT='/Game/Blueprints'
 
 def prepare():
-    bp=unreal.load_asset(ROOT+'/BP_TrafficLightsManager')
-    enum=unreal.load_asset(ROOT+'/E_LightColor')
+    bp=load_asset(ROOT+'/BP_TrafficLightsManager')
+    enum=load_asset(ROOT+'/E_LightColor')
     enum_type=unreal.EdGraphPinType()
     assert enum_type.import_text('(PinCategory="byte",PinSubCategoryObject=UserDefinedEnum\''+enum.get_path_name()+'\')')
     integer=B.get_basic_type_by_name('int'); boolean=B.get_basic_type_by_name('bool'); real=B.get_basic_type_by_name('real')
     # The template spells the light class TraffictLight. Keep its references intact.
-    light=unreal.load_asset(ROOT+'/BP_TraffictLight')
+    light=load_asset(ROOT+'/BP_TraffictLight')
     for name,kind,default,editable in [
         ('ColorOrder',B.get_array_type(enum_type),'',False),
         ('Lights',B.get_array_type(B.get_object_reference_type(light.generated_class())),'',True),
@@ -25,8 +26,8 @@ def prepare():
         ('SettingsRow',B.get_struct_type(unreal.DataTableRowHandle.static_struct()),'',True),
         ('LoadedSettings',boolean,'false',False)]:variable(bp,name,kind,default,editable)
     g.compile_bp(bp)
-    factory=unreal.DataTableFactory();factory.set_editor_property('struct',unreal.load_asset(ROOT+'/S_LIghtColor'))
-    table=unreal.load_asset(ROOT+'/DT_TrafficSettings') or unreal.AssetToolsHelpers.get_asset_tools().create_asset('DT_TrafficSettings',ROOT,unreal.DataTable,factory)
+    factory=unreal.DataTableFactory();factory.set_editor_property('struct',load_asset(ROOT+'/S_LIghtColor'))
+    table=load_asset(ROOT+'/DT_TrafficSettings') or unreal.AssetToolsHelpers.get_asset_tools().create_asset('DT_TrafficSettings',ROOT,unreal.DataTable,factory)
     base={'Green':{'R':0.025297,'G':1,'B':0,'A':1},'Yellow':{'R':1,'G':0.795985,'B':0,'A':1},'Red':{'R':1,'G':0,'B':0.039114,'A':1}}
     data=[]
     for name,multiplier in [('Default',1),('LowBrightness',.5),('HighVisibility',1.5)]:
@@ -56,8 +57,8 @@ def timer(e,entry,function,seconds=None,seconds_pin=None,loop=False):
     return n,after(entry,n)
 
 def build():
-    bp=unreal.load_asset(ROOT+'/BP_TrafficLightsManager')
-    light=unreal.load_asset(ROOT+'/BP_TraffictLight')
+    bp=load_asset(ROOT+'/BP_TrafficLightsManager')
+    light=load_asset(ROOT+'/BP_TraffictLight')
     g.clear_graph(bp)
     previous=B.find_graph(bp,'Recolor_0')
     if previous and not B.find_graph(bp,'Recolor'):B.rename_graph(previous,'Recolor')
@@ -127,7 +128,7 @@ def build():
 def data_table_examples():
     g.BP_ROOT='/Game/StealthShooter/Blueprints'
     bp=g.blueprint('BP_DataTableExamples',unreal.Actor)
-    for name,kind in [('RowCount',B.get_basic_type_by_name('int')),('FoundCount',B.get_basic_type_by_name('int')),('Completed',B.get_basic_type_by_name('bool')),('LastSettings',B.get_struct_type(unreal.load_asset(ROOT+'/S_LIghtColor')))]:variable(bp,name,kind)
+    for name,kind in [('RowCount',B.get_basic_type_by_name('int')),('FoundCount',B.get_basic_type_by_name('int')),('Completed',B.get_basic_type_by_name('bool')),('LastSettings',B.get_struct_type(load_asset(ROOT+'/S_LIghtColor')))]:variable(bp,name,kind)
     g.compile_bp(bp)
     e=g.clear_graph(bp);ev=g.event(bp,'ReceiveBeginPlay')
     names=g.call(e,'/Script/Engine.DataTableFunctionLibrary.GetDataTableRowNames');g.value(names,'Table',ROOT+'/DT_TrafficSettings.DT_TrafficSettings');g.wire(g.then(ev),names.find_execute_pin())
@@ -179,11 +180,11 @@ def configure_level():
     assert levels.load_level('/Game/ThirdPerson/Maps/ThirdPersonMap')
     sub=unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
     world=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
-    world.get_world_settings().set_editor_property('default_game_mode',unreal.load_asset('/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode').generated_class())
+    world.get_world_settings().set_editor_property('default_game_mode',load_asset('/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode').generated_class())
     manager=next(a for a in sub.get_all_level_actors() if a.get_class().get_name()=='BP_TrafficLightsManager_C')
-    manager.set_editor_property('SettingsRow',unreal.DataTableRowHandle(data_table=unreal.load_asset(ROOT+'/DT_TrafficSettings'),row_name='Default'))
+    manager.set_editor_property('SettingsRow',unreal.DataTableRowHandle(data_table=load_asset(ROOT+'/DT_TrafficSettings'),row_name='Default'))
     manager.set_editor_property('Interval',2.0);manager.set_editor_property('VariableIntervals',False)
-    light_class=unreal.load_asset(ROOT+'/BP_TraffictLight').generated_class()
+    light_class=load_asset(ROOT+'/BP_TraffictLight').generated_class()
     positions=[('North',1250,700),('South',1250,1000),('East',1550,700),('West',1550,1000)]
     for name,x,y in positions:
         label='TrafficLight_'+name
@@ -197,6 +198,6 @@ def configure_level():
     # The timing example remains on the foundation lab, away from the practical map.
     assert levels.load_level('/Game/StealthShooter/Maps/L_BlueprintLab')
     if not any(a.get_actor_label()=='TimingExamples' for a in sub.get_all_level_actors()):
-        a=sub.spawn_actor_from_class(unreal.load_asset('/Game/StealthShooter/Blueprints/BP_TimingExamples').generated_class(),unreal.Vector(0,0,-100));a.set_actor_label('TimingExamples')
+        a=sub.spawn_actor_from_class(load_asset('/Game/StealthShooter/Blueprints/BP_TimingExamples').generated_class(),unreal.Vector(0,0,-100));a.set_actor_label('TimingExamples')
     assert levels.save_current_level()
     return True

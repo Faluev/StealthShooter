@@ -1,5 +1,6 @@
 """Shared helpers for the advanced Blueprint lesson assets."""
 import unreal
+from project_paths import load_asset,resolve_reference
 ROOT="/Game/StealthShooter"
 BP_ROOT=ROOT+"/Blueprints"
 MAP_ROOT=ROOT+"/Maps"
@@ -31,8 +32,8 @@ def compile_bp(bp):
 
 
 def blueprint(name, parent):
-    path = BP_ROOT + '/' + name
-    bp = unreal.load_asset(path) if unreal.EditorAssetLibrary.does_asset_exist(path) else None
+    path = resolve_reference(BP_ROOT + '/' + name)
+    bp = load_asset(path) if unreal.EditorAssetLibrary.does_asset_exist(path) else None
     if bp is None:
         bp = B.create_blueprint_asset_with_parent(path, parent)
     if not bp:
@@ -67,7 +68,7 @@ def wire(source, target):
 
 
 def value(node, name, text):
-    if not pin(node, name).set_pin_value(str(text)):
+    if not pin(node, name).set_pin_value(resolve_reference(text)):
         fail(f'Cannot set {node.get_node_title()}.{name}={text}')
 
 
@@ -93,7 +94,7 @@ def chain(source_node, target_node):
 
 
 def call(g, path):
-    node = g.add_call_function_node(path)
+    node = g.add_call_function_node(resolve_reference(path))
     if node is None:
         fail('Function not available: ' + path)
     return node

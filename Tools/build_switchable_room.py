@@ -1,5 +1,6 @@
 """Build practical 3.8 with an interface, per-lamp subscriptions and nearby input."""
 import unreal
+from project_paths import load_asset,resolve_reference
 import lab_graph as g
 from build_blueprint_lab import variable,ref,after,store,finalize
 
@@ -26,14 +27,14 @@ def component(bp,name,cls):
 
 def prepare():
     setup()
-    bpi=unreal.load_asset(ROOT+'/BPI_Switchable')
+    bpi=load_asset(ROOT+'/BPI_Switchable')
     for gr in B.list_graphs(bpi):
         if str(gr.get_name()).startswith('NewFunction'):B.remove_graph(bpi,gr)
     for name in ['SwitchOn','SwitchOff']:g.new_function(bpi,name)
     e=g.new_function(bpi,'IsSwitchOn');g.output_parameter(e,'IsOn',BOOL)
     g.compile_bp(bpi)
     button=g.blueprint('BP_LightSwitch',unreal.Actor)
-    variable(button,'IsOn',BOOL,'true')
+    variable(button,'bOn',BOOL,'true')
     variable(button,'InteractionRadius',REAL,'250',True)
     variable(button,'PressCount',INT,'0')
     variable(button,'BroadcastCount',INT,'0')
@@ -42,10 +43,10 @@ def prepare():
         assert B.add_event_dispatcher_parameter(button,'OnSwitched','Enabled',BOOL)
     g.compile_bp(button)
     lamp=g.blueprint('BP_SwitchableLamp',unreal.Actor)
-    variable(lamp,'IsOn',BOOL,'true')
+    variable(lamp,'bOn',BOOL,'true')
     variable(lamp,'ControlButton',B.get_object_reference_type(button.generated_class()),editable=True)
     variable(lamp,'SwitchCount',INT,'0')
-    variable(lamp,'Bound',BOOL,'false')
+    variable(lamp,'bBound',BOOL,'false')
     g.compile_bp(lamp)
     component(button,'SwitchBody',unreal.StaticMeshComponent)
     component(button,'SwitchCap',unreal.StaticMeshComponent)
@@ -70,11 +71,11 @@ def increment(e,entry,name):
 
 def query(bp):
     e=g.new_function(bp,'IsSwitchOn');ret=g.output_parameter(e,'IsOn',BOOL)
-    g.wire(e.find_graph_entry_pin(),ret.find_execute_pin());g.wire(ref(e,'IsOn'),g.pin(ret,'IsOn'))
+    g.wire(e.find_graph_entry_pin(),ret.find_execute_pin());g.wire(ref(e,'bOn'),g.pin(ret,'IsOn'))
     g.compile_bp(bp)
 
 def button_graphs():
-    setup();bp=unreal.load_asset(ROOT+'/BP_LightSwitch');g.clear_graph(bp);query(bp)
+    setup();bp=load_asset(ROOT+'/BP_LightSwitch');g.clear_graph(bp);query(bp)
     e=g.new_function(bp,'TryInteract');entry=e.find_graph_entry_pin()
     pawn=g.call(e,'/Script/Engine.GameplayStatics.GetPlayerPawn');g.value(pawn,'PlayerIndex',0)
     valid=g.call(e,'/Script/Engine.KismetSystemLibrary.IsValid');g.wire(g.result(pawn),g.pin(valid,'Object'))
@@ -83,14 +84,14 @@ def button_graphs():
     close=g.call(e,'/Script/Engine.KismetMathLibrary.LessEqual_DoubleDouble');g.wire(g.result(distance),g.pin(close,'A'));g.wire(ref(e,'InteractionRadius'),g.pin(close,'B'))
     nearby=e.add_branch_node();g.wire(g.pin(exists,'then',True),nearby.find_execute_pin());g.wire(g.result(close),g.pin(nearby,'Condition'))
     entry=increment(e,g.pin(nearby,'then',True),'PressCount')
-    state=e.add_branch_node();g.wire(entry,state.find_execute_pin());g.wire(ref(e,'IsOn'),g.pin(state,'Condition'))
+    state=e.add_branch_node();g.wire(entry,state.find_execute_pin());g.wire(ref(e,'bOn'),g.pin(state,'Condition'))
     for output,name in [('then','SwitchOff'),('else','SwitchOn')]:
         call=message(e,name,self_ref(e));g.wire(g.pin(state,output,True),call.find_execute_pin())
     g.compile_bp(bp)
     e=g.graph(bp)
     for name,on in [('SwitchOn',True),('SwitchOff',False)]:
-        ev=g.event(bp,name);branch=e.add_branch_node();g.wire(g.then(ev),branch.find_execute_pin());g.wire(ref(e,'IsOn'),g.pin(branch,'Condition'))
-        entry=store(e,g.pin(branch,'else' if on else 'then',True),'IsOn',literal=str(on).lower())
+        ev=g.event(bp,name);branch=e.add_branch_node();g.wire(g.then(ev),branch.find_execute_pin());g.wire(ref(e,'bOn'),g.pin(branch,'Condition'))
+        entry=store(e,g.pin(branch,'else' if on else 'then',True),'bOn',literal=str(on).lower())
         entry=increment(e,entry,'BroadcastCount')
         dispatch=g.named_node(e,lambda n:n.endswith('|callonswitched'),'Call OnSwitched');g.value(dispatch,'Enabled',str(on).lower());entry=after(entry,dispatch)
         text=g.call(e,'/Script/Engine.KismetTextLibrary.Conv_StringToText');g.value(text,'InString','E: LIGHTS '+('OFF' if on else 'ON')+'  |  RANGE 2.5m')
@@ -106,33 +107,33 @@ def delegate(e,target_pin):
     n=g.named_node(e,lambda x:x.endswith('|создатьсобытие') or x.endswith('|createevent'),'Create Event')
     g.wire(self_ref(e),g.pin(n,'self'))
     g.wire(g.pin(n,'OutputDelegate',True),target_pin)
-    B.set_create_delegate_function(n,'HandleSwitchChanged')
+    B.set_create_delegate_function(n,'OnSwitchChanged')
     return n
 
 def lamp_graphs():
-    setup();bp=unreal.load_asset(ROOT+'/BP_SwitchableLamp');g.clear_graph(bp);query(bp)
-    e=g.new_function(bp,'HandleSwitchChanged');enabled=g.input_parameter(e,'Enabled',BOOL)
+    setup();bp=load_asset(ROOT+'/BP_SwitchableLamp');g.clear_graph(bp);query(bp)
+    e=g.new_function(bp,'OnSwitchChanged');enabled=g.input_parameter(e,'Enabled',BOOL)
     branch=e.add_branch_node();g.wire(e.find_graph_entry_pin(),branch.find_execute_pin());g.wire(enabled,g.pin(branch,'Condition'))
     for output,name in [('then','SwitchOn'),('else','SwitchOff')]:
         n=message(e,name,self_ref(e));g.wire(g.pin(branch,output,True),n.find_execute_pin())
     g.compile_bp(bp)
     e=g.new_function(bp,'BindToButton');entry=e.find_graph_entry_pin()
-    already=e.add_branch_node();g.wire(entry,already.find_execute_pin());g.wire(ref(e,'Bound'),g.pin(already,'Condition'))
+    already=e.add_branch_node();g.wire(entry,already.find_execute_pin());g.wire(ref(e,'bBound'),g.pin(already,'Condition'))
     valid=g.call(e,'/Script/Engine.KismetSystemLibrary.IsValid');g.wire(ref(e,'ControlButton'),g.pin(valid,'Object'))
     exists=e.add_branch_node();g.wire(g.pin(already,'else',True),exists.find_execute_pin());g.wire(g.result(valid),g.pin(exists,'Condition'))
     bind=g.named_node(e,lambda n:n.endswith('|bindeventtoonswitched'),'Bind OnSwitched');g.wire(ref(e,'ControlButton'),g.pin(bind,'self'));delegate(e,g.pin(bind,'Delegate'))
-    entry=after(g.pin(exists,'then',True),bind);entry=store(e,entry,'Bound',literal='true')
+    entry=after(g.pin(exists,'then',True),bind);entry=store(e,entry,'bBound',literal='true')
     current=message(e,'IsSwitchOn',ref(e,'ControlButton'));entry=after(entry,current)
-    sync=g.call(e,bp.generated_class().get_path_name()+':HandleSwitchChanged');g.wire(g.pin(current,'IsOn',True),g.pin(sync,'Enabled'));after(entry,sync)
+    sync=g.call(e,bp.generated_class().get_path_name()+':OnSwitchChanged');g.wire(g.pin(current,'IsOn',True),g.pin(sync,'Enabled'));after(entry,sync)
     g.compile_bp(bp)
-    e=g.new_function(bp,'UnbindFromButton');entry=store(e,e.find_graph_entry_pin(),'Bound',literal='false')
+    e=g.new_function(bp,'UnbindFromButton');entry=store(e,e.find_graph_entry_pin(),'bBound',literal='false')
     valid=g.call(e,'/Script/Engine.KismetSystemLibrary.IsValid');g.wire(ref(e,'ControlButton'),g.pin(valid,'Object'))
     exists=e.add_branch_node();g.wire(entry,exists.find_execute_pin());g.wire(g.result(valid),g.pin(exists,'Condition'))
     unbind=g.named_node(e,lambda n:n.endswith('|unbindeventfromonswitched'),'Unbind OnSwitched');g.wire(ref(e,'ControlButton'),g.pin(unbind,'self'));delegate(e,g.pin(unbind,'Delegate'));after(g.pin(exists,'then',True),unbind)
     g.compile_bp(bp)
     e=g.graph(bp)
     for name,on in [('SwitchOn',True),('SwitchOff',False)]:
-        ev=g.event(bp,name);entry=store(e,g.then(ev),'IsOn',literal=str(on).lower());entry=increment(e,entry,'SwitchCount')
+        ev=g.event(bp,name);entry=store(e,g.then(ev),'bOn',literal=str(on).lower());entry=increment(e,entry,'SwitchCount')
         visibility=g.call(e,'/Script/Engine.SceneComponent.SetVisibility');g.wire(ref(e,'LampLight'),g.pin(visibility,'self'));g.value(visibility,'bNewVisibility',str(on).lower());entry=after(entry,visibility)
         material=g.call(e,'/Script/Engine.PrimitiveComponent.SetMaterial');g.wire(ref(e,'Bulb'),g.pin(material,'self'));g.value(material,'Material',ROOT+'/M_Bulb'+('On' if on else 'Off')+'.M_Bulb'+('On' if on else 'Off'));after(entry,material)
     for event,method in [('ReceiveBeginPlay','BindToButton'),('ReceiveEndPlay','UnbindFromButton')]:
@@ -142,7 +143,7 @@ def lamp_graphs():
 
 def material(name,color,emission=0):
     path=ROOT+'/'+name
-    m=unreal.load_asset(path) or unreal.AssetToolsHelpers.get_asset_tools().create_asset(name,ROOT,unreal.Material,unreal.MaterialFactoryNew())
+    m=load_asset(path) or unreal.AssetToolsHelpers.get_asset_tools().create_asset(name,ROOT,unreal.Material,unreal.MaterialFactoryNew())
     lib=unreal.MaterialEditingLibrary;lib.delete_all_material_expressions(m)
     base=lib.create_material_expression(m,unreal.MaterialExpressionConstant3Vector,0,0);base.set_editor_property('constant',unreal.LinearColor(*color,1));lib.connect_material_property(base,'',unreal.MaterialProperty.MP_BASE_COLOR)
     if emission:
@@ -153,9 +154,9 @@ def material(name,color,emission=0):
 def appearance():
     setup()
     materials={name:material(name,color,emission) for name,color,emission in [('M_BulbOn',(1,.67,.29),2),('M_BulbOff',(.035,.04,.05),0),('M_Body',(.035,.055,.08),0),('M_ButtonCap',(.03,.6,.25),.4),('M_Floor',(.075,.10,.13),0),('M_Wall',(.17,.20,.24),0),('M_Accent',(.04,.3,.5),.2)]}
-    button=unreal.load_asset(ROOT+'/BP_LightSwitch');lamp=unreal.load_asset(ROOT+'/BP_SwitchableLamp')
+    button=load_asset(ROOT+'/BP_LightSwitch');lamp=load_asset(ROOT+'/BP_SwitchableLamp')
     def mesh(bp,name,shape,loc,scale,mat,collision=True):
-        c=component(bp,name,unreal.StaticMeshComponent);c.set_static_mesh(unreal.load_asset('/Engine/BasicShapes/'+shape));c.set_editor_property('relative_location',unreal.Vector(*loc));c.set_editor_property('relative_scale3d',unreal.Vector(*scale));c.set_material(0,materials[mat]);c.set_collision_profile_name('BlockAllDynamic' if collision else 'NoCollision');c.set_mobility(unreal.ComponentMobility.MOVABLE);return c
+        c=component(bp,name,unreal.StaticMeshComponent);c.set_static_mesh(load_asset('/Engine/BasicShapes/'+shape));c.set_editor_property('relative_location',unreal.Vector(*loc));c.set_editor_property('relative_scale3d',unreal.Vector(*scale));c.set_material(0,materials[mat]);c.set_collision_profile_name('BlockAllDynamic' if collision else 'NoCollision');c.set_mobility(unreal.ComponentMobility.MOVABLE);return c
     mesh(button,'SwitchBody','Cube',(0,0,60),(.45,.45,1.2),'M_Body')
     mesh(button,'SwitchCap','Sphere',(0,0,132),(.33,.33,.16),'M_ButtonCap',False)
     prompt=component(button,'Prompt',unreal.TextRenderComponent);prompt.set_editor_property('relative_location',unreal.Vector(0,0,225));prompt.set_editor_property('relative_rotation',unreal.Rotator(yaw=180));prompt.set_text('E: LIGHTS OFF  |  RANGE 2.5m');prompt.set_world_size(17);prompt.set_horizontal_alignment(unreal.HorizTextAligment.EHTA_CENTER)
@@ -178,7 +179,7 @@ def level():
         if rot is not None:a.set_actor_rotation(rot,False)
         return a
     def mesh(label,loc,scale,mat):
-        a=actor(unreal.StaticMeshActor,label,loc);a.static_mesh_component.set_static_mesh(unreal.load_asset('/Engine/BasicShapes/Cube'));a.set_actor_scale3d(unreal.Vector(*scale));a.static_mesh_component.set_material(0,unreal.load_asset(ROOT+'/'+mat));return a
+        a=actor(unreal.StaticMeshActor,label,loc);a.static_mesh_component.set_static_mesh(load_asset('/Engine/BasicShapes/Cube'));a.set_actor_scale3d(unreal.Vector(*scale));a.static_mesh_component.set_material(0,load_asset(ROOT+'/'+mat));return a
     def text(label,value,loc,size):
         a=actor(unreal.TextRenderActor,label,loc,unreal.Rotator(yaw=180));a.text_render.set_text(value);a.text_render.set_world_size(size);a.text_render.set_horizontal_alignment(unreal.HorizTextAligment.EHTA_CENTER);return a
     mesh('Room_Floor',(100,0,-20),(18,16,.4),'M_Floor')
@@ -186,9 +187,9 @@ def level():
     for name,y in [('Left',-800),('Right',800)]:mesh('Room_'+name+'Wall',(100,y,180),(18,.25,3.6),'M_Wall')
     mesh('Room_FrontRail',(-800,0,45),(.25,16,.9),'M_Body')
     for y in [-770,770]:mesh('Room_Edge_'+str(y),(100,y,10),(17,.12,.1),'M_Accent')
-    button=actor(unreal.load_asset(ROOT+'/BP_LightSwitch').generated_class(),'MasterLightSwitch',(0,-120,0))
+    button=actor(load_asset(ROOT+'/BP_LightSwitch').generated_class(),'MasterLightSwitch',(0,-120,0))
     for index,(x,y) in enumerate([(-300,-550),(-300,550),(600,-550),(600,550)],1):
-        lamp=actor(unreal.load_asset(ROOT+'/BP_SwitchableLamp').generated_class(),'SwitchableLamp_'+str(index),(x,y,0))
+        lamp=actor(load_asset(ROOT+'/BP_SwitchableLamp').generated_class(),'SwitchableLamp_'+str(index),(x,y,0))
         lamp.set_editor_property('ControlButton',button)
         mesh('Lamp_Platform_'+str(index),(x,y,4),(1.2,1.2,.08),'M_Body')
     text('Room_Title','SWITCHABLE  /  LIGHTING LAB',(980,0,290),42)
@@ -198,25 +199,25 @@ def level():
     sun=actor(unreal.DirectionalLight,'AmbientFill',(0,0,700),unreal.Rotator(pitch=-55,yaw=-30));sun.light_component.set_intensity(.35);sun.light_component.set_light_color(unreal.LinearColor(.35,.55,1))
     pp=actor(unreal.PostProcessVolume,'FixedExposure',(0,0,0));pp.set_editor_property('unbound',True)
     settings=pp.get_editor_property('settings');settings.set_editor_property('override_auto_exposure_min_brightness',True);settings.set_editor_property('override_auto_exposure_max_brightness',True);settings.set_editor_property('auto_exposure_min_brightness',1);settings.set_editor_property('auto_exposure_max_brightness',1);pp.set_editor_property('settings',settings)
-    world=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world();world.get_world_settings().set_editor_property('default_game_mode',unreal.load_asset('/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode').generated_class())
+    world=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world();world.get_world_settings().set_editor_property('default_game_mode',load_asset('/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode').generated_class())
     unreal.EditorLevelLibrary.set_level_viewport_camera_info(unreal.Vector(-680,0,250),unreal.Rotator(pitch=-7,yaw=0))
     assert levels.save_current_level()
     return {'map':path,'lamps':4,'radius_cm':250}
 
 def comments():
-    notes={'BP_LightSwitch':{'TryInteract':'Only the local player within InteractionRadius may press E. Interface messages change the switch state.', 'EventGraph':'SwitchOn / SwitchOff broadcast only on a real state change. The switch never stores or iterates lamp references.'},'BP_SwitchableLamp':{'BindToButton':'Each lamp subscribes once at Begin Play and synchronizes with the switch state.', 'HandleSwitchChanged':'Dispatcher callback invokes this lamp through BPI_Switchable.', 'UnbindFromButton':'Remove this lamp callback at End Play; never unbind other subscribers.', 'EventGraph':'Interface events update the actual Point Light visibility and the bulb material.'}}
+    notes={'BP_LightSwitch':{'TryInteract':'Only the local player within InteractionRadius may press E. Interface messages change the switch state.', 'EventGraph':'SwitchOn / SwitchOff broadcast only on a real state change. The switch never stores or iterates lamp references.'},'BP_SwitchableLamp':{'BindToButton':'Each lamp subscribes once at Begin Play and synchronizes with the switch state.', 'OnSwitchChanged':'Dispatcher callback invokes this lamp through BPI_Switchable.', 'UnbindFromButton':'Remove this lamp callback at End Play; never unbind other subscribers.', 'EventGraph':'Interface events update the actual Point Light visibility and the bulb material.'}}
     for name,graphs in notes.items():
-        bp=unreal.load_asset(ROOT+'/'+name)
+        bp=load_asset(ROOT+'/'+name)
         for graph_name,note in graphs.items():
             e=unreal.BlueprintGraphEditor.get_graph_editor(B.find_graph(bp,graph_name));e.add_comment_to_nodes(note,e.list_all_nodes())
         g.save(bp)
     return True
 
 def readable_text():
-    button=unreal.load_asset(ROOT+'/BP_LightSwitch')
+    button=load_asset(ROOT+'/BP_LightSwitch')
     prompt=component(button,'Prompt',unreal.TextRenderComponent)
     path=ROOT+'/M_LabText'
-    text_material=unreal.load_asset(path)
+    text_material=load_asset(path)
     if text_material is None:
         source=prompt.get_editor_property('text_material')
         text_material=unreal.EditorAssetLibrary.duplicate_asset(source.get_path_name().split('.')[0],path)

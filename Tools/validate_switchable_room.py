@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import unreal
+from project_paths import load_asset,resolve_reference
 
 def actors():
     worlds=unreal.EditorLevelLibrary.get_pie_worlds(False)
@@ -13,7 +14,7 @@ def actors():
     pawn=unreal.GameplayStatics.get_player_pawn(world,0)
     return world,button,lamps,pawn
 
-def run():
+def run(report_path=None):
     world,button,lamps,pawn=actors()
     checks=[]
     def check(name,actual,expected=True):
@@ -23,11 +24,11 @@ def run():
         for index,lamp in enumerate(group,1):
             check(f'{label} lamp {index} interface query',lamp.call_method('IsSwitchOn'),expected)
             check(f'{label} lamp {index} Point Light',lamp.get_editor_property('LampLight').is_visible(),expected)
-            check(f'{label} lamp {index} bulb',lamp.get_editor_property('Bulb').get_material(0).get_name(),'M_BulbOn' if expected else 'M_BulbOff')
+            check(f'{label} lamp {index} bulb',lamp.get_editor_property('Bulb').get_material(0).get_name(),'M_LampBulb_On' if expected else 'M_LampBulb_Off')
     check('Four lamps',len(lamps),4)
-    interface=unreal.load_asset('/Game/StealthShooter/Interaction/BPI_Switchable').generated_class()
+    interface=load_asset('/Game/StealthShooter/Interaction/BPI_Switchable').generated_class()
     for actor in [button,*lamps]:check(actor.get_actor_label()+' implements BPI_Switchable',unreal.SystemLibrary.does_implement_interface(actor,interface))
-    for lamp in lamps:check(lamp.get_actor_label()+' subscribed at Begin Play',lamp.get_editor_property('Bound'))
+    for lamp in lamps:check(lamp.get_actor_label()+' subscribed at Begin Play',lamp.get_editor_property('bBound'))
     check('Third Person pawn',pawn.get_class().get_name(),'BP_ThirdPersonCharacter_C')
     state(True,label='Initial')
     location=button.get_actor_location()
@@ -68,31 +69,31 @@ def run():
         for iteration in range(12):
             button.call_method('TryInteract')
             state(iteration%2==0,label='Repeat '+str(iteration+1))
-        check('All subscribers still active',all(l.get_editor_property('Bound') for l in lamps))
+        check('All subscribers still active',all(l.get_editor_property('bBound') for l in lamps))
     finally:
         pawn.set_actor_location(original,False,True)
         for lamp in lamps:
             lamp.call_method('BindToButton')
         button.call_method('SwitchOn')
     report={'map':'L_SwitchableRoom','engine':unreal.SystemLibrary.get_engine_version(),'checks':checks,'passed':len(checks)}
-    path=Path(__file__).resolve().parents[1]/'Docs/SwitchableRoomValidation.json'
+    path=Path(report_path) if report_path else Path(__file__).resolve().parents[1]/'Docs/SwitchableRoomValidation.json'
     path.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     return {'passed':len(checks)}
 
-def run_lifecycle():
+def run_lifecycle(report_path=None):
     world,button,lamps,pawn=actors()
     checks=[]
     lamp=lamps[0]
     lamp.call_method('UnbindFromButton')
     lamp.set_editor_property('ControlButton',None,notify_mode=unreal.PropertyAccessChangeNotifyMode.NEVER)
     lamp.call_method('BindToButton')
-    assert not lamp.get_editor_property('Bound')
+    assert not lamp.get_editor_property('bBound')
     checks.append({'name':'Missing button leaves lamp safely unbound','passed':True})
     lamp.call_method('SwitchOff');assert not lamp.get_editor_property('LampLight').is_visible()
     lamp.call_method('SwitchOn');assert lamp.get_editor_property('LampLight').is_visible()
     checks.append({'name':'Unbound lamp still implements its interface','passed':True})
     lamp.set_editor_property('ControlButton',button,notify_mode=unreal.PropertyAccessChangeNotifyMode.NEVER)
-    lamp.call_method('BindToButton');assert lamp.get_editor_property('Bound')
+    lamp.call_method('BindToButton');assert lamp.get_editor_property('bBound')
     checks.append({'name':'Restoring button reference permits rebinding','passed':True})
     lamp.destroy_actor()
     assert not unreal.SystemLibrary.is_valid(lamp)
@@ -102,7 +103,7 @@ def run_lifecycle():
     button.call_method('SwitchOn')
     assert all(a.get_editor_property('LampLight').is_visible() for a in lamps[1:])
     checks.append({'name':'Remaining subscribers work after subscriber destruction','passed':True})
-    path=Path(__file__).resolve().parents[1]/'Docs/SwitchableRoomValidation.json'
+    path=Path(report_path) if report_path else Path(__file__).resolve().parents[1]/'Docs/SwitchableRoomValidation.json'
     report=json.loads(path.read_text(encoding='utf-8'));report['checks'].extend(checks);report['passed']=len(report['checks'])
     path.write_text(json.dumps(report,indent=2),encoding='utf-8')
     return {'lifecycle':len(checks),'total':report['passed']}

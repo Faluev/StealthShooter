@@ -1,5 +1,6 @@
 """Create the UMG group-control practical without modifying previous lesson assets."""
 import unreal
+from project_paths import load_asset,resolve_reference
 import lab_graph as g
 from build_blueprint_lab import variable,ref,store,after,finalize
 from build_switchable_room import component,message,self_ref
@@ -12,7 +13,7 @@ STRING=B.get_basic_type_by_name('string')
 ACTOR=B.get_object_reference_type(unreal.Actor)
 
 def widget_design():
-    bp=unreal.load_asset(UI);tree=unreal.find_object(bp,'WidgetTree');root=unreal.find_object(tree,'CanvasPanel_2')
+    bp=load_asset(UI);tree=unreal.find_object(bp,'WidgetTree');root=unreal.find_object(tree,'CanvasPanel_2')
     assert root,'Create a Canvas Panel root in the Widget Designer first.'
     root.clear_children()
     def new(cls,name):return unreal.find_object(tree,name) or unreal.new_object(cls,tree,name)
@@ -38,7 +39,7 @@ def widget_design():
 def prepare():
     g.BP_ROOT=ROOT
     path=ROOT+'/BP_GroupSwitch'
-    bp=unreal.load_asset(path) or unreal.EditorAssetLibrary.duplicate_asset('/Game/StealthShooter/Interaction/BP_LightSwitch',path)
+    bp=load_asset(path) or unreal.EditorAssetLibrary.duplicate_asset('/Game/StealthShooter/Interaction/BP_LightSwitch',path)
     for gr in B.list_graphs(bp):
         if str(gr.get_name()) not in ['EventGraph','IsSwitchOn']:B.remove_graph(bp,gr)
     g.clear_graph(bp)
@@ -46,8 +47,8 @@ def prepare():
     B.remove_event_dispatcher(bp,'OnSwitched')
     variable(bp,'SwitchTargets',B.get_array_type(ACTOR),editable=True)
     variable(bp,'GroupLabel',STRING,'Группа',True)
-    variable(bp,'IsNearby',BOOL,'false')
-    widget=unreal.load_asset(UI);g.compile_bp(widget)
+    variable(bp,'bNearby',BOOL,'false')
+    widget=load_asset(UI);g.compile_bp(widget)
     variable(bp,'ControlWidget',B.get_object_reference_type(widget.generated_class()))
     prompt=component(bp,'Prompt',unreal.TextRenderComponent);prompt.set_text('APPROACH TO CONTROL');prompt.set_world_size(17)
     g.compile_bp(bp)
@@ -73,7 +74,7 @@ def near(e,owner,pawn,radius):
 def call_self(e,bp,name):return g.call(e,bp.generated_class().get_path_name()+':'+name)
 
 def widget_graphs():
-    bp=unreal.load_asset(UI);unreal.get_editor_subsystem(unreal.AssetEditorSubsystem).close_all_editors_for_asset(bp);g.compile_bp(bp)
+    bp=load_asset(UI);unreal.get_editor_subsystem(unreal.AssetEditorSubsystem).close_all_editors_for_asset(bp);g.compile_bp(bp)
     variable(bp,'PanelLabel',STRING,'Группа')
     e=g.new_function(bp,'RefreshDisplay');entry=valid(e,ref(e,'OwnerSwitch'),e.find_graph_entry_pin())
     state=message(e,'IsSwitchOn',ref(e,'OwnerSwitch'));entry=after(entry,state)
@@ -86,13 +87,13 @@ def widget_graphs():
         for name,enabled in [('ButtonOn',not on),('ButtonOff',on)]:
             n=g.call(e,'/Script/UMG.Widget.SetIsEnabled');g.wire(ref(e,name),g.pin(n,'self'));g.value(n,'bInIsEnabled',str(enabled).lower());entry=after(entry,n)
     g.compile_bp(bp)
-    for name,action in [('HandleOn','SwitchOn'),('HandleOff','SwitchOff')]:
+    for name,action in [('OnEnableClicked','SwitchOn'),('OnDisableClicked','SwitchOff')]:
         e=g.new_function(bp,name);entry=valid(e,ref(e,'OwnerSwitch'),e.find_graph_entry_pin());pawn=player(e);entry=valid(e,pawn,entry)
         br=e.add_branch_node();g.wire(entry,br.find_execute_pin());g.wire(near(e,ref(e,'OwnerSwitch'),pawn,ref(e,'UseRadius')),g.pin(br,'Condition'))
         n=message(e,action,ref(e,'OwnerSwitch'));entry=after(g.pin(br,'then',True),n);after(entry,call_self(e,bp,'RefreshDisplay'))
         g.compile_bp(bp)
     e=g.clear_graph(bp);ev=g.event(bp,'Construct');entry=g.then(ev)
-    for button,handler in [('ButtonOn','HandleOn'),('ButtonOff','HandleOff')]:
+    for button,handler in [('ButtonOn','OnEnableClicked'),('ButtonOff','OnDisableClicked')]:
         bind=g.named_node(e,lambda n:n=='кнопка|событие|bindeventtoonclicked','Button OnClicked')
         g.wire(ref(e,button),g.pin(bind,'self'))
         delegate=g.named_node(e,lambda n:n.endswith('|создатьсобытие') or n.endswith('|createevent'),'Create Event');g.wire(self_ref(e),g.pin(delegate,'self'));g.wire(g.pin(delegate,'OutputDelegate',True),g.pin(bind,'Delegate'));B.set_create_delegate_function(delegate,handler);assert str(B.get_create_delegate_function(delegate))==handler
@@ -101,7 +102,7 @@ def widget_graphs():
     return True
 
 def button_graphs():
-    bp=unreal.load_asset(ROOT+'/BP_GroupSwitch');widget=unreal.load_asset(UI);g.clear_graph(bp)
+    bp=load_asset(ROOT+'/BP_GroupSwitch');widget=load_asset(UI);g.clear_graph(bp)
     for name in ['ShowControls','HideControls','UpdateProximity']:g.new_function(bp,name)
     g.compile_bp(bp)
     for name,show in [('ShowControls',True),('HideControls',False)]:
@@ -117,14 +118,14 @@ def button_graphs():
         g.compile_bp(bp)
     e=g.new_function(bp,'UpdateProximity');entry=valid(e,ref(e,'ControlWidget'),e.find_graph_entry_pin());pawn=player(e);entry=valid(e,pawn,entry)
     nearby=near(e,self_ref(e),pawn,ref(e,'InteractionRadius'))
-    change=g.call(e,'/Script/Engine.KismetMathLibrary.NotEqual_BoolBool');g.wire(nearby,g.pin(change,'A'));g.wire(ref(e,'IsNearby'),g.pin(change,'B'))
-    br=e.add_branch_node();g.wire(entry,br.find_execute_pin());g.wire(g.result(change),g.pin(br,'Condition'));entry=store(e,g.pin(br,'then',True),'IsNearby',nearby)
-    show=e.add_branch_node();g.wire(entry,show.find_execute_pin());g.wire(ref(e,'IsNearby'),g.pin(show,'Condition'))
+    change=g.call(e,'/Script/Engine.KismetMathLibrary.NotEqual_BoolBool');g.wire(nearby,g.pin(change,'A'));g.wire(ref(e,'bNearby'),g.pin(change,'B'))
+    br=e.add_branch_node();g.wire(entry,br.find_execute_pin());g.wire(g.result(change),g.pin(br,'Condition'));entry=store(e,g.pin(br,'then',True),'bNearby',nearby)
+    show=e.add_branch_node();g.wire(entry,show.find_execute_pin());g.wire(ref(e,'bNearby'),g.pin(show,'Condition'))
     for output,method in [('then','ShowControls'),('else','HideControls')]:after(g.pin(show,output,True),call_self(e,bp,method))
     g.compile_bp(bp)
     e=g.graph(bp)
     for name,on in [('SwitchOn',True),('SwitchOff',False)]:
-        ev=g.event(bp,name);entry=store(e,g.then(ev),'IsOn',literal=str(on).lower())
+        ev=g.event(bp,name);entry=store(e,g.then(ev),'bOn',literal=str(on).lower())
         cap=g.call(e,'/Script/Engine.PrimitiveComponent.SetMaterial');g.wire(ref(e,'SwitchCap'),g.pin(cap,'self'));g.value(cap,'Material','/Game/StealthShooter/Interaction/M_'+('ButtonCap.M_ButtonCap' if on else 'BulbOff.M_BulbOff'));entry=after(entry,cap)
         loop=e.add_macro_node('/Engine/EditorBlueprintResources/StandardMacros.StandardMacros:ForEachLoop');g.wire(ref(e,'SwitchTargets'),g.pin(loop,'Array'));g.wire(entry,g.pin(loop,'Exec'))
         obj=g.pin(loop,'Array Element',True);entry=valid(e,obj,g.pin(loop,'LoopBody',True));n=message(e,name,obj);after(entry,n)
@@ -155,20 +156,20 @@ def level():
         if rot:a.set_actor_rotation(rot,False)
         return a
     def mesh(label,loc,scale,mat):
-        a=actor(unreal.StaticMeshActor,label,loc);a.static_mesh_component.set_static_mesh(unreal.load_asset('/Engine/BasicShapes/Cube'));a.set_actor_scale3d(unreal.Vector(*scale));a.static_mesh_component.set_material(0,unreal.load_asset('/Game/StealthShooter/Interaction/'+mat));return a
+        a=actor(unreal.StaticMeshActor,label,loc);a.static_mesh_component.set_static_mesh(load_asset('/Engine/BasicShapes/Cube'));a.set_actor_scale3d(unreal.Vector(*scale));a.static_mesh_component.set_material(0,load_asset('/Game/StealthShooter/Interaction/'+mat));return a
     def text(label,value,loc,size):
-        a=actor(unreal.TextRenderActor,label,loc,unreal.Rotator(yaw=180));t=a.text_render;t.set_text(value);t.set_world_size(size);t.set_horizontal_alignment(unreal.HorizTextAligment.EHTA_CENTER);t.set_editor_property('text_material',unreal.load_asset('/Game/StealthShooter/Interaction/M_LabText'));return a
+        a=actor(unreal.TextRenderActor,label,loc,unreal.Rotator(yaw=180));t=a.text_render;t.set_text(value);t.set_world_size(size);t.set_horizontal_alignment(unreal.HorizTextAligment.EHTA_CENTER);t.set_editor_property('text_material',load_asset('/Game/StealthShooter/Interaction/M_LabText'));return a
     mesh('Hall_Floor',(0,0,-20),(22,31,.4),'M_Floor')
     mesh('Hall_BackWall',(1000,0,180),(.25,31,3.6),'M_Wall')
     for sign in [-1,1]:mesh('Hall_Side_'+str(sign),(0,sign*1550,180),(22,.25,3.6),'M_Wall')
     mesh('Hall_FrontRail',(-1100,0,40),(.25,31,.8),'M_Body')
     for index,y in enumerate([-850,0,850]):
         letter='ABC'[index]
-        button=actor(unreal.load_asset(ROOT+'/BP_GroupSwitch').generated_class(),'GroupSwitch_'+letter,(0,y,0))
+        button=actor(load_asset(ROOT+'/BP_GroupSwitch').generated_class(),'GroupSwitch_'+letter,(0,y,0))
         button.set_editor_property('GroupLabel','Группа '+letter+' · 2 светильника')
         lamps=[]
         for j,offset in enumerate([-200,200],1):
-            lamp=actor(unreal.load_asset('/Game/StealthShooter/Interaction/BP_SwitchableLamp').generated_class(),'Group_'+letter+'_Lamp_'+str(j),(600,y+offset,0))
+            lamp=actor(load_asset('/Game/StealthShooter/Interaction/BP_SwitchableLamp').generated_class(),'Group_'+letter+'_Lamp_'+str(j),(600,y+offset,0))
             lamp.set_editor_property('ControlButton',None)
             lamp.get_editor_property('LampLight').set_light_color(unreal.LinearColor(*[(.35,.68,1),(.30,1,.64),(1,.68,.28)][index]))
             lamps.append(lamp)
@@ -184,7 +185,7 @@ def level():
     settings=pp.get_editor_property('settings')
     for name,value in [('override_auto_exposure_min_brightness',True),('override_auto_exposure_max_brightness',True),('auto_exposure_min_brightness',1),('auto_exposure_max_brightness',1)]:settings.set_editor_property(name,value)
     pp.set_editor_property('settings',settings)
-    world=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world();world.get_world_settings().set_editor_property('default_game_mode',unreal.load_asset('/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode').generated_class())
+    world=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world();world.get_world_settings().set_editor_property('default_game_mode',load_asset('/Game/ThirdPerson/Blueprints/BP_ThirdPersonGameMode').generated_class())
     unreal.EditorLevelLibrary.set_level_viewport_camera_info(unreal.Vector(-800,0,280),unreal.Rotator(pitch=-7,yaw=0))
     assert levels.save_current_level()
     return {'map':path,'groups':3,'lamps':6}

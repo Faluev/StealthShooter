@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 import unreal
+from project_paths import load_asset,resolve_reference
 
 def run_lab():
     world=unreal.EditorLevelLibrary.get_pie_worlds(False)[0]
@@ -10,7 +11,7 @@ def run_lab():
     for label,actual,expected in [('Three row names',actor.get_editor_property('RowCount'),3),('Three typed rows read',actor.get_editor_property('FoundCount'),3),('Iteration completed',actor.get_editor_property('Completed'),True)]:
         assert actual==expected,label
         checks.append({'name':label,'passed':True})
-    table=unreal.load_asset('/Game/Blueprints/DT_TrafficSettings')
+    table=load_asset('/Game/Blueprints/DT_TrafficSettings')
     assert {str(n) for n in unreal.DataTableFunctionLibrary.get_data_table_row_names(table)}=={'Default','LowBrightness','HighVisibility'}
     checks.append({'name':'Expected named profiles exist','passed':True})
     report={'checks':checks,'passed':len(checks)}

@@ -2,6 +2,7 @@
 import json,re
 from pathlib import Path
 import unreal
+from project_paths import load_asset,resolve_reference
 import lab_graph as g
 
 ROOT='/Game/StealthShooter'
@@ -16,6 +17,7 @@ def setup():
     g.ROOT=ROOT;g.BP_ROOT=BP;g.MAP_ROOT=ROOT+'/Maps'
 
 def variable(bp,name,kind,default='',editable=False):
+    if bp.get_name() in ['BP_LightSwitch','BP_SwitchableLamp','BP_GroupSwitch']:name={'IsOn':'bOn','Bound':'bBound','IsNearby':'bNearby'}.get(name,name)
     if name not in [str(n) for n in B.list_member_variable_names(bp,False)]:
         assert g.graph(bp).add_member_variable(name,kind,default),name
     B.set_blueprint_variable_instance_editable(bp,name,editable)
@@ -24,18 +26,18 @@ def variable(bp,name,kind,default='',editable=False):
 def prepare():
     setup()
     for name in ['S_Example','S_StaticObjInfo']:
-        s=unreal.load_asset(ROOT+'/Data/'+name)
+        s=load_asset(ROOT+'/Data/'+name)
         assert s
         g.save(s)
         unreal.get_editor_subsystem(unreal.AssetEditorSubsystem).close_all_editors_for_asset(s)
     cube=g.blueprint('BP_Cube',unreal.StaticMeshActor)
     g.compile_bp(cube)
     cdo=unreal.get_default_object(cube.generated_class())
-    cdo.static_mesh_component.set_static_mesh(unreal.load_asset('/Engine/BasicShapes/Cube'))
+    cdo.static_mesh_component.set_static_mesh(load_asset('/Engine/BasicShapes/Cube'))
     cdo.static_mesh_component.set_mobility(unreal.ComponentMobility.MOVABLE)
     g.save(cube)
     obj=g.blueprint('BP_StaticObject',unreal.StaticMeshActor)
-    variable(obj,'Info',B.get_struct_type(unreal.load_asset(ROOT+'/Data/S_StaticObjInfo')),editable=True)
+    variable(obj,'Info',B.get_struct_type(load_asset(ROOT+'/Data/S_StaticObjInfo')),editable=True)
     g.compile_bp(obj)
     controller=g.blueprint('BP_ColorControl',unreal.Actor)
     cube_type=B.get_object_reference_type(cube.generated_class())
@@ -52,7 +54,7 @@ def prepare():
         B.set_blueprint_variable_instance_editable(examples,name,True)
     g.compile_bp(examples)
     structs=g.blueprint('BP_StructureExamples',unreal.Actor)
-    variable(structs,'Item',B.get_struct_type(unreal.load_asset(ROOT+'/Data/S_Example')))
+    variable(structs,'Item',B.get_struct_type(load_asset(ROOT+'/Data/S_Example')))
     g.compile_bp(structs)
     result={'nodes':[str(n) for n in g.graph(obj).list_available_nodes([]) if any(x in str(n).lower() for x in ['s_staticobjinfo','s_example','foreach'])], 'info':str(unreal.get_default_object(obj.generated_class()).get_editor_property('Info'))}
     return result
@@ -83,7 +85,7 @@ def finalize(bp):
     g.compile_bp(bp);g.layout(bp);g.save(bp)
 
 def objects():
-    setup();bp=unreal.load_asset(BP+'/BP_StaticObject');e=g.clear_graph(bp)
+    setup();bp=load_asset(BP+'/BP_StaticObject');e=g.clear_graph(bp)
     ev=g.event(bp,'ReceiveBeginPlay')
     info=g.get_variable(e,'Info');br=struct_node(e,'Break','S_StaticObjInfo')
     g.wire(g.result(info),next(p for p in br.list_input_pins() if p.get_pin_type_as_json_schema()))
@@ -112,7 +114,7 @@ def color_loop(e,entry,array):
     return loop
 
 def colors():
-    setup();bp=unreal.load_asset(BP+'/BP_ColorControl');e=g.new_function(bp,'ApplyColors')
+    setup();bp=load_asset(BP+'/BP_ColorControl');e=g.new_function(bp,'ApplyColors')
     entry=store(e,e.find_graph_entry_pin(),'AppliedCount',literal='0')
     entry=store(e,entry,'Completed',literal='false')
     branch=e.add_branch_node();g.wire(entry,branch.find_execute_pin());g.wire(ref(e,'UseSet'),g.pin(branch,'Condition'))
@@ -126,7 +128,7 @@ def colors():
     return True
 
 def containers():
-    setup();bp=unreal.load_asset(BP+'/BP_ContainerExamples')
+    setup();bp=load_asset(BP+'/BP_ContainerExamples')
     for name,kind,default in [('MapLines',B.get_array_type(STRING),''),('Difference',B.get_set_type(INT),''),('Intersection',B.get_set_type(INT),''),('Union',B.get_set_type(INT),''),('UniqueIndex',INT,'0'),('MapCompleted',BOOL,'false'),('BreakCompleted',BOOL,'false')]:variable(bp,name,kind,default)
     g.compile_bp(bp)
     e=g.new_function(bp,'RunExamples');entry=e.find_graph_entry_pin()
@@ -164,7 +166,7 @@ def containers():
     return True
 
 def structures():
-    setup();bp=unreal.load_asset(BP+'/BP_StructureExamples')
+    setup();bp=load_asset(BP+'/BP_StructureExamples')
     for n,t,d in [('FinalCost',INT,'0'),('FinalName',TEXT,''),('Completed',BOOL,'false')]:variable(bp,n,t,d)
     g.compile_bp(bp)
     e=g.new_function(bp,'InitializeItem')
@@ -186,7 +188,7 @@ def structures():
     return structures_finish()
 
 def structures_finish():
-    setup();bp=unreal.load_asset(BP+'/BP_StructureExamples');e=g.new_function(bp,'InitializeItem') if not B.find_graph(bp,'InitializeItem') else unreal.BlueprintGraphEditor.get_graph_editor(B.find_graph(bp,'InitializeItem'))
+    setup();bp=load_asset(BP+'/BP_StructureExamples');e=g.new_function(bp,'InitializeItem') if not B.find_graph(bp,'InitializeItem') else unreal.BlueprintGraphEditor.get_graph_editor(B.find_graph(bp,'InitializeItem'))
     members=next(n for n in e.list_all_nodes() if n.get_class().get_name()=='K2Node_SetFieldsInStruct')
     item_set=next(n for n in e.list_all_nodes() if n.get_class().get_name()=='K2Node_VariableSet')
     entry=g.then(item_set)
@@ -201,7 +203,7 @@ def structures_finish():
 
 def material(name,color):
     path=ROOT+'/Materials/'+name
-    m=unreal.load_asset(path) or unreal.AssetToolsHelpers.get_asset_tools().create_asset(name,ROOT+'/Materials',unreal.Material,unreal.MaterialFactoryNew())
+    m=load_asset(path) or unreal.AssetToolsHelpers.get_asset_tools().create_asset(name,ROOT+'/Materials',unreal.Material,unreal.MaterialFactoryNew())
     lib=unreal.MaterialEditingLibrary;lib.delete_all_material_expressions(m)
     n=lib.create_material_expression(m,unreal.MaterialExpressionConstant3Vector,0,0);n.set_editor_property('constant',unreal.LinearColor(*color,1))
     lib.connect_material_property(n,'',unreal.MaterialProperty.MP_BASE_COLOR)
@@ -218,45 +220,45 @@ def level():
     else:
         current=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
         assert current.get_path_name().split('.')[0]==path,'Open the existing lab map before updating its examples.'
-    control_bp=unreal.load_asset(BP+'/BP_ColorControl');B.set_blueprint_variable_instance_editable(control_bp,'AppliedMaterial',True);g.compile_bp(control_bp)
+    control_bp=load_asset(BP+'/BP_ColorControl');B.set_blueprint_variable_instance_editable(control_bp,'AppliedMaterial',True);g.compile_bp(control_bp)
     cyan=material('M_Cyan',(0.015,.65,.72));white=material('M_White',(.65,.7,.75));floor_mat=material('M_LabFloor',(.035,.055,.075))
     def actor(cls,label,loc,rotation=None):
         a=next((a for a in sub.get_all_level_actors() if a.get_actor_label()==label),None)
         if not a:a=sub.spawn_actor_from_class(cls,unreal.Vector(*loc),rotation or unreal.Rotator())
         a.set_actor_label(label);return a
     def static(mesh,label,loc,scale=(1,1,1),mat=white):
-        a=actor(unreal.StaticMeshActor,label,loc);a.static_mesh_component.set_static_mesh(unreal.load_asset(mesh));a.set_actor_scale3d(unreal.Vector(*scale));a.static_mesh_component.set_material(0,mat);return a
+        a=actor(unreal.StaticMeshActor,label,loc);a.static_mesh_component.set_static_mesh(load_asset(mesh));a.set_actor_scale3d(unreal.Vector(*scale));a.static_mesh_component.set_material(0,mat);return a
     def text(label,content,loc,size=38):
         a=actor(unreal.TextRenderActor,label,loc,unreal.Rotator(pitch=0,yaw=180,roll=0));a.text_render.set_text(content);a.text_render.set_world_size(size);a.text_render.set_horizontal_alignment(unreal.HorizTextAligment.EHTA_CENTER);return a
     static('/Engine/BasicShapes/Cube','LabFloor',(200,0,-30),(20,20,.5),floor_mat)
-    cube_class=unreal.load_asset(BP+'/BP_Cube').generated_class()
+    cube_class=load_asset(BP+'/BP_Cube').generated_class()
     controls=[]
     for name,y,use_set in [('Array',-550,False),('Set',0,True)]:
         cubes=[]
         for i,x in enumerate([0,250,500]):
             a=actor(cube_class,name+'_Cube_'+str(i+1),(x,y,75));a.static_mesh_component.set_material(0,white);cubes.append(a)
-        c=actor(unreal.load_asset(BP+'/BP_ColorControl').generated_class(),name+'_ColorControl',(0,y,-100))
+        c=actor(load_asset(BP+'/BP_ColorControl').generated_class(),name+'_ColorControl',(0,y,-100))
         c.set_editor_property('TargetCubes',cubes if not use_set else [])
         c.set_editor_property('TargetCubeSet',set(cubes) if use_set else set())
         c.set_editor_property('UseSet',use_set);c.set_editor_property('AppliedMaterial',cyan);controls.append(c)
         text(name+'_Label','ARRAY' if not use_set else 'SET -> ARRAY',(-160,y,210),48)
-    info_class=unreal.load_asset(BP+'/BP_StaticObject').generated_class()
+    info_class=load_asset(BP+'/BP_StaticObject').generated_class()
     for i,mesh in enumerate(['Sphere','Cone','Cylinder']):
         a=actor(info_class,'Structure_'+mesh,(i*250,550,75))
-        a.static_mesh_component.set_static_mesh(unreal.load_asset('/Engine/BasicShapes/Cube'))
+        a.static_mesh_component.set_static_mesh(load_asset('/Engine/BasicShapes/Cube'))
         a.static_mesh_component.set_mobility(unreal.ComponentMobility.MOVABLE);a.static_mesh_component.set_material(0,white)
         value=a.get_editor_property('Info')
         for key in re.findall(r'([A-Za-z][A-Za-z0-9_]+)=',value.export_text()):
             if key.startswith('Name_'):value.set_editor_property(key,unreal.Text(mesh))
-            if key.startswith('Mesh_'):value.set_editor_property(key,unreal.load_asset('/Engine/BasicShapes/'+mesh))
+            if key.startswith('Mesh_'):value.set_editor_property(key,load_asset('/Engine/BasicShapes/'+mesh))
         a.set_editor_property('Info',value)
     text('Struct_Label','STRUCTURE -> MESH',(-160,550,210),42)
     text('Lab_Title','BLUEPRINT LAB',(850,0,600),85)
     text('Lab_Subtitle','1.3 STRUCTURES  /  1.4 CONTAINERS  /  1.5 FOREACH',(850,0,495),30)
     text('Map_Notes','MAP: 1 = one  |  2 = two  |  3 = three',(850,0,365),35)
     text('Break_Notes','ForEach + Break: [1, 1, 2, 3] -> stop at 2',(850,0,280),32)
-    actor(unreal.load_asset(BP+'/BP_ContainerExamples').generated_class(),'ContainerExamples',(0,0,-100))
-    actor(unreal.load_asset(BP+'/BP_StructureExamples').generated_class(),'StructureExamples',(100,0,-100))
+    actor(load_asset(BP+'/BP_ContainerExamples').generated_class(),'ContainerExamples',(0,0,-100))
+    actor(load_asset(BP+'/BP_StructureExamples').generated_class(),'StructureExamples',(100,0,-100))
     light=actor(unreal.DirectionalLight,'Sun',(0,0,1000),unreal.Rotator(pitch=-50,yaw=-30,roll=0));light.light_component.set_intensity(4)
     actor(unreal.SkyLight,'SkyLight',(0,0,500))
     actor(unreal.SkyAtmosphere,'SkyAtmosphere',(0,0,0))
