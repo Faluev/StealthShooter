@@ -1,0 +1,75 @@
+{
+  "lesson": "11.2: concept decomposition",
+  "baseline_commit": "3c7d27a635a82201ecf723eff1f7a6a738e4da9b",
+  "mode": "Actual Play In Editor, not Simulate",
+  "scope": "Existing scenes regression; the lesson adds planning documentation only",
+  "results": [
+    {
+      "scene": "L_SwitchableRoom",
+      "passed": 267,
+      "failed": 0
+    },
+    {
+      "scene": "L_GroupControl",
+      "passed": 55,
+      "failed": 0
+    },
+    {
+      "scene": "ThirdPersonMap: color cycles",
+      "passed": 87,
+      "failed": 0
+    },
+    {
+      "scene": "L_BlueprintLab: structures and containers",
+      "passed": 38,
+      "failed": 0
+    },
+    {
+      "scene": "L_BlueprintLab: Data Table",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "scene": "ThirdPersonMap: missing-row fallback",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "scene": "L_BlueprintLab: latent actions and timers",
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "scene": "L_BoundedPatrol",
+      "passed": 25,
+      "failed": 0,
+      "samples": 665,
+      "speed_validation": {
+        "criterion": "Velocity does not exceed Speed after its documented 0.2-second timer refresh",
+        "settled_samples_checked": 639,
+        "original_all_frames_predicate_passed": false,
+        "observed_transition_samples": [
+          {
+            "t": 36.592,
+            "stage": 8,
+            "x": -178.792,
+            "y": 452.106,
+            "z": 62.15,
+            "velocity": 360.0,
+            "speed": 0,
+            "clearance": 151.208
+          }
+        ],
+        "explanation": "The original all-frames predicate also checked the first frame immediately after Speed changed to zero. Velocity reached zero at t=36.642, 0.050 seconds after the first Speed=0 sample. The documented refresh period was respected; gameplay was not changed."
+      }
+    }
+  ],
+  "passed": 486,
+  "failed": 0,
+  "content_config_tools_unchanged": true,
+  "notes": [
+    "Existing validation outputs were redirected to Saved/Lesson112Checks; previous committed reports were preserved.",
+    "The foundations validator was executed from a temporary copy with the expected M_Cyan name updated to M_Example_Cyan after the existing 5.4 asset rename.",
+    "Runtime fixtures were discarded between scenes. The traffic test used a fresh Play world after the missing-row fallback scenario."
+  ]
+}
