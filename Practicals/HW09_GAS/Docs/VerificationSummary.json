@@ -1,0 +1,47 @@
+{
+  "engine": "5.8.4",
+  "fresh_editor_without_blueprint_editing_tools": true,
+  "baseline_checks": 29,
+  "refactored_checks": 31,
+  "failures": 0,
+  "native_right_mouse_dash": {
+    "before": [
+      900,
+      1110,
+      92.012604
+    ],
+    "after": [
+      1200,
+      1110,
+      92.012604
+    ],
+    "cue_count_before": 11,
+    "cue_count_after": 12
+  },
+  "game_audio_output": {
+    "baseline": {
+      "peak_pcm16": 14370,
+      "rms_pcm16": 3048.24,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    "refactored": {
+      "peak_pcm16": 14769,
+      "rms_pcm16": 3011.02,
+      "sample_rate": 48000,
+      "channels": 2
+    },
+    "native": {
+      "peak_pcm16": 7833,
+      "rms_pcm16": 1095.19,
+      "sample_rate": 48000,
+      "channels": 2
+    }
+  },
+  "source_content_files": 226,
+  "unchanged_source_content_files": 225,
+  "changed_source_content": [
+    "ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset"
+  ],
+  "scope": "Provided HW_09 only; previous practical project assets unchanged"
+}

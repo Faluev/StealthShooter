@@ -1,0 +1,389 @@
+{
+  "mode": "baseline",
+  "checks": [
+    {
+      "check": "Dash distance remains 300 cm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Original character has no Ability System Component",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "forward: instantaneous displacement matches forward distance",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "forward: one original emitter is spawned",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "forward: effect stays at the pre-dash position",
+      "passed": true,
+      "detail": [
+        1200.0,
+        1110.0,
+        92.0126
+      ]
+    },
+    {
+      "check": "forward: effect scale remains 0.6",
+      "passed": true,
+      "detail": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "check": "right: instantaneous displacement matches forward distance",
+      "passed": true,
+      "detail": [
+        0.0,
+        300.0,
+        0.0
+      ]
+    },
+    {
+      "check": "right: one original emitter is spawned",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "right: effect stays at the pre-dash position",
+      "passed": true,
+      "detail": [
+        1200.0,
+        1110.0,
+        92.0126
+      ]
+    },
+    {
+      "check": "right: effect scale remains 0.6",
+      "passed": true,
+      "detail": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "check": "backward: instantaneous displacement matches forward distance",
+      "passed": true,
+      "detail": [
+        -300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "backward: one original emitter is spawned",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "backward: effect stays at the pre-dash position",
+      "passed": true,
+      "detail": [
+        1200.0,
+        1110.0,
+        92.0126
+      ]
+    },
+    {
+      "check": "backward: effect scale remains 0.6",
+      "passed": true,
+      "detail": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "check": "airborne: instantaneous displacement matches forward distance",
+      "passed": true,
+      "detail": [
+        212.132,
+        212.132,
+        0.0
+      ]
+    },
+    {
+      "check": "airborne: one original emitter is spawned",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "airborne: effect stays at the pre-dash position",
+      "passed": true,
+      "detail": [
+        1200.0,
+        1110.0,
+        292.0126
+      ]
+    },
+    {
+      "check": "airborne: effect scale remains 0.6",
+      "passed": true,
+      "detail": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "check": "Existing wall is available for no-sweep parity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wall_no_sweep: instantaneous displacement matches forward distance",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "wall_no_sweep: one original emitter is spawned",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "check": "wall_no_sweep: effect stays at the pre-dash position",
+      "passed": true,
+      "detail": [
+        -100.0,
+        1750.0,
+        92.0126
+      ]
+    },
+    {
+      "check": "wall_no_sweep: effect scale remains 0.6",
+      "passed": true,
+      "detail": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "check": "Holding the dash action does not repeat",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Repeated press 1 has no new cooldown",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Repeated press 2 has no new cooldown",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Repeated press 3 has no new cooldown",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Repeated press 4 has no new cooldown",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Repeated press 5 has no new cooldown",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "case": "forward",
+      "start": [
+        1200.0,
+        1110.0,
+        92.0126
+      ],
+      "displacement": [
+        300.0,
+        0.0,
+        0.0
+      ],
+      "emitter_location": [
+        1200.0,
+        1110.0,
+        92.0126
+      ],
+      "emitter_scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "case": "right",
+      "start": [
+        1200.0,
+        1110.0,
+        92.0126
+      ],
+      "displacement": [
+        0.0,
+        300.0,
+        0.0
+      ],
+      "emitter_location": [
+        1200.0,
+        1110.0,
+        92.0126
+      ],
+      "emitter_scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "case": "backward",
+      "start": [
+        1200.0,
+        1110.0,
+        92.0126
+      ],
+      "displacement": [
+        -300.0,
+        0.0,
+        0.0
+      ],
+      "emitter_location": [
+        1200.0,
+        1110.0,
+        92.0126
+      ],
+      "emitter_scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "case": "airborne",
+      "start": [
+        1200.0,
+        1110.0,
+        292.0126
+      ],
+      "displacement": [
+        212.132,
+        212.132,
+        0.0
+      ],
+      "emitter_location": [
+        1200.0,
+        1110.0,
+        292.0126
+      ],
+      "emitter_scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "case": "wall_no_sweep",
+      "start": [
+        -100.0,
+        1750.0,
+        92.0126
+      ],
+      "displacement": [
+        300.0,
+        0.0,
+        0.0
+      ],
+      "emitter_location": [
+        -100.0,
+        1750.0,
+        92.0126
+      ],
+      "emitter_scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  ],
+  "settings": {
+    "DashDistance": 300.0,
+    "movement": {
+      "gravity_scale": 1.75,
+      "jump_z_velocity": 700.0,
+      "air_control": 0.3499999940395355,
+      "max_walk_speed": 500.0,
+      "max_acceleration": 1500.0,
+      "braking_deceleration_walking": 2000.0,
+      "orient_rotation_to_movement": true
+    },
+    "capsule_radius": 35.0,
+    "capsule_half_height": 90.0,
+    "mesh": "/Game/Characters/Mannequins/Meshes/SKM_Manny_Simple.SKM_Manny_Simple",
+    "animation_class": "/Game/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny_C",
+    "mesh_location": [
+      0.0,
+      0.0,
+      -89.0
+    ],
+    "spring_arm": {
+      "length": 400.0,
+      "control_rotation": true,
+      "relative_location": [
+        0.0,
+        0.0,
+        8.4923
+      ]
+    },
+    "camera": {
+      "fov": 90.0,
+      "control_rotation": false
+    }
+  },
+  "passed": 29,
+  "failed": 0,
+  "error": null,
+  "elapsed_seconds": 1.88
+}
