@@ -2,7 +2,7 @@
 
 ## Запуск
 
-- Unreal Engine **5.8.3**, проект `StealthShooter.uproject`, карта `/Game/StealthShooter/Maps/L_Catapult`.
+- Unreal Engine **5.8.4**, проект `StealthShooter.uproject`, карта `/Game/StealthShooter/Maps/L_Catapult`.
 - Нажмите Play, дождитесь надписи **READY / F: FIRE**, щёлкните по игровому окну и нажмите **F**.
 - Катапульта бросит ядро и автоматически перезарядится примерно за 6 секунд. Повторные нажатия во время цикла игнорируются.
 - WASD, мышь и Space остаются стандартным управлением Third Person. Esc завершает Play.

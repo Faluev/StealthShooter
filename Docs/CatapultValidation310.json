@@ -291,5 +291,6 @@
     "native_F_fired": true,
     "project_opened": true,
     "automatic_reload_ready": true
-  }
+  },
+  "engine_version": "5.8.4"
 }
