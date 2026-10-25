@@ -1,0 +1,295 @@
+{
+  "map": "L_Catapult",
+  "mode": "Play In Editor",
+  "checks": [
+    {
+      "check": "One Physics Constraint Component",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Constraint binds fixed base and throwing arm",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Arm simulates physics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cannonball simulates physics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cannonball uses continuous collision detection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Base remains fixed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Loading angle is settled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 1: ammunition is in spoon",
+      "passed": true,
+      "detail": "<Struct 'Vector' (0x0000020A9551E9F0) {x: -234.127126, y: -0.000026, z: 224.956808}>"
+    },
+    {
+      "check": "Loaded ammunition has no expiry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Physical mesh is ammunition root",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Repeated Fire while busy creates one shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fire does not spawn extra ammunition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fire sets busy and clears ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Only fired ammunition gets cleanup timer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 1: cannonball leaves spoon forward",
+      "passed": true,
+      "detail": 1698.03
+    },
+    {
+      "check": "Cycle 1: physical ballistic arc rises",
+      "passed": true,
+      "detail": 495.33
+    },
+    {
+      "check": "Cycle 1: cannonball collides with ground",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 1: hinge stays within angular limit",
+      "passed": true,
+      "detail": 65.6
+    },
+    {
+      "check": "Cycle 1: arm returns before loading",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 1: reload creates a different ball",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 1: base position is unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 2: ammunition is in spoon",
+      "passed": true,
+      "detail": "<Struct 'Vector' (0x0000020A9551E9F0) {x: -262.981246, y: -0.000022, z: 229.540086}>"
+    },
+    {
+      "check": "Loaded ammunition has no expiry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Physical mesh is ammunition root",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Repeated Fire while busy creates one shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fire does not spawn extra ammunition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fire sets busy and clears ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Only fired ammunition gets cleanup timer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 2: cannonball leaves spoon forward",
+      "passed": true,
+      "detail": 1907.48
+    },
+    {
+      "check": "Cycle 2: physical ballistic arc rises",
+      "passed": true,
+      "detail": 514.85
+    },
+    {
+      "check": "Cycle 2: cannonball collides with ground",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 2: hinge stays within angular limit",
+      "passed": true,
+      "detail": 65.62
+    },
+    {
+      "check": "Cycle 2: arm returns before loading",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 2: reload creates a different ball",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 2: base position is unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 3: ammunition is in spoon",
+      "passed": true,
+      "detail": "<Struct 'Vector' (0x0000020A9551E9F0) {x: -262.920732, y: -0.000019, z: 229.559880}>"
+    },
+    {
+      "check": "Loaded ammunition has no expiry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Physical mesh is ammunition root",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Repeated Fire while busy creates one shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fire does not spawn extra ammunition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fire sets busy and clears ready",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Only fired ammunition gets cleanup timer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 3: cannonball leaves spoon forward",
+      "passed": true,
+      "detail": 1872.52
+    },
+    {
+      "check": "Cycle 3: physical ballistic arc rises",
+      "passed": true,
+      "detail": 515.78
+    },
+    {
+      "check": "Cycle 3: cannonball collides with ground",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 3: hinge stays within angular limit",
+      "passed": true,
+      "detail": 65.62
+    },
+    {
+      "check": "Cycle 3: arm returns before loading",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 3: reload creates a different ball",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cycle 3: base position is unchanged",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "cycles": [
+    {
+      "shot": 1,
+      "maximum_forward_x_cm": 1698.03,
+      "apex_z_cm": 495.33,
+      "maximum_hinge_degrees": 65.6,
+      "physics_frames": 556,
+      "reload_seconds": 5.8
+    },
+    {
+      "shot": 2,
+      "maximum_forward_x_cm": 1907.48,
+      "apex_z_cm": 514.85,
+      "maximum_hinge_degrees": 65.62,
+      "physics_frames": 555,
+      "reload_seconds": 5.79
+    },
+    {
+      "shot": 3,
+      "maximum_forward_x_cm": 1872.52,
+      "apex_z_cm": 515.78,
+      "maximum_hinge_degrees": 65.62,
+      "physics_frames": 559,
+      "reload_seconds": 5.81
+    }
+  ],
+  "passed": 49,
+  "failed": 0,
+  "error": null,
+  "elapsed_seconds": 19.83,
+  "native_keyboard": {
+    "key": "F",
+    "shots_before": 4,
+    "shots_after": 5,
+    "passed": true,
+    "reload_ready": true
+  },
+  "fresh_launch": {
+    "editor_tools_enabled": false,
+    "startup_map": "L_Catapult",
+    "native_F_fired": true,
+    "project_opened": true,
+    "automatic_reload_ready": true
+  }
+}

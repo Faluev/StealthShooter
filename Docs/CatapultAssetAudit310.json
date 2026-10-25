@@ -1,0 +1,92 @@
+{
+  "BP_Catapult": [
+    {
+      "graph": "UserConstructionScript",
+      "nodes": 1,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "Fire",
+      "nodes": 25,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "Reload",
+      "nodes": 22,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "LoadBall",
+      "nodes": 31,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "InitializeCatapult",
+      "nodes": 8,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "BeginReload",
+      "nodes": 4,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "EventGraph",
+      "nodes": 11,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "BP_Cannonball": [
+    {
+      "graph": "UserConstructionScript",
+      "nodes": 1,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "EventGraph",
+      "nodes": 0,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "functions": [
+    "AND Boolean",
+    "Absolute (Float)",
+    "BeginDeferredActorSpawnFromClass",
+    "Clear Timer by Function Name",
+    "EnableInput",
+    "FinishSpawningActor",
+    "Fire",
+    "Get World Transform",
+    "GetCurrentSwing2",
+    "GetPhysicsAngularVelocityInDegrees",
+    "GetPlayerController",
+    "InitializeCatapult",
+    "MakeRotator",
+    "MakeTransform",
+    "NOT Boolean",
+    "OR Boolean",
+    "Reload",
+    "Set Text",
+    "Set Timer by Function Name",
+    "SetAngularDriveParams",
+    "SetAngularOrientationTarget",
+    "SetConstrainedComponents",
+    "SetLifeSpan",
+    "To Text (String)",
+    "TransformLocation",
+    "Vector Length",
+    "WakeAllRigidBodies",
+    "float < float",
+    "int + int"
+  ],
+  "forbidden_functions": []
+}
