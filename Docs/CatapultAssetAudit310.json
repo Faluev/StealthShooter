@@ -8,7 +8,7 @@
     },
     {
       "graph": "Fire",
-      "nodes": 25,
+      "nodes": 29,
       "errors": 0,
       "warnings": 0
     },
@@ -20,7 +20,7 @@
     },
     {
       "graph": "LoadBall",
-      "nodes": 31,
+      "nodes": 32,
       "errors": 0,
       "warnings": 0
     },
@@ -32,13 +32,61 @@
     },
     {
       "graph": "BeginReload",
-      "nodes": 4,
+      "nodes": 5,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "BeginCharge",
+      "nodes": 15,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "UpdateCharge",
+      "nodes": 15,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "ReleaseCharge",
+      "nodes": 12,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "InitializeHUD",
+      "nodes": 9,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "RefreshHUD",
+      "nodes": 20,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "LatchPayload",
+      "nodes": 18,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "ReleasePayload",
+      "nodes": 14,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "CheckPayloadRelease",
+      "nodes": 8,
       "errors": 0,
       "warnings": 0
     },
     {
       "graph": "EventGraph",
-      "nodes": 11,
+      "nodes": 24,
       "errors": 0,
       "warnings": 0
     }
@@ -57,35 +105,80 @@
       "warnings": 0
     }
   ],
+  "WBP_CatapultHUD": [
+    {
+      "graph": "UpdateDisplay",
+      "nodes": 10,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "graph": "EventGraph",
+      "nodes": 0,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
   "functions": [
     "AND Boolean",
     "Absolute (Float)",
+    "AddToViewport",
+    "Append",
+    "BeginCharge",
     "BeginDeferredActorSpawnFromClass",
+    "Clamp (Float)",
     "Clear Timer by Function Name",
     "EnableInput",
     "FinishSpawningActor",
     "Fire",
+    "Get Actor Location",
     "Get World Transform",
     "GetCurrentSwing2",
     "GetPhysicsAngularVelocityInDegrees",
     "GetPlayerController",
+    "GetTimeSeconds",
     "InitializeCatapult",
+    "InitializeHUD",
+    "IsValid",
+    "LatchPayload",
+    "Lerp",
+    "Lerp (LinearColor)",
     "MakeRotator",
     "MakeTransform",
+    "Max (Float)",
     "NOT Boolean",
     "OR Boolean",
+    "ReleaseCharge",
+    "ReleasePayload",
     "Reload",
+    "RemoveFromParent",
+    "Round",
+    "SelectString",
     "Set Text",
     "Set Timer by Function Name",
+    "Set World Location",
     "SetAngularDriveParams",
     "SetAngularOrientationTarget",
     "SetConstrainedComponents",
+    "SetFillColorAndOpacity",
     "SetLifeSpan",
+    "SetLinearXLimit",
+    "SetLinearYLimit",
+    "SetLinearZLimit",
+    "SetPercent",
+    "SetText (Text)",
+    "To String (Integer)",
     "To Text (String)",
     "TransformLocation",
+    "UpdateCharge",
+    "UpdateDisplay",
     "Vector Length",
     "WakeAllRigidBodies",
+    "float * float",
+    "float - float",
+    "float / float",
     "float < float",
+    "float <= float",
     "int + int"
   ],
   "forbidden_functions": []

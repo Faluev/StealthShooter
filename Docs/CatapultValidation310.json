@@ -3,7 +3,7 @@
   "mode": "Play In Editor",
   "checks": [
     {
-      "check": "One Physics Constraint Component",
+      "check": "Hinge and payload Physics Constraint Components",
       "passed": true,
       "detail": null
     },
@@ -40,7 +40,7 @@
     {
       "check": "Cycle 1: ammunition is in spoon",
       "passed": true,
-      "detail": "<Struct 'Vector' (0x0000020A9551E9F0) {x: -234.127126, y: -0.000026, z: 224.956808}>"
+      "detail": "<Struct 'Vector' (0x0000025EB7765D20) {x: -270.596082, y: 0.000014, z: 223.436355}>"
     },
     {
       "check": "Loaded ammunition has no expiry",
@@ -75,12 +75,12 @@
     {
       "check": "Cycle 1: cannonball leaves spoon forward",
       "passed": true,
-      "detail": 1698.03
+      "detail": 865.48
     },
     {
       "check": "Cycle 1: physical ballistic arc rises",
       "passed": true,
-      "detail": 495.33
+      "detail": 420.01
     },
     {
       "check": "Cycle 1: cannonball collides with ground",
@@ -90,7 +90,7 @@
     {
       "check": "Cycle 1: hinge stays within angular limit",
       "passed": true,
-      "detail": 65.6
+      "detail": 64.71
     },
     {
       "check": "Cycle 1: arm returns before loading",
@@ -110,7 +110,7 @@
     {
       "check": "Cycle 2: ammunition is in spoon",
       "passed": true,
-      "detail": "<Struct 'Vector' (0x0000020A9551E9F0) {x: -262.981246, y: -0.000022, z: 229.540086}>"
+      "detail": "<Struct 'Vector' (0x0000025EB7765D20) {x: -269.951000, y: 0.000006, z: 227.279684}>"
     },
     {
       "check": "Loaded ammunition has no expiry",
@@ -145,12 +145,12 @@
     {
       "check": "Cycle 2: cannonball leaves spoon forward",
       "passed": true,
-      "detail": 1907.48
+      "detail": 863.82
     },
     {
       "check": "Cycle 2: physical ballistic arc rises",
       "passed": true,
-      "detail": 514.85
+      "detail": 419.7
     },
     {
       "check": "Cycle 2: cannonball collides with ground",
@@ -160,7 +160,7 @@
     {
       "check": "Cycle 2: hinge stays within angular limit",
       "passed": true,
-      "detail": 65.62
+      "detail": 64.73
     },
     {
       "check": "Cycle 2: arm returns before loading",
@@ -180,7 +180,7 @@
     {
       "check": "Cycle 3: ammunition is in spoon",
       "passed": true,
-      "detail": "<Struct 'Vector' (0x0000020A9551E9F0) {x: -262.920732, y: -0.000019, z: 229.559880}>"
+      "detail": "<Struct 'Vector' (0x0000025EB7765D20) {x: -269.939719, y: 0.000012, z: 227.344553}>"
     },
     {
       "check": "Loaded ammunition has no expiry",
@@ -215,12 +215,12 @@
     {
       "check": "Cycle 3: cannonball leaves spoon forward",
       "passed": true,
-      "detail": 1872.52
+      "detail": 860.98
     },
     {
       "check": "Cycle 3: physical ballistic arc rises",
       "passed": true,
-      "detail": 515.78
+      "detail": 419.67
     },
     {
       "check": "Cycle 3: cannonball collides with ground",
@@ -230,7 +230,7 @@
     {
       "check": "Cycle 3: hinge stays within angular limit",
       "passed": true,
-      "detail": 65.62
+      "detail": 64.72
     },
     {
       "check": "Cycle 3: arm returns before loading",
@@ -251,46 +251,31 @@
   "cycles": [
     {
       "shot": 1,
-      "maximum_forward_x_cm": 1698.03,
-      "apex_z_cm": 495.33,
-      "maximum_hinge_degrees": 65.6,
-      "physics_frames": 556,
-      "reload_seconds": 5.8
+      "maximum_forward_x_cm": 865.48,
+      "apex_z_cm": 420.01,
+      "maximum_hinge_degrees": 64.71,
+      "physics_frames": 470,
+      "reload_seconds": 5.13
     },
     {
       "shot": 2,
-      "maximum_forward_x_cm": 1907.48,
-      "apex_z_cm": 514.85,
-      "maximum_hinge_degrees": 65.62,
-      "physics_frames": 555,
-      "reload_seconds": 5.79
+      "maximum_forward_x_cm": 863.82,
+      "apex_z_cm": 419.7,
+      "maximum_hinge_degrees": 64.73,
+      "physics_frames": 472,
+      "reload_seconds": 5.15
     },
     {
       "shot": 3,
-      "maximum_forward_x_cm": 1872.52,
-      "apex_z_cm": 515.78,
-      "maximum_hinge_degrees": 65.62,
-      "physics_frames": 559,
-      "reload_seconds": 5.81
+      "maximum_forward_x_cm": 860.98,
+      "apex_z_cm": 419.67,
+      "maximum_hinge_degrees": 64.72,
+      "physics_frames": 469,
+      "reload_seconds": 5.14
     }
   ],
   "passed": 49,
   "failed": 0,
   "error": null,
-  "elapsed_seconds": 19.83,
-  "native_keyboard": {
-    "key": "F",
-    "shots_before": 4,
-    "shots_after": 5,
-    "passed": true,
-    "reload_ready": true
-  },
-  "fresh_launch": {
-    "editor_tools_enabled": false,
-    "startup_map": "L_Catapult",
-    "native_F_fired": true,
-    "project_opened": true,
-    "automatic_reload_ready": true
-  },
-  "engine_version": "5.8.4"
+  "elapsed_seconds": 19.84
 }

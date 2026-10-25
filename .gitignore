@@ -39,3 +39,7 @@ Desktop.ini
 /Tools/editor_api.json
 /Tools/probe_editor.py
 /Tools/WaitEditorTask.ps1
+# Licensed Fab source assets and the optional local presentation map
+/Content/Rock_Collection_04/
+/Content/Abandoned_Cathedral/
+/Content/StealthShooter/Maps/L_Catapult_Ruins.umap

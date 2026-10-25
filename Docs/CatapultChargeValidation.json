@@ -1,0 +1,514 @@
+{
+  "mode": "Play In Editor",
+  "checks": [
+    {
+      "check": "UMG meter is visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Initial meter shows minimum charge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Release without press does not shoot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Hold begins one charge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Press alone does not shoot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Holding F never fires automatically",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Release fires exactly once",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Release ends charging",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload rejects extra presses and releases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Throw 1 leaves the spoon",
+      "passed": true,
+      "detail": 1723.4575006323491
+    },
+    {
+      "check": "Throw 1 reloads a fresh cannonball",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Throw 1 stops before loading",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Hold begins one charge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Press alone does not shoot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Holding F never fires automatically",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Half-duration produces medium charge",
+      "passed": true,
+      "detail": 0.6013612002134323
+    },
+    {
+      "check": "Release fires exactly once",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Release ends charging",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload rejects extra presses and releases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Throw 2 leaves the spoon",
+      "passed": true,
+      "detail": 1829.1809074381085
+    },
+    {
+      "check": "Throw 2 reloads a fresh cannonball",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Throw 2 stops before loading",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Hold begins one charge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Press alone does not shoot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Holding F never fires automatically",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Charge is capped at 100 percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Full meter reaches 100 percent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Release fires exactly once",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Release ends charging",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload rejects extra presses and releases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Throw 3 leaves the spoon",
+      "passed": true,
+      "detail": 1960.4999988822192
+    },
+    {
+      "check": "Throw 3 reloads a fresh cannonball",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Throw 3 stops before loading",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Maximum power throws farther than minimum",
+      "passed": true,
+      "detail": [
+        {
+          "hold_seconds": 0.05,
+          "charge": 0.22112604081630707,
+          "maximum_x_cm": 1723.5,
+          "apex_z_cm": 425.8,
+          "first_landing_x_cm": 265.5,
+          "reload_seconds": 5.1
+        },
+        {
+          "hold_seconds": 1,
+          "charge": 0.6013612002134323,
+          "maximum_x_cm": 1829.2,
+          "apex_z_cm": 567.3,
+          "first_landing_x_cm": 868.0,
+          "reload_seconds": 5.12
+        },
+        {
+          "hold_seconds": 2.4,
+          "charge": 1.0,
+          "maximum_x_cm": 1960.5,
+          "apex_z_cm": 767.3,
+          "first_landing_x_cm": 1678.8,
+          "reload_seconds": 5.12
+        }
+      ]
+    },
+    {
+      "check": "Medium power lands between weak and full",
+      "passed": true,
+      "detail": [
+        {
+          "hold_seconds": 0.05,
+          "charge": 0.22112604081630707,
+          "maximum_x_cm": 1723.5,
+          "apex_z_cm": 425.8,
+          "first_landing_x_cm": 265.5,
+          "reload_seconds": 5.1
+        },
+        {
+          "hold_seconds": 1,
+          "charge": 0.6013612002134323,
+          "maximum_x_cm": 1829.2,
+          "apex_z_cm": 567.3,
+          "first_landing_x_cm": 868.0,
+          "reload_seconds": 5.12
+        },
+        {
+          "hold_seconds": 2.4,
+          "charge": 1.0,
+          "maximum_x_cm": 1960.5,
+          "apex_z_cm": 767.3,
+          "first_landing_x_cm": 1678.8,
+          "reload_seconds": 5.12
+        }
+      ]
+    },
+    {
+      "check": "Power levels are ordered",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "shots": [
+    {
+      "hold_seconds": 0.05,
+      "charge": 0.22112604081630707,
+      "maximum_x_cm": 1723.5,
+      "apex_z_cm": 425.8,
+      "first_landing_x_cm": 265.5,
+      "reload_seconds": 5.1
+    },
+    {
+      "hold_seconds": 1,
+      "charge": 0.6013612002134323,
+      "maximum_x_cm": 1829.2,
+      "apex_z_cm": 567.3,
+      "first_landing_x_cm": 868.0,
+      "reload_seconds": 5.12
+    },
+    {
+      "hold_seconds": 2.4,
+      "charge": 1.0,
+      "maximum_x_cm": 1960.5,
+      "apex_z_cm": 767.3,
+      "first_landing_x_cm": 1678.8,
+      "reload_seconds": 5.12
+    }
+  ],
+  "passed": 36,
+  "failed": 0,
+  "error": null,
+  "elapsed_seconds": 23.24,
+  "map": "L_Catapult",
+  "engine_version": "5.8.4",
+  "fab_scene": {
+    "mode": "Play In Editor",
+    "checks": [
+      {
+        "check": "UMG meter is visible",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Initial meter shows minimum charge",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Release without press does not shoot",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Hold begins one charge",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Press alone does not shoot",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Holding F never fires automatically",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Release fires exactly once",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Release ends charging",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Reload rejects extra presses and releases",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Throw 1 leaves the spoon",
+        "passed": true,
+        "detail": 1442.368607662998
+      },
+      {
+        "check": "Throw 1 reloads a fresh cannonball",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Throw 1 stops before loading",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Hold begins one charge",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Press alone does not shoot",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Holding F never fires automatically",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Half-duration produces medium charge",
+        "passed": true,
+        "detail": 0.601705040037632
+      },
+      {
+        "check": "Release fires exactly once",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Release ends charging",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Reload rejects extra presses and releases",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Throw 2 leaves the spoon",
+        "passed": true,
+        "detail": 1862.5556365309294
+      },
+      {
+        "check": "Throw 2 reloads a fresh cannonball",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Throw 2 stops before loading",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Hold begins one charge",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Press alone does not shoot",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Holding F never fires automatically",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Charge is capped at 100 percent",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Full meter reaches 100 percent",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Release fires exactly once",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Release ends charging",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Reload rejects extra presses and releases",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Throw 3 leaves the spoon",
+        "passed": true,
+        "detail": 1960.4999981594979
+      },
+      {
+        "check": "Throw 3 reloads a fresh cannonball",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Throw 3 stops before loading",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "check": "Maximum power throws farther than minimum",
+        "passed": true,
+        "detail": [
+          {
+            "hold_seconds": 0.05,
+            "charge": 0.22115923911333085,
+            "maximum_x_cm": 1442.4,
+            "apex_z_cm": 426.1,
+            "first_landing_x_cm": 220.6,
+            "reload_seconds": 5.09
+          },
+          {
+            "hold_seconds": 1,
+            "charge": 0.601705040037632,
+            "maximum_x_cm": 1862.6,
+            "apex_z_cm": 573.4,
+            "first_landing_x_cm": 868.5,
+            "reload_seconds": 5.1
+          },
+          {
+            "hold_seconds": 2.4,
+            "charge": 1.0,
+            "maximum_x_cm": 1960.5,
+            "apex_z_cm": 739.6,
+            "first_landing_x_cm": 1688.0,
+            "reload_seconds": 5.1
+          }
+        ]
+      },
+      {
+        "check": "Power levels are ordered",
+        "passed": true,
+        "detail": null
+      }
+    ],
+    "shots": [
+      {
+        "hold_seconds": 0.05,
+        "charge": 0.22115923911333085,
+        "maximum_x_cm": 1442.4,
+        "apex_z_cm": 426.1,
+        "first_landing_x_cm": 220.6,
+        "reload_seconds": 5.09
+      },
+      {
+        "hold_seconds": 1,
+        "charge": 0.601705040037632,
+        "maximum_x_cm": 1862.6,
+        "apex_z_cm": 573.4,
+        "first_landing_x_cm": 868.5,
+        "reload_seconds": 5.1
+      },
+      {
+        "hold_seconds": 2.4,
+        "charge": 1.0,
+        "maximum_x_cm": 1960.5,
+        "apex_z_cm": 739.6,
+        "first_landing_x_cm": 1688.0,
+        "reload_seconds": 5.1
+      }
+    ],
+    "passed": 35,
+    "failed": 0,
+    "error": null,
+    "elapsed_seconds": 23.19,
+    "native_short_press": {
+      "key": "F",
+      "shots_after": 4,
+      "charge": 0.2,
+      "passed": true
+    }
+  },
+  "public_dependencies": {
+    "public_map": "/Game/StealthShooter/Maps/L_Catapult",
+    "game_packages": 140,
+    "licensed_source_dependencies": [],
+    "standalone_without_fab": true
+  }
+}

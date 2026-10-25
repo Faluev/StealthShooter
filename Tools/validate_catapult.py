@@ -47,7 +47,7 @@ def tick(dt):
                 if now()-started>15:raise TimeoutError('Initial reload failed')
                 return
             ball=prop(cat,'LoadedBall')
-            check('One Physics Constraint Component',len(cat.get_components_by_class(unreal.PhysicsConstraintComponent))==1)
+            check('Hinge and payload Physics Constraint Components',len(cat.get_components_by_class(unreal.PhysicsConstraintComponent))==2)
             bodies=hinge.get_constrained_components();check('Constraint binds fixed base and throwing arm',bodies[0]==prop(cat,'Base') and bodies[2]==arm)
             check('Arm simulates physics',arm.is_simulating_physics())
             check('Cannonball simulates physics',prop(ball,'BallMesh').is_simulating_physics())

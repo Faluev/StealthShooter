@@ -89,15 +89,39 @@ def prepare():
     return {'arm':mesh.get_path_name(),'ball':ball.get_path_name(),'catapult':cat.get_path_name()}
 
 
+def prepare_payload_latch(cat):
+    latch=component(cat,'PayloadLatch',unreal.PhysicsConstraintComponent);latch.set_disable_collision(True)
+    for fn in [latch.set_linear_x_limit,latch.set_linear_y_limit,latch.set_linear_z_limit]:fn(unreal.LinearConstraintMotion.LCM_FREE,0)
+    latch.set_angular_twist_limit(unreal.AngularConstraintMotion.ACM_FREE,0);latch.set_angular_swing1_limit(unreal.AngularConstraintMotion.ACM_FREE,0);latch.set_angular_swing2_limit(unreal.AngularConstraintMotion.ACM_FREE,0)
+    variable(cat,'bPayloadLatched',m.BOOL,'false')
+    for name in ['LatchPayload','ReleasePayload','CheckPayloadRelease']:g.new_function(cat,name)
+    g.compile_bp(cat)
+
+def payload_graphs(cat):
+    e=g.new_function(cat,'LatchPayload');entry=e.find_graph_entry_pin()
+    loc=call(e,'Actor','K2_GetActorLocation',ref(e,'LoadedBall'))
+    entry=after(entry,call(e,'SceneComponent','K2_SetWorldLocation',ref(e,'PayloadLatch'),NewLocation=g.result(loc)))
+    mesh=g.get_variable(e,'BallMesh',asset('BP_Cannonball').generated_class().get_path_name());g.wire(ref(e,'LoadedBall'),g.pin(mesh,'self'))
+    entry=after(entry,call(e,'PhysicsConstraintComponent','SetConstrainedComponents',ref(e,'PayloadLatch'),Component1=ref(e,'ThrowingArm'),Component2=g.result(mesh)))
+    for axis in ['X','Y','Z']:entry=after(entry,call(e,'PhysicsConstraintComponent','SetLinear'+axis+'Limit',ref(e,'PayloadLatch'),ConstraintType='LCM_Locked',LimitSize=0))
+    store(e,entry,'bPayloadLatched',literal='true')
+    e=g.new_function(cat,'ReleasePayload');guard=m.branch(e,e.find_graph_entry_pin(),ref(e,'bPayloadLatched'));entry=g.pin(guard,'then',True)
+    # All degrees become free: the joint exerts no forces and preserves the pair collision filter.
+    # The released ball keeps its simulated momentum, never an assigned velocity or impulse.
+    for axis in ['X','Y','Z']:entry=after(entry,call(e,'PhysicsConstraintComponent','SetLinear'+axis+'Limit',ref(e,'PayloadLatch'),ConstraintType='LCM_Free',LimitSize=0))
+    entry=store(e,entry,'bPayloadLatched',literal='false');m.clear_timer(e,entry,'CheckPayloadRelease')
+    e=g.new_function(cat,'CheckPayloadRelease');angle=call(e,'PhysicsConstraintComponent','GetCurrentSwing2',ref(e,'ArmConstraint'))
+    guard=m.branch(e,e.find_graph_entry_pin(),m.op(e,'LessEqual_DoubleDouble',g.result(angle),-35));after(g.pin(guard,'then',True),own(e,cat,'ReleasePayload'))
+
 def graphs():
-    cat=asset('BP_Catapult');e=g.clear_graph(cat)
+    cat=asset('BP_Catapult');prepare_payload_latch(cat);payload_graphs(cat);e=g.clear_graph(cat)
     ev=g.event(cat,'ReceiveBeginPlay');entry=after(g.then(ev),own(e,cat,'InitializeCatapult'))
     pc=m.pc(e);n=call(e,'Actor','EnableInput',PlayerController=pc);after(entry,n)
     for key,fn in [('F','Fire')]:
         n=g.named_node(e,lambda s:s.endswith('|keyboardevents|'+key.lower()),key+' keyboard event')
         after(g.pin(n,'Pressed',True),own(e,cat,fn))
     ev=g.event(cat,'ReceiveEndPlay');entry=g.then(ev)
-    for fn in ['LoadBall','BeginReload']:entry=m.clear_timer(e,entry,fn)
+    for fn in ['LoadBall','BeginReload','CheckPayloadRelease']:entry=m.clear_timer(e,entry,fn)
     e=g.new_function(cat,'InitializeCatapult');entry=e.find_graph_entry_pin()
     n=call(e,'PhysicsConstraintComponent','SetConstrainedComponents',ref(e,'ArmConstraint'),Component1=ref(e,'Base'),Component2=ref(e,'ThrowingArm'));entry=after(entry,n)
     entry=store(e,entry,'bBusy',literal='false');after(entry,own(e,cat,'Reload'))
@@ -108,9 +132,10 @@ def graphs():
     rot=call(e,'KismetMathLibrary','MakeRotator',Yaw=0,Pitch=ref(e,'FireAngle'))
     entry=after(entry,call(e,'PrimitiveComponent','WakeAllRigidBodies',ref(e,'ThrowingArm')))
     entry=after(entry,call(e,'PhysicsConstraintComponent','SetAngularOrientationTarget',ref(e,'ArmConstraint'),InPosTarget=g.result(rot)))
+    entry=m.timer(e,entry,'CheckPayloadRelease',.005,True)
     entry=m.timer(e,entry,'BeginReload',1.5)
     after(entry,call(e,'TextRenderComponent','K2_SetText',ref(e,'StatusText'),Value='FIRING / RELOADING'))
-    e=g.new_function(cat,'BeginReload');entry=store(e,e.find_graph_entry_pin(),'bBusy',literal='false');after(entry,own(e,cat,'Reload'))
+    e=g.new_function(cat,'BeginReload');entry=after(e.find_graph_entry_pin(),own(e,cat,'ReleasePayload'));entry=store(e,entry,'bBusy',literal='false');after(entry,own(e,cat,'Reload'))
     e=g.new_function(cat,'Reload');condition=m.op(e,'Not_PreBool',m.op(e,'BooleanOR',ref(e,'bBusy'),ref(e,'bReady')))
     br=m.branch(e,e.find_graph_entry_pin(),condition);entry=store(e,g.pin(br,'then',True),'bBusy',literal='true')
     entry=after(entry,call(e,'PhysicsConstraintComponent','SetAngularDriveParams',ref(e,'ArmConstraint'),PositionStrength=100,VelocityStrength=100,InForceLimit=0))
@@ -127,13 +152,13 @@ def graphs():
     settled=m.op(e,'BooleanAND',m.op(e,'Less_DoubleDouble',g.result(absolute),2),m.op(e,'Less_DoubleDouble',g.result(speed),5))
     guard=m.branch(e,entry,settled);retry=after(g.pin(guard,'else',True),call(e,'PrimitiveComponent','WakeAllRigidBodies',ref(e,'ThrowingArm')));m.timer(e,retry,'LoadBall',.1);entry=g.pin(guard,'then',True)
     transform=call(e,'SceneComponent','K2_GetComponentToWorld',ref(e,'ThrowingArm'))
-    pos=call(e,'KismetMathLibrary','TransformLocation',T=g.result(transform),Location='(X=-270,Y=0,Z=54)')
+    pos=call(e,'KismetMathLibrary','TransformLocation',T=g.result(transform),Location='(X=-270,Y=0,Z=47)')
     spawntransform=call(e,'KismetMathLibrary','MakeTransform',Location=g.result(pos))
     n=call(e,'GameplayStatics','BeginDeferredActorSpawnFromClass',ActorClass=asset('BP_Cannonball').generated_class().get_path_name(),SpawnTransform=g.result(spawntransform),CollisionHandlingOverride='AlwaysSpawn');entry=after(entry,n)
     n2=call(e,'GameplayStatics','FinishSpawningActor',Actor=g.result(n),SpawnTransform=g.result(spawntransform));entry=after(entry,n2)
     cast=g.named_node(e,lambda s:s.endswith('|casttobp_cannonball'),'Cast cannonball');g.wire(g.result(n2),g.pin(cast,'Object'));entry=after(entry,cast)
     out=next(p for p in cast.list_output_pins() if str(p.get_pin_name()).startswith('As'))
-    entry=store(e,entry,'LoadedBall',out);entry=store(e,entry,'bBusy',literal='false');entry=store(e,entry,'bReady',literal='true')
+    entry=store(e,entry,'LoadedBall',out);entry=after(entry,own(e,cat,'LatchPayload'));entry=store(e,entry,'bBusy',literal='false');entry=store(e,entry,'bReady',literal='true')
     after(entry,call(e,'TextRenderComponent','K2_SetText',ref(e,'StatusText'),Value='READY / F: FIRE'))
     # Remove unused placeholder; only meaningful, commented functions remain.
     for gr in B.list_graphs(cat):
