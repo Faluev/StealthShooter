@@ -13,7 +13,8 @@ StealthShooter/
   Interaction/
     Lighting/                   кнопка и светильник из 3.8
     GroupControl/               групповой пульт и его UMG-виджет
-  Maps/                         три сохранённые учебные карты
+  Maps/                         отдельные карты практических работ
+  Movement/Patrol/              автономный актор из 10.7
   MaterialLibrary/
     Environment/                общие материалы комнат
     Lighting/                   материалы светильника и пульта
@@ -28,6 +29,7 @@ StealthShooter/
 
 - Члены класса: PascalCase, булевы поля — bOn, bBound, bNearby. Имена коллекций — во множественном числе без суффикса Array.
 - Настройки экземпляра: категория Interaction|Configuration. Состояние: Interaction|State. Контекст виджета: UI|Context. Счётчики: Diagnostics. Диспетчер: Interaction|Events.
+- Для движения используется тематический набор Patrol|Configuration / State / Diagnostics; границы и Speed доступны в экземплярах.
 - Функции обозначают действие; запрос состояния — IsSwitchOn. Диспетчер и обработчики начинаются с On: OnSwitched, OnSwitchChanged, OnEnableClicked, OnDisableClicked.
 - Одна функция выполняет одну связанную задачу и содержит не более 30 узлов. У реализованных функций есть явные Return, включая ранние выходы. Тело ForEach продолжает обход, Return располагается после Completed, чтобы не оборвать цикл после первого элемента.
 - Декларации интерфейса без выходов, диспетчер, события и стандартный Construction Script не рассматриваются как обычные реализованные функции с Return.

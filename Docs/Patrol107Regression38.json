@@ -1,0 +1,1055 @@
+{
+  "map": "L_SwitchableRoom",
+  "engine": "5.8.4-58902052+++UE5+Release-5.8",
+  "checks": [
+    {
+      "name": "Four lamps",
+      "passed": true
+    },
+    {
+      "name": "MasterLightSwitch implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_1 implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_2 implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_3 implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_4 implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_1 subscribed at Begin Play",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_2 subscribed at Begin Play",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_3 subscribed at Begin Play",
+      "passed": true
+    },
+    {
+      "name": "SwitchableLamp_4 subscribed at Begin Play",
+      "passed": true
+    },
+    {
+      "name": "Third Person pawn",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Initial lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Outside radius rejects press",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Outside lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Inside radius accepts press",
+      "passed": true
+    },
+    {
+      "name": "Switch query after press",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Inside lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "SwitchOff is idempotent",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Interface SwitchOn lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "SwitchOn is idempotent",
+      "passed": true
+    },
+    {
+      "name": "Just outside spherical boundary",
+      "passed": true
+    },
+    {
+      "name": "Exact spherical boundary accepted",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Boundary lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rebinding does not duplicate callback 1",
+      "passed": true
+    },
+    {
+      "name": "Rebinding does not duplicate callback 2",
+      "passed": true
+    },
+    {
+      "name": "Rebinding does not duplicate callback 3",
+      "passed": true
+    },
+    {
+      "name": "Rebinding does not duplicate callback 4",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rebind lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Unsubscribed lamp remains on",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Other subscribers lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rejoined lamp syncs to switch",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Rejoin lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 1 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 2 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 3 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 4 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 5 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 6 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 7 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 8 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 9 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 10 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 11 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 1 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 1 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 1 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 2 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 2 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 2 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 3 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 3 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 3 bulb",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 4 interface query",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 4 Point Light",
+      "passed": true
+    },
+    {
+      "name": "Repeat 12 lamp 4 bulb",
+      "passed": true
+    },
+    {
+      "name": "All subscribers still active",
+      "passed": true
+    }
+  ],
+  "passed": 262
+}

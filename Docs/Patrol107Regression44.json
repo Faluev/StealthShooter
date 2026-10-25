@@ -1,0 +1,226 @@
+{
+  "map": "L_GroupControl",
+  "checks": [
+    {
+      "name": "Three group switches",
+      "passed": true
+    },
+    {
+      "name": "Original ThirdPerson pawn",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A has two configured targets",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A targets implement interface",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A widget knows its owning switch",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A panel hidden outside radius",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A stale widget action rejected",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A panel appears inside radius",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A no other group panel visible",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A widget turns group off",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A other groups remain on",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A state label updated",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A redundant Off disabled",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A widget turns group on",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A repeated cycles preserve state",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A panel removed after exit",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_A reentry reuses same widget",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B has two configured targets",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B targets implement interface",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B widget knows its owning switch",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B panel hidden outside radius",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B stale widget action rejected",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B panel appears inside radius",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B no other group panel visible",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B widget turns group off",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B other groups remain on",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B state label updated",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B redundant Off disabled",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B widget turns group on",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B repeated cycles preserve state",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B panel removed after exit",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_B reentry reuses same widget",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C implements BPI_Switchable",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C has two configured targets",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C targets implement interface",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C widget knows its owning switch",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C panel hidden outside radius",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C stale widget action rejected",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C panel appears inside radius",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C no other group panel visible",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C widget turns group off",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C other groups remain on",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C state label updated",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C redundant Off disabled",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C widget turns group on",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C repeated cycles preserve state",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C panel removed after exit",
+      "passed": true
+    },
+    {
+      "name": "GroupSwitch_C reentry reuses same widget",
+      "passed": true
+    },
+    {
+      "name": "Empty target array is safe",
+      "passed": true
+    },
+    {
+      "name": "Null target is skipped",
+      "passed": true
+    },
+    {
+      "name": "Array additions are processed",
+      "passed": true
+    },
+    {
+      "name": "All panels removed away from consoles",
+      "passed": true
+    },
+    {
+      "name": "Cursor hidden after leaving",
+      "passed": true
+    }
+  ],
+  "passed": 55
+}

@@ -1,0 +1,7356 @@
+{
+  "map": "/Game/StealthShooter/Maps/L_BoundedPatrol",
+  "checks": [
+    {
+      "check": "Character parent with CharacterMovement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph ContainsPoint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph SampleDestination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph ChooseDestination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph RefreshPatrol",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph ConfigureMovement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph RequestDestination",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph RestartPatrol",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Short commented graph EventGraph",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Blueprint compiles without errors or warnings",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "check": "Exactly one standard AIMoveTo node",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No manual translation nodes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "Configuration variable and category Speed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Configuration variable and category MinX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Configuration variable and category MaxX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Configuration variable and category MinY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Configuration variable and category MaxY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Public-repository ignore file exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Two placed autonomous agents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Navigation controller possessed BP_BoundedPatrol_C_0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Navigation controller possessed BP_BoundedPatrol_C_1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Repeated random destinations completed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Random targets remain inside the configured area",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Blocked route reached the opposite side",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Actual path went around the central mesh",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Actor turned along the route",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Returned after crossing MinX",
+      "passed": true,
+      "detail": {
+        "x": -885.9097694025585,
+        "y": -503.87805567143187,
+        "elapsed_s": 1.86
+      }
+    },
+    {
+      "check": "Boundary turn and valid random destination MinX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Returned after crossing MaxX",
+      "passed": true,
+      "detail": {
+        "x": 886.7326078050914,
+        "y": 513.3187776282563,
+        "elapsed_s": 1.2
+      }
+    },
+    {
+      "check": "Boundary turn and valid random destination MaxX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Returned after crossing MinY",
+      "passed": true,
+      "detail": {
+        "x": -390.9978804797588,
+        "y": -781.0195629410805,
+        "elapsed_s": 1.15
+      }
+    },
+    {
+      "check": "Boundary turn and valid random destination MinY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Returned after crossing MaxY",
+      "passed": true,
+      "detail": {
+        "x": 133.80485656077417,
+        "y": 786.750965594899,
+        "elapsed_s": 1.95
+      }
+    },
+    {
+      "check": "Boundary turn and valid random destination MaxY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Runtime Speed 100 applied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Actor moved at configured Speed 100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Runtime Speed 360 applied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Actor moved at configured Speed 360",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Zero Speed stops movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Negative Speed safely clamps to zero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No capsule penetrated any of the three Static Mesh obstacles",
+      "passed": true,
+      "detail": {
+        "minimum_cm": 34.01
+      }
+    },
+    {
+      "check": "Movement stayed on the floor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Movement speed did not exceed configured Speed",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": 43,
+  "failed": 0,
+  "sample_count": 711,
+  "samples": [
+    {
+      "t": 27.233,
+      "stage": -1,
+      "x": 294.757,
+      "y": 176.484,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 169.757
+    },
+    {
+      "t": 27.283,
+      "stage": 0,
+      "x": 292.426,
+      "y": 167.791,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 167.426
+    },
+    {
+      "t": 27.333,
+      "stage": 0,
+      "x": 290.094,
+      "y": 159.098,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 165.094
+    },
+    {
+      "t": 27.383,
+      "stage": 0,
+      "x": 287.763,
+      "y": 150.405,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 162.763
+    },
+    {
+      "t": 27.433,
+      "stage": 0,
+      "x": 285.432,
+      "y": 141.712,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 160.432
+    },
+    {
+      "t": 27.483,
+      "stage": 0,
+      "x": 283.101,
+      "y": 133.019,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 158.101
+    },
+    {
+      "t": 27.533,
+      "stage": 0,
+      "x": 280.769,
+      "y": 124.326,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 155.769
+    },
+    {
+      "t": 27.583,
+      "stage": 0,
+      "x": 278.437,
+      "y": 115.627,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 153.437
+    },
+    {
+      "t": 27.633,
+      "stage": 0,
+      "x": 276.106,
+      "y": 106.935,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 151.106
+    },
+    {
+      "t": 27.683,
+      "stage": 0,
+      "x": 273.774,
+      "y": 98.242,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 148.774
+    },
+    {
+      "t": 27.733,
+      "stage": 0,
+      "x": 271.438,
+      "y": 89.528,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 146.438
+    },
+    {
+      "t": 27.783,
+      "stage": 0,
+      "x": 269.092,
+      "y": 80.78,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 144.092
+    },
+    {
+      "t": 27.833,
+      "stage": 0,
+      "x": 266.757,
+      "y": 72.074,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 141.757
+    },
+    {
+      "t": 27.883,
+      "stage": 0,
+      "x": 264.426,
+      "y": 63.381,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 139.426
+    },
+    {
+      "t": 27.933,
+      "stage": 0,
+      "x": 262.095,
+      "y": 54.688,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 137.095
+    },
+    {
+      "t": 27.983,
+      "stage": 0,
+      "x": 259.763,
+      "y": 45.995,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 134.763
+    },
+    {
+      "t": 28.033,
+      "stage": 0,
+      "x": 257.432,
+      "y": 37.302,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 132.432
+    },
+    {
+      "t": 28.083,
+      "stage": 0,
+      "x": 255.101,
+      "y": 28.609,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 130.101
+    },
+    {
+      "t": 28.133,
+      "stage": 0,
+      "x": 252.77,
+      "y": 19.916,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 127.77
+    },
+    {
+      "t": 28.183,
+      "stage": 0,
+      "x": 250.439,
+      "y": 11.223,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 125.439
+    },
+    {
+      "t": 28.233,
+      "stage": 0,
+      "x": 248.107,
+      "y": 2.53,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 123.107
+    },
+    {
+      "t": 28.283,
+      "stage": 0,
+      "x": 245.776,
+      "y": -6.163,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 120.776
+    },
+    {
+      "t": 28.333,
+      "stage": 0,
+      "x": 243.445,
+      "y": -14.856,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 118.445
+    },
+    {
+      "t": 28.383,
+      "stage": 0,
+      "x": 241.114,
+      "y": -23.549,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 116.114
+    },
+    {
+      "t": 28.433,
+      "stage": 0,
+      "x": 238.782,
+      "y": -32.242,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 113.782
+    },
+    {
+      "t": 28.483,
+      "stage": 0,
+      "x": 236.451,
+      "y": -40.938,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 111.451
+    },
+    {
+      "t": 28.533,
+      "stage": 0,
+      "x": 234.119,
+      "y": -49.631,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 109.119
+    },
+    {
+      "t": 28.583,
+      "stage": 0,
+      "x": 231.788,
+      "y": -58.324,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 106.788
+    },
+    {
+      "t": 28.633,
+      "stage": 0,
+      "x": 229.457,
+      "y": -67.017,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 104.457
+    },
+    {
+      "t": 28.683,
+      "stage": 0,
+      "x": 227.126,
+      "y": -75.71,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 102.126
+    },
+    {
+      "t": 28.733,
+      "stage": 0,
+      "x": 224.794,
+      "y": -84.403,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 99.794
+    },
+    {
+      "t": 28.783,
+      "stage": 0,
+      "x": 222.463,
+      "y": -93.096,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 97.463
+    },
+    {
+      "t": 28.833,
+      "stage": 0,
+      "x": 220.132,
+      "y": -101.789,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 95.132
+    },
+    {
+      "t": 28.883,
+      "stage": 0,
+      "x": 217.799,
+      "y": -110.49,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 92.799
+    },
+    {
+      "t": 28.933,
+      "stage": 0,
+      "x": 215.467,
+      "y": -119.183,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 90.467
+    },
+    {
+      "t": 28.983,
+      "stage": 0,
+      "x": 213.136,
+      "y": -127.876,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 88.136
+    },
+    {
+      "t": 29.034,
+      "stage": 0,
+      "x": 210.781,
+      "y": -136.657,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 85.781
+    },
+    {
+      "t": 29.084,
+      "stage": 0,
+      "x": 208.442,
+      "y": -145.382,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 83.442
+    },
+    {
+      "t": 29.134,
+      "stage": 0,
+      "x": 206.109,
+      "y": -154.081,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 81.109
+    },
+    {
+      "t": 29.184,
+      "stage": 0,
+      "x": 203.773,
+      "y": -162.792,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 78.773
+    },
+    {
+      "t": 29.234,
+      "stage": 0,
+      "x": 201.431,
+      "y": -171.523,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 76.431
+    },
+    {
+      "t": 29.285,
+      "stage": 0,
+      "x": 199.096,
+      "y": -180.232,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 74.096
+    },
+    {
+      "t": 29.335,
+      "stage": 0,
+      "x": 196.746,
+      "y": -188.996,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 71.746
+    },
+    {
+      "t": 29.385,
+      "stage": 0,
+      "x": 194.395,
+      "y": -197.761,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 69.395
+    },
+    {
+      "t": 29.435,
+      "stage": 0,
+      "x": 192.063,
+      "y": -206.458,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 67.063
+    },
+    {
+      "t": 29.486,
+      "stage": 0,
+      "x": 189.716,
+      "y": -215.207,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 64.716
+    },
+    {
+      "t": 29.536,
+      "stage": 0,
+      "x": 187.383,
+      "y": -223.908,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 62.383
+    },
+    {
+      "t": 29.586,
+      "stage": 0,
+      "x": 185.048,
+      "y": -232.614,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 60.048
+    },
+    {
+      "t": 29.636,
+      "stage": 0,
+      "x": 182.717,
+      "y": -241.307,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 57.717
+    },
+    {
+      "t": 29.686,
+      "stage": 0,
+      "x": 180.386,
+      "y": -250.0,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 55.386
+    },
+    {
+      "t": 29.736,
+      "stage": 0,
+      "x": 178.055,
+      "y": -258.693,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 53.055
+    },
+    {
+      "t": 29.786,
+      "stage": 0,
+      "x": 175.723,
+      "y": -267.388,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 50.723
+    },
+    {
+      "t": 29.836,
+      "stage": 0,
+      "x": 173.383,
+      "y": -276.113,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 48.383
+    },
+    {
+      "t": 29.886,
+      "stage": 0,
+      "x": 170.967,
+      "y": -284.786,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 45.967
+    },
+    {
+      "t": 29.936,
+      "stage": 0,
+      "x": 168.128,
+      "y": -293.349,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 43.128
+    },
+    {
+      "t": 29.986,
+      "stage": 0,
+      "x": 165.296,
+      "y": -301.892,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 40.341
+    },
+    {
+      "t": 30.036,
+      "stage": 0,
+      "x": 162.464,
+      "y": -310.435,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 38.89
+    },
+    {
+      "t": 30.086,
+      "stage": 0,
+      "x": 159.625,
+      "y": -319.001,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 39.495
+    },
+    {
+      "t": 30.136,
+      "stage": 0,
+      "x": 156.792,
+      "y": -327.544,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 42.064
+    },
+    {
+      "t": 30.186,
+      "stage": 0,
+      "x": 153.958,
+      "y": -336.092,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 46.274
+    },
+    {
+      "t": 30.237,
+      "stage": 0,
+      "x": 150.764,
+      "y": -344.528,
+      "z": 62.15,
+      "velocity": 175.438,
+      "speed": 180.0,
+      "clearance": 51.444
+    },
+    {
+      "t": 30.287,
+      "stage": 0,
+      "x": 145.017,
+      "y": -351.265,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 55.034
+    },
+    {
+      "t": 30.337,
+      "stage": 0,
+      "x": 138.669,
+      "y": -357.645,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 59.243
+    },
+    {
+      "t": 30.387,
+      "stage": 0,
+      "x": 132.321,
+      "y": -364.025,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 64.442
+    },
+    {
+      "t": 30.437,
+      "stage": 0,
+      "x": 125.973,
+      "y": -370.405,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 70.411
+    },
+    {
+      "t": 30.487,
+      "stage": 0,
+      "x": 119.618,
+      "y": -376.791,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 76.791
+    },
+    {
+      "t": 30.537,
+      "stage": 0,
+      "x": 113.258,
+      "y": -383.184,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 83.184
+    },
+    {
+      "t": 30.588,
+      "stage": 0,
+      "x": 106.856,
+      "y": -389.617,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 89.617
+    },
+    {
+      "t": 30.638,
+      "stage": 0,
+      "x": 100.502,
+      "y": -396.004,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 96.004
+    },
+    {
+      "t": 30.688,
+      "stage": 0,
+      "x": 94.154,
+      "y": -402.384,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 102.384
+    },
+    {
+      "t": 30.738,
+      "stage": 0,
+      "x": 87.806,
+      "y": -408.764,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 108.764
+    },
+    {
+      "t": 30.788,
+      "stage": 0,
+      "x": 81.457,
+      "y": -415.144,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 115.144
+    },
+    {
+      "t": 30.838,
+      "stage": 0,
+      "x": 75.109,
+      "y": -421.524,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 121.524
+    },
+    {
+      "t": 30.888,
+      "stage": 0,
+      "x": 68.761,
+      "y": -427.904,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 127.904
+    },
+    {
+      "t": 30.938,
+      "stage": 0,
+      "x": 62.413,
+      "y": -434.284,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 134.284
+    },
+    {
+      "t": 30.988,
+      "stage": 0,
+      "x": 56.065,
+      "y": -440.664,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 140.664
+    },
+    {
+      "t": 31.038,
+      "stage": 0,
+      "x": 49.701,
+      "y": -447.059,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 147.059
+    },
+    {
+      "t": 31.088,
+      "stage": 0,
+      "x": 43.346,
+      "y": -453.447,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 153.447
+    },
+    {
+      "t": 31.138,
+      "stage": 0,
+      "x": 36.997,
+      "y": -459.827,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 159.827
+    },
+    {
+      "t": 31.188,
+      "stage": 0,
+      "x": 30.649,
+      "y": -466.207,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 166.207
+    },
+    {
+      "t": 31.238,
+      "stage": 0,
+      "x": 24.301,
+      "y": -472.587,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 172.587
+    },
+    {
+      "t": 31.288,
+      "stage": 0,
+      "x": 17.952,
+      "y": -478.969,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 178.969
+    },
+    {
+      "t": 31.338,
+      "stage": 0,
+      "x": 11.604,
+      "y": -485.349,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 185.349
+    },
+    {
+      "t": 31.388,
+      "stage": 0,
+      "x": 5.256,
+      "y": -491.729,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 191.729
+    },
+    {
+      "t": 31.438,
+      "stage": 0,
+      "x": -1.11,
+      "y": -498.127,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 198.127
+    },
+    {
+      "t": 31.488,
+      "stage": 0,
+      "x": -7.491,
+      "y": -504.539,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 204.539
+    },
+    {
+      "t": 31.538,
+      "stage": 0,
+      "x": -13.85,
+      "y": -510.931,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 210.931
+    },
+    {
+      "t": 31.591,
+      "stage": 0,
+      "x": -20.49,
+      "y": -517.604,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 217.604
+    },
+    {
+      "t": 31.642,
+      "stage": 0,
+      "x": -26.975,
+      "y": -524.122,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 224.122
+    },
+    {
+      "t": 31.692,
+      "stage": 0,
+      "x": -33.325,
+      "y": -530.503,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 230.503
+    },
+    {
+      "t": 31.742,
+      "stage": 0,
+      "x": -39.673,
+      "y": -536.883,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 236.883
+    },
+    {
+      "t": 31.792,
+      "stage": 0,
+      "x": -46.021,
+      "y": -543.263,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 243.263
+    },
+    {
+      "t": 31.842,
+      "stage": 0,
+      "x": -52.369,
+      "y": -549.643,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 249.643
+    },
+    {
+      "t": 31.892,
+      "stage": 0,
+      "x": -58.717,
+      "y": -556.023,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 256.023
+    },
+    {
+      "t": 31.942,
+      "stage": 0,
+      "x": -65.07,
+      "y": -562.408,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 262.408
+    },
+    {
+      "t": 31.992,
+      "stage": 0,
+      "x": -71.426,
+      "y": -568.796,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 268.796
+    },
+    {
+      "t": 32.042,
+      "stage": 0,
+      "x": -77.774,
+      "y": -575.176,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 275.176
+    },
+    {
+      "t": 32.092,
+      "stage": 0,
+      "x": -84.122,
+      "y": -581.556,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 281.556
+    },
+    {
+      "t": 32.142,
+      "stage": 0,
+      "x": -90.47,
+      "y": -587.936,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 287.936
+    },
+    {
+      "t": 32.192,
+      "stage": 0,
+      "x": -96.818,
+      "y": -594.316,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 294.316
+    },
+    {
+      "t": 32.242,
+      "stage": 0,
+      "x": -103.166,
+      "y": -600.696,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 300.696
+    },
+    {
+      "t": 32.292,
+      "stage": 0,
+      "x": -109.514,
+      "y": -607.076,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 307.076
+    },
+    {
+      "t": 32.342,
+      "stage": 0,
+      "x": -115.863,
+      "y": -613.456,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 313.456
+    },
+    {
+      "t": 32.392,
+      "stage": 0,
+      "x": -122.211,
+      "y": -619.836,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 319.836
+    },
+    {
+      "t": 32.442,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.492,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.542,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.592,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.642,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.692,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.742,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.792,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.842,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.892,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.942,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 32.992,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.042,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.092,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.142,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.192,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.242,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.292,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.342,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.392,
+      "stage": 0,
+      "x": -128.559,
+      "y": -626.216,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 326.235
+    },
+    {
+      "t": 33.442,
+      "stage": 0,
+      "x": -128.867,
+      "y": -625.005,
+      "z": 62.15,
+      "velocity": 50.001,
+      "speed": 180.0,
+      "clearance": 325.028
+    },
+    {
+      "t": 33.492,
+      "stage": 0,
+      "x": -129.917,
+      "y": -620.886,
+      "z": 62.15,
+      "velocity": 110.002,
+      "speed": 180.0,
+      "clearance": 320.924
+    },
+    {
+      "t": 33.542,
+      "stage": 0,
+      "x": -131.708,
+      "y": -613.86,
+      "z": 62.15,
+      "velocity": 170.003,
+      "speed": 180.0,
+      "clearance": 313.932
+    },
+    {
+      "t": 33.592,
+      "stage": 0,
+      "x": -133.932,
+      "y": -605.131,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 305.261
+    },
+    {
+      "t": 33.642,
+      "stage": 0,
+      "x": -136.174,
+      "y": -596.337,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 296.547
+    },
+    {
+      "t": 33.692,
+      "stage": 0,
+      "x": -138.396,
+      "y": -587.615,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 287.927
+    },
+    {
+      "t": 33.742,
+      "stage": 0,
+      "x": -140.619,
+      "y": -578.894,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 279.331
+    },
+    {
+      "t": 33.793,
+      "stage": 0,
+      "x": -142.848,
+      "y": -570.15,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 270.738
+    },
+    {
+      "t": 33.843,
+      "stage": 0,
+      "x": -145.07,
+      "y": -561.428,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 262.198
+    },
+    {
+      "t": 33.893,
+      "stage": 0,
+      "x": -147.305,
+      "y": -552.659,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 253.642
+    },
+    {
+      "t": 33.943,
+      "stage": 0,
+      "x": -149.528,
+      "y": -543.938,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 245.168
+    },
+    {
+      "t": 33.993,
+      "stage": 0,
+      "x": -151.751,
+      "y": -535.216,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 236.733
+    },
+    {
+      "t": 34.043,
+      "stage": 0,
+      "x": -153.973,
+      "y": -526.495,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 228.341
+    },
+    {
+      "t": 34.093,
+      "stage": 0,
+      "x": -156.196,
+      "y": -517.774,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 219.997
+    },
+    {
+      "t": 34.143,
+      "stage": 0,
+      "x": -158.419,
+      "y": -509.052,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 211.707
+    },
+    {
+      "t": 34.193,
+      "stage": 0,
+      "x": -160.641,
+      "y": -500.331,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 203.477
+    },
+    {
+      "t": 34.243,
+      "stage": 0,
+      "x": -162.864,
+      "y": -491.61,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 195.315
+    },
+    {
+      "t": 34.293,
+      "stage": 0,
+      "x": -165.087,
+      "y": -482.888,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 187.23
+    },
+    {
+      "t": 34.343,
+      "stage": 0,
+      "x": -167.31,
+      "y": -474.167,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 179.232
+    },
+    {
+      "t": 34.393,
+      "stage": 0,
+      "x": -169.532,
+      "y": -465.446,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 171.334
+    },
+    {
+      "t": 34.443,
+      "stage": 0,
+      "x": -171.755,
+      "y": -456.724,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 163.55
+    },
+    {
+      "t": 34.493,
+      "stage": 0,
+      "x": -173.978,
+      "y": -448.003,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 155.897
+    },
+    {
+      "t": 34.543,
+      "stage": 0,
+      "x": -176.2,
+      "y": -439.282,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 148.394
+    },
+    {
+      "t": 34.593,
+      "stage": 0,
+      "x": -178.423,
+      "y": -430.56,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 141.068
+    },
+    {
+      "t": 34.643,
+      "stage": 0,
+      "x": -180.646,
+      "y": -421.839,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 133.945
+    },
+    {
+      "t": 34.693,
+      "stage": 0,
+      "x": -182.869,
+      "y": -413.118,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 127.061
+    },
+    {
+      "t": 34.743,
+      "stage": 0,
+      "x": -185.091,
+      "y": -404.396,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 120.456
+    },
+    {
+      "t": 34.793,
+      "stage": 0,
+      "x": -187.314,
+      "y": -395.675,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 114.179
+    },
+    {
+      "t": 34.843,
+      "stage": 0,
+      "x": -189.539,
+      "y": -386.945,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 108.281
+    },
+    {
+      "t": 34.893,
+      "stage": 0,
+      "x": -191.762,
+      "y": -378.224,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 102.84
+    },
+    {
+      "t": 34.943,
+      "stage": 0,
+      "x": -193.984,
+      "y": -369.503,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 97.926
+    },
+    {
+      "t": 34.993,
+      "stage": 0,
+      "x": -196.207,
+      "y": -360.782,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 93.621
+    },
+    {
+      "t": 35.043,
+      "stage": 0,
+      "x": -198.43,
+      "y": -352.06,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 90.012
+    },
+    {
+      "t": 35.093,
+      "stage": 0,
+      "x": -200.652,
+      "y": -343.339,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 87.187
+    },
+    {
+      "t": 35.143,
+      "stage": 0,
+      "x": -202.875,
+      "y": -334.618,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 85.223
+    },
+    {
+      "t": 35.193,
+      "stage": 0,
+      "x": -205.098,
+      "y": -325.896,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 84.18
+    },
+    {
+      "t": 35.243,
+      "stage": 0,
+      "x": -207.321,
+      "y": -317.175,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 84.093
+    },
+    {
+      "t": 35.293,
+      "stage": 0,
+      "x": -209.55,
+      "y": -308.428,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 84.969
+    },
+    {
+      "t": 35.343,
+      "stage": 0,
+      "x": -211.772,
+      "y": -299.706,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 86.772
+    },
+    {
+      "t": 35.393,
+      "stage": 0,
+      "x": -213.995,
+      "y": -290.985,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 88.995
+    },
+    {
+      "t": 35.443,
+      "stage": 0,
+      "x": -216.218,
+      "y": -282.264,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 91.218
+    },
+    {
+      "t": 35.493,
+      "stage": 0,
+      "x": -218.441,
+      "y": -273.543,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 93.441
+    },
+    {
+      "t": 35.543,
+      "stage": 0,
+      "x": -220.663,
+      "y": -264.821,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 95.663
+    },
+    {
+      "t": 35.593,
+      "stage": 0,
+      "x": -222.886,
+      "y": -256.1,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 97.886
+    },
+    {
+      "t": 35.643,
+      "stage": 0,
+      "x": -225.117,
+      "y": -247.346,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 100.117
+    },
+    {
+      "t": 35.693,
+      "stage": 0,
+      "x": -227.34,
+      "y": -238.624,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 102.34
+    },
+    {
+      "t": 35.743,
+      "stage": 0,
+      "x": -229.562,
+      "y": -229.903,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 104.562
+    },
+    {
+      "t": 35.793,
+      "stage": 0,
+      "x": -231.785,
+      "y": -221.182,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 106.785
+    },
+    {
+      "t": 35.843,
+      "stage": 0,
+      "x": -234.008,
+      "y": -212.46,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 109.008
+    },
+    {
+      "t": 35.894,
+      "stage": 0,
+      "x": -236.245,
+      "y": -203.681,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 111.245
+    },
+    {
+      "t": 35.944,
+      "stage": 0,
+      "x": -238.468,
+      "y": -194.959,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 113.468
+    },
+    {
+      "t": 35.994,
+      "stage": 0,
+      "x": -240.691,
+      "y": -186.238,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 115.691
+    },
+    {
+      "t": 36.044,
+      "stage": 0,
+      "x": -242.914,
+      "y": -177.516,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 117.914
+    },
+    {
+      "t": 36.094,
+      "stage": 0,
+      "x": -245.161,
+      "y": -168.699,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 120.161
+    },
+    {
+      "t": 36.144,
+      "stage": 0,
+      "x": -247.384,
+      "y": -159.977,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 122.384
+    },
+    {
+      "t": 36.194,
+      "stage": 0,
+      "x": -249.606,
+      "y": -151.256,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 124.606
+    },
+    {
+      "t": 36.244,
+      "stage": 0,
+      "x": -251.83,
+      "y": -142.529,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 126.83
+    },
+    {
+      "t": 36.294,
+      "stage": 0,
+      "x": -254.053,
+      "y": -133.808,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 129.053
+    },
+    {
+      "t": 36.344,
+      "stage": 0,
+      "x": -256.276,
+      "y": -125.086,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 131.276
+    },
+    {
+      "t": 36.394,
+      "stage": 0,
+      "x": -256.276,
+      "y": -125.086,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 131.276
+    },
+    {
+      "t": 36.444,
+      "stage": 0,
+      "x": -256.276,
+      "y": -125.086,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 131.276
+    },
+    {
+      "t": 36.494,
+      "stage": 0,
+      "x": -256.276,
+      "y": -125.086,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 131.276
+    },
+    {
+      "t": 36.544,
+      "stage": 0,
+      "x": -256.276,
+      "y": -125.086,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 131.276
+    },
+    {
+      "t": 36.594,
+      "stage": 0,
+      "x": -256.276,
+      "y": -125.086,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 180.0,
+      "clearance": 131.276
+    },
+    {
+      "t": 36.644,
+      "stage": 0,
+      "x": -256.021,
+      "y": -123.863,
+      "z": 62.15,
+      "velocity": 50.001,
+      "speed": 180.0,
+      "clearance": 131.021
+    },
+    {
+      "t": 36.694,
+      "stage": 0,
+      "x": -255.156,
+      "y": -119.702,
+      "z": 62.15,
+      "velocity": 110.001,
+      "speed": 180.0,
+      "clearance": 130.156
+    },
+    {
+      "t": 36.744,
+      "stage": 0,
+      "x": -253.68,
+      "y": -112.603,
+      "z": 62.15,
+      "velocity": 170.002,
+      "speed": 180.0,
+      "clearance": 128.68
+    },
+    {
+      "t": 36.794,
+      "stage": 0,
+      "x": -251.848,
+      "y": -103.792,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 126.848
+    },
+    {
+      "t": 36.844,
+      "stage": 0,
+      "x": -250.015,
+      "y": -94.98,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 125.015
+    },
+    {
+      "t": 36.894,
+      "stage": 0,
+      "x": -248.183,
+      "y": -86.168,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 123.183
+    },
+    {
+      "t": 36.944,
+      "stage": 0,
+      "x": -246.351,
+      "y": -77.357,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 121.351
+    },
+    {
+      "t": 36.994,
+      "stage": 0,
+      "x": -244.518,
+      "y": -68.545,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 119.518
+    },
+    {
+      "t": 37.044,
+      "stage": 0,
+      "x": -242.686,
+      "y": -59.734,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 117.686
+    },
+    {
+      "t": 37.094,
+      "stage": 0,
+      "x": -240.854,
+      "y": -50.922,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 115.854
+    },
+    {
+      "t": 37.144,
+      "stage": 0,
+      "x": -239.021,
+      "y": -42.11,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 114.021
+    },
+    {
+      "t": 37.194,
+      "stage": 0,
+      "x": -237.189,
+      "y": -33.299,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 112.189
+    },
+    {
+      "t": 37.244,
+      "stage": 0,
+      "x": -235.357,
+      "y": -24.487,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 110.357
+    },
+    {
+      "t": 37.294,
+      "stage": 0,
+      "x": -233.524,
+      "y": -15.675,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 108.524
+    },
+    {
+      "t": 37.344,
+      "stage": 0,
+      "x": -231.692,
+      "y": -6.864,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 106.692
+    },
+    {
+      "t": 37.394,
+      "stage": 0,
+      "x": -229.86,
+      "y": 1.948,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 104.86
+    },
+    {
+      "t": 37.444,
+      "stage": 0,
+      "x": -228.027,
+      "y": 10.759,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 103.027
+    },
+    {
+      "t": 37.494,
+      "stage": 0,
+      "x": -226.195,
+      "y": 19.571,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 101.195
+    },
+    {
+      "t": 37.544,
+      "stage": 0,
+      "x": -224.362,
+      "y": 28.383,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 99.362
+    },
+    {
+      "t": 37.594,
+      "stage": 0,
+      "x": -222.53,
+      "y": 37.195,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 97.53
+    },
+    {
+      "t": 37.644,
+      "stage": 0,
+      "x": -220.698,
+      "y": 46.006,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 95.698
+    },
+    {
+      "t": 37.694,
+      "stage": 0,
+      "x": -218.865,
+      "y": 54.818,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 93.865
+    },
+    {
+      "t": 37.744,
+      "stage": 0,
+      "x": -217.033,
+      "y": 63.63,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 92.033
+    },
+    {
+      "t": 37.794,
+      "stage": 0,
+      "x": -215.201,
+      "y": 72.441,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 90.201
+    },
+    {
+      "t": 37.844,
+      "stage": 0,
+      "x": -213.368,
+      "y": 81.253,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 88.368
+    },
+    {
+      "t": 37.894,
+      "stage": 0,
+      "x": -211.536,
+      "y": 90.065,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 86.536
+    },
+    {
+      "t": 37.944,
+      "stage": 0,
+      "x": -209.704,
+      "y": 98.876,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 84.704
+    },
+    {
+      "t": 37.994,
+      "stage": 0,
+      "x": -207.871,
+      "y": 107.688,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 82.871
+    },
+    {
+      "t": 38.044,
+      "stage": 0,
+      "x": -206.039,
+      "y": 116.499,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 81.039
+    },
+    {
+      "t": 38.095,
+      "stage": 0,
+      "x": -204.187,
+      "y": 125.404,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 79.187
+    },
+    {
+      "t": 38.145,
+      "stage": 0,
+      "x": -202.355,
+      "y": 134.216,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 77.355
+    },
+    {
+      "t": 38.195,
+      "stage": 0,
+      "x": -200.523,
+      "y": 143.028,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 75.523
+    },
+    {
+      "t": 38.245,
+      "stage": 0,
+      "x": -198.69,
+      "y": 151.839,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 73.69
+    },
+    {
+      "t": 38.295,
+      "stage": 0,
+      "x": -196.858,
+      "y": 160.651,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 71.858
+    },
+    {
+      "t": 38.345,
+      "stage": 0,
+      "x": -195.026,
+      "y": 169.462,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 70.026
+    },
+    {
+      "t": 38.395,
+      "stage": 0,
+      "x": -193.192,
+      "y": 178.278,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 68.192
+    },
+    {
+      "t": 38.445,
+      "stage": 0,
+      "x": -191.36,
+      "y": 187.09,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 66.36
+    },
+    {
+      "t": 38.495,
+      "stage": 0,
+      "x": -189.528,
+      "y": 195.901,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 64.528
+    },
+    {
+      "t": 38.545,
+      "stage": 0,
+      "x": -187.695,
+      "y": 204.713,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 62.695
+    },
+    {
+      "t": 38.595,
+      "stage": 0,
+      "x": -185.863,
+      "y": 213.525,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 60.863
+    },
+    {
+      "t": 38.645,
+      "stage": 0,
+      "x": -184.031,
+      "y": 222.336,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 59.031
+    },
+    {
+      "t": 38.695,
+      "stage": 0,
+      "x": -182.198,
+      "y": 231.148,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 57.198
+    },
+    {
+      "t": 38.745,
+      "stage": 0,
+      "x": -180.366,
+      "y": 239.96,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 55.366
+    },
+    {
+      "t": 38.795,
+      "stage": 0,
+      "x": -178.528,
+      "y": 248.798,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 53.528
+    },
+    {
+      "t": 38.845,
+      "stage": 0,
+      "x": -176.689,
+      "y": 257.643,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 51.689
+    },
+    {
+      "t": 38.895,
+      "stage": 0,
+      "x": -174.856,
+      "y": 266.458,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 49.856
+    },
+    {
+      "t": 38.945,
+      "stage": 0,
+      "x": -173.023,
+      "y": 275.272,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 48.023
+    },
+    {
+      "t": 38.995,
+      "stage": 0,
+      "x": -171.191,
+      "y": 284.084,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 46.191
+    },
+    {
+      "t": 39.045,
+      "stage": 0,
+      "x": -168.425,
+      "y": 292.644,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 43.425
+    },
+    {
+      "t": 39.095,
+      "stage": 0,
+      "x": -165.583,
+      "y": 301.184,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 40.601
+    },
+    {
+      "t": 39.145,
+      "stage": 0,
+      "x": -162.741,
+      "y": 309.723,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 38.974
+    },
+    {
+      "t": 39.195,
+      "stage": 0,
+      "x": -159.899,
+      "y": 318.263,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 39.389
+    },
+    {
+      "t": 39.245,
+      "stage": 0,
+      "x": -157.053,
+      "y": 326.816,
+      "z": 62.15,
+      "velocity": 180.0,
+      "speed": 180.0,
+      "clearance": 41.791
+    },
+    {
+      "t": 39.295,
+      "stage": 1,
+      "x": -648.956,
+      "y": 0.688,
+      "z": 62.15,
+      "velocity": 50.001,
+      "speed": 240.0,
+      "clearance": 279.955
+    },
+    {
+      "t": 39.345,
+      "stage": 1,
+      "x": -645.407,
+      "y": 3.026,
+      "z": 62.15,
+      "velocity": 110.002,
+      "speed": 240.0,
+      "clearance": 277.402
+    },
+    {
+      "t": 39.395,
+      "stage": 1,
+      "x": -639.353,
+      "y": 7.016,
+      "z": 62.15,
+      "velocity": 170.002,
+      "speed": 240.0,
+      "clearance": 273.144
+    },
+    {
+      "t": 39.446,
+      "stage": 1,
+      "x": -630.741,
+      "y": 12.691,
+      "z": 62.15,
+      "velocity": 230.321,
+      "speed": 240.0,
+      "clearance": 267.31
+    },
+    {
+      "t": 39.496,
+      "stage": 1,
+      "x": -620.706,
+      "y": 19.303,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 260.697
+    },
+    {
+      "t": 39.546,
+      "stage": 1,
+      "x": -610.686,
+      "y": 25.907,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 254.093
+    },
+    {
+      "t": 39.596,
+      "stage": 1,
+      "x": -600.603,
+      "y": 32.551,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 247.449
+    },
+    {
+      "t": 39.646,
+      "stage": 1,
+      "x": -590.57,
+      "y": 39.162,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 240.838
+    },
+    {
+      "t": 39.696,
+      "stage": 1,
+      "x": -580.504,
+      "y": 45.795,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 234.205
+    },
+    {
+      "t": 39.746,
+      "stage": 1,
+      "x": -570.483,
+      "y": 52.398,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 227.602
+    },
+    {
+      "t": 39.796,
+      "stage": 1,
+      "x": -560.463,
+      "y": 59.001,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 220.999
+    },
+    {
+      "t": 39.846,
+      "stage": 1,
+      "x": -550.443,
+      "y": 65.604,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 214.396
+    },
+    {
+      "t": 39.896,
+      "stage": 1,
+      "x": -540.422,
+      "y": 72.207,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 207.793
+    },
+    {
+      "t": 39.946,
+      "stage": 1,
+      "x": -530.387,
+      "y": 78.82,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 201.18
+    },
+    {
+      "t": 39.996,
+      "stage": 1,
+      "x": -520.361,
+      "y": 85.427,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 194.573
+    },
+    {
+      "t": 40.046,
+      "stage": 1,
+      "x": -510.34,
+      "y": 92.03,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 187.97
+    },
+    {
+      "t": 40.096,
+      "stage": 1,
+      "x": -500.316,
+      "y": 98.636,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 181.364
+    },
+    {
+      "t": 40.146,
+      "stage": 1,
+      "x": -490.295,
+      "y": 105.239,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 174.761
+    },
+    {
+      "t": 40.196,
+      "stage": 1,
+      "x": -480.275,
+      "y": 111.842,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 168.158
+    },
+    {
+      "t": 40.246,
+      "stage": 1,
+      "x": -470.229,
+      "y": 118.462,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 161.538
+    },
+    {
+      "t": 40.296,
+      "stage": 1,
+      "x": -460.209,
+      "y": 125.065,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 154.935
+    },
+    {
+      "t": 40.347,
+      "stage": 1,
+      "x": -450.158,
+      "y": 131.688,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 148.312
+    },
+    {
+      "t": 40.397,
+      "stage": 1,
+      "x": -440.138,
+      "y": 138.291,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 141.709
+    },
+    {
+      "t": 40.447,
+      "stage": 1,
+      "x": -430.117,
+      "y": 144.894,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 135.106
+    },
+    {
+      "t": 40.497,
+      "stage": 1,
+      "x": -420.097,
+      "y": 151.497,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 128.503
+    },
+    {
+      "t": 40.547,
+      "stage": 1,
+      "x": -410.077,
+      "y": 158.1,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 121.9
+    },
+    {
+      "t": 40.597,
+      "stage": 1,
+      "x": -400.054,
+      "y": 164.704,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 115.296
+    },
+    {
+      "t": 40.647,
+      "stage": 1,
+      "x": -390.034,
+      "y": 171.307,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 108.693
+    },
+    {
+      "t": 40.697,
+      "stage": 1,
+      "x": -380.014,
+      "y": 177.91,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 102.09
+    },
+    {
+      "t": 40.747,
+      "stage": 1,
+      "x": -369.964,
+      "y": 184.533,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 95.467
+    },
+    {
+      "t": 40.797,
+      "stage": 1,
+      "x": -359.938,
+      "y": 191.139,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 88.861
+    },
+    {
+      "t": 40.847,
+      "stage": 1,
+      "x": -349.912,
+      "y": 197.746,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 82.254
+    },
+    {
+      "t": 40.897,
+      "stage": 1,
+      "x": -339.875,
+      "y": 204.36,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 75.64
+    },
+    {
+      "t": 40.947,
+      "stage": 1,
+      "x": -329.802,
+      "y": 210.997,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 69.003
+    },
+    {
+      "t": 40.997,
+      "stage": 1,
+      "x": -319.763,
+      "y": 217.613,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 63.222
+    },
+    {
+      "t": 41.048,
+      "stage": 1,
+      "x": -309.68,
+      "y": 224.257,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 59.331
+    },
+    {
+      "t": 41.098,
+      "stage": 1,
+      "x": -299.849,
+      "y": 231.136,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 57.418
+    },
+    {
+      "t": 41.148,
+      "stage": 1,
+      "x": -290.248,
+      "y": 238.335,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 57.586
+    },
+    {
+      "t": 41.198,
+      "stage": 1,
+      "x": -280.647,
+      "y": 245.534,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 60.196
+    },
+    {
+      "t": 41.248,
+      "stage": 1,
+      "x": -271.046,
+      "y": 252.734,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 64.954
+    },
+    {
+      "t": 41.298,
+      "stage": 1,
+      "x": -261.388,
+      "y": 259.975,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 71.474
+    },
+    {
+      "t": 41.348,
+      "stage": 1,
+      "x": -251.769,
+      "y": 267.188,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 79.273
+    },
+    {
+      "t": 41.398,
+      "stage": 1,
+      "x": -242.169,
+      "y": 274.387,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 88.011
+    },
+    {
+      "t": 41.448,
+      "stage": 1,
+      "x": -232.568,
+      "y": 281.586,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 97.432
+    },
+    {
+      "t": 41.499,
+      "stage": 1,
+      "x": -222.827,
+      "y": 288.89,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 97.827
+    },
+    {
+      "t": 41.55,
+      "stage": 1,
+      "x": -213.075,
+      "y": 296.203,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 88.075
+    },
+    {
+      "t": 41.6,
+      "stage": 1,
+      "x": -203.474,
+      "y": 303.402,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 78.547
+    },
+    {
+      "t": 41.65,
+      "stage": 1,
+      "x": -193.873,
+      "y": 310.602,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 69.684
+    },
+    {
+      "t": 41.7,
+      "stage": 1,
+      "x": -184.272,
+      "y": 317.801,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 61.887
+    },
+    {
+      "t": 41.75,
+      "stage": 1,
+      "x": -174.653,
+      "y": 325.014,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 55.597
+    },
+    {
+      "t": 41.8,
+      "stage": 1,
+      "x": -165.052,
+      "y": 332.213,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 51.399
+    },
+    {
+      "t": 41.85,
+      "stage": 1,
+      "x": -155.395,
+      "y": 339.454,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 49.805
+    },
+    {
+      "t": 41.9,
+      "stage": 1,
+      "x": -145.286,
+      "y": 345.185,
+      "z": 62.15,
+      "velocity": 225.928,
+      "speed": 240.0,
+      "clearance": 49.53
+    },
+    {
+      "t": 41.95,
+      "stage": 1,
+      "x": -133.935,
+      "y": 346.593,
+      "z": 62.15,
+      "velocity": 236.621,
+      "speed": 240.0,
+      "clearance": 47.442
+    },
+    {
+      "t": 42.0,
+      "stage": 1,
+      "x": -121.864,
+      "y": 346.179,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 46.179
+    },
+    {
+      "t": 42.05,
+      "stage": 1,
+      "x": -109.87,
+      "y": 345.768,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 45.768
+    },
+    {
+      "t": 42.1,
+      "stage": 1,
+      "x": -97.876,
+      "y": 345.357,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 45.357
+    },
+    {
+      "t": 42.15,
+      "stage": 1,
+      "x": -85.883,
+      "y": 344.945,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 44.945
+    },
+    {
+      "t": 42.2,
+      "stage": 1,
+      "x": -73.89,
+      "y": 344.534,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 44.534
+    },
+    {
+      "t": 42.251,
+      "stage": 1,
+      "x": -61.831,
+      "y": 344.12,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 44.12
+    },
+    {
+      "t": 42.301,
+      "stage": 1,
+      "x": -49.838,
+      "y": 343.709,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 43.709
+    },
+    {
+      "t": 42.351,
+      "stage": 1,
+      "x": -37.842,
+      "y": 343.298,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 43.298
+    },
+    {
+      "t": 42.401,
+      "stage": 1,
+      "x": -25.849,
+      "y": 342.886,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 42.886
+    },
+    {
+      "t": 42.451,
+      "stage": 1,
+      "x": -13.856,
+      "y": 342.475,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 42.475
+    },
+    {
+      "t": 42.501,
+      "stage": 1,
+      "x": -1.862,
+      "y": 342.064,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 42.064
+    },
+    {
+      "t": 42.551,
+      "stage": 1,
+      "x": 10.079,
+      "y": 340.947,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 40.947
+    },
+    {
+      "t": 42.601,
+      "stage": 1,
+      "x": 22.016,
+      "y": 339.615,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 39.615
+    },
+    {
+      "t": 42.651,
+      "stage": 1,
+      "x": 34.031,
+      "y": 338.276,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 38.276
+    },
+    {
+      "t": 42.701,
+      "stage": 1,
+      "x": 45.957,
+      "y": 336.945,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 36.945
+    },
+    {
+      "t": 42.752,
+      "stage": 1,
+      "x": 58.078,
+      "y": 335.594,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 35.594
+    },
+    {
+      "t": 42.802,
+      "stage": 1,
+      "x": 70.013,
+      "y": 334.263,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 34.263
+    },
+    {
+      "t": 42.852,
+      "stage": 1,
+      "x": 81.935,
+      "y": 334.01,
+      "z": 62.15,
+      "velocity": 238.205,
+      "speed": 240.0,
+      "clearance": 34.01
+    },
+    {
+      "t": 42.902,
+      "stage": 1,
+      "x": 93.893,
+      "y": 334.01,
+      "z": 62.15,
+      "velocity": 237.626,
+      "speed": 240.0,
+      "clearance": 34.01
+    },
+    {
+      "t": 42.952,
+      "stage": 1,
+      "x": 105.751,
+      "y": 334.01,
+      "z": 62.15,
+      "velocity": 236.755,
+      "speed": 240.0,
+      "clearance": 34.01
+    },
+    {
+      "t": 43.002,
+      "stage": 1,
+      "x": 117.555,
+      "y": 334.01,
+      "z": 62.15,
+      "velocity": 235.35,
+      "speed": 240.0,
+      "clearance": 34.01
+    },
+    {
+      "t": 43.052,
+      "stage": 1,
+      "x": 129.26,
+      "y": 333.817,
+      "z": 62.15,
+      "velocity": 233.776,
+      "speed": 240.0,
+      "clearance": 34.084
+    },
+    {
+      "t": 43.102,
+      "stage": 1,
+      "x": 140.854,
+      "y": 331.178,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 34.978
+    },
+    {
+      "t": 43.152,
+      "stage": 1,
+      "x": 152.436,
+      "y": 328.036,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 39.227
+    },
+    {
+      "t": 43.202,
+      "stage": 1,
+      "x": 164.017,
+      "y": 324.894,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 46.283
+    },
+    {
+      "t": 43.252,
+      "stage": 1,
+      "x": 175.294,
+      "y": 321.092,
+      "z": 62.15,
+      "velocity": 236.548,
+      "speed": 240.0,
+      "clearance": 54.537
+    },
+    {
+      "t": 43.302,
+      "stage": 1,
+      "x": 185.36,
+      "y": 314.649,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 62.112
+    },
+    {
+      "t": 43.353,
+      "stage": 1,
+      "x": 195.362,
+      "y": 307.876,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 70.801
+    },
+    {
+      "t": 43.403,
+      "stage": 1,
+      "x": 205.349,
+      "y": 301.112,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 80.357
+    },
+    {
+      "t": 43.453,
+      "stage": 1,
+      "x": 215.286,
+      "y": 294.384,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 90.286
+    },
+    {
+      "t": 43.503,
+      "stage": 1,
+      "x": 225.222,
+      "y": 287.655,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 100.222
+    },
+    {
+      "t": 43.553,
+      "stage": 1,
+      "x": 235.158,
+      "y": 280.926,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 110.158
+    },
+    {
+      "t": 43.603,
+      "stage": 1,
+      "x": 245.094,
+      "y": 274.197,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 120.094
+    },
+    {
+      "t": 43.653,
+      "stage": 1,
+      "x": 255.038,
+      "y": 267.463,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 130.038
+    },
+    {
+      "t": 43.703,
+      "stage": 1,
+      "x": 264.975,
+      "y": 260.735,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 139.975
+    },
+    {
+      "t": 43.753,
+      "stage": 1,
+      "x": 274.993,
+      "y": 253.95,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 149.993
+    },
+    {
+      "t": 43.803,
+      "stage": 1,
+      "x": 284.938,
+      "y": 247.216,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 159.938
+    },
+    {
+      "t": 43.854,
+      "stage": 1,
+      "x": 294.933,
+      "y": 240.447,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 169.933
+    },
+    {
+      "t": 43.904,
+      "stage": 1,
+      "x": 304.87,
+      "y": 233.718,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 179.87
+    },
+    {
+      "t": 43.954,
+      "stage": 1,
+      "x": 314.814,
+      "y": 226.984,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 189.814
+    },
+    {
+      "t": 44.004,
+      "stage": 1,
+      "x": 324.75,
+      "y": 220.255,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 199.75
+    },
+    {
+      "t": 44.054,
+      "stage": 1,
+      "x": 334.695,
+      "y": 213.521,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 209.695
+    },
+    {
+      "t": 44.104,
+      "stage": 1,
+      "x": 344.631,
+      "y": 206.792,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 219.631
+    },
+    {
+      "t": 44.154,
+      "stage": 1,
+      "x": 354.587,
+      "y": 200.05,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 229.587
+    },
+    {
+      "t": 44.204,
+      "stage": 1,
+      "x": 364.523,
+      "y": 193.322,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 239.523
+    },
+    {
+      "t": 44.254,
+      "stage": 1,
+      "x": 374.459,
+      "y": 186.593,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 249.459
+    },
+    {
+      "t": 44.304,
+      "stage": 1,
+      "x": 384.406,
+      "y": 179.857,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 259.406
+    },
+    {
+      "t": 44.354,
+      "stage": 1,
+      "x": 394.345,
+      "y": 173.127,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 269.345
+    },
+    {
+      "t": 44.404,
+      "stage": 1,
+      "x": 404.281,
+      "y": 166.398,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 279.281
+    },
+    {
+      "t": 44.454,
+      "stage": 1,
+      "x": 414.218,
+      "y": 159.669,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 289.218
+    },
+    {
+      "t": 44.504,
+      "stage": 1,
+      "x": 424.188,
+      "y": 152.918,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 299.188
+    },
+    {
+      "t": 44.554,
+      "stage": 1,
+      "x": 434.142,
+      "y": 146.177,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 309.142
+    },
+    {
+      "t": 44.604,
+      "stage": 1,
+      "x": 444.118,
+      "y": 139.421,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 319.118
+    },
+    {
+      "t": 44.655,
+      "stage": 1,
+      "x": 454.146,
+      "y": 132.63,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 329.146
+    },
+    {
+      "t": 44.705,
+      "stage": 1,
+      "x": 464.087,
+      "y": 125.898,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 339.087
+    },
+    {
+      "t": 44.755,
+      "stage": 1,
+      "x": 474.09,
+      "y": 119.125,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 349.09
+    },
+    {
+      "t": 44.805,
+      "stage": 1,
+      "x": 484.041,
+      "y": 112.386,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 359.041
+    },
+    {
+      "t": 44.855,
+      "stage": 1,
+      "x": 493.977,
+      "y": 105.657,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 368.977
+    },
+    {
+      "t": 44.905,
+      "stage": 1,
+      "x": 503.913,
+      "y": 98.928,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 378.913
+    },
+    {
+      "t": 44.955,
+      "stage": 1,
+      "x": 513.849,
+      "y": 92.2,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 372.2
+    },
+    {
+      "t": 45.005,
+      "stage": 1,
+      "x": 523.787,
+      "y": 85.47,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 365.47
+    },
+    {
+      "t": 45.055,
+      "stage": 1,
+      "x": 533.73,
+      "y": 78.736,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 358.736
+    },
+    {
+      "t": 45.106,
+      "stage": 1,
+      "x": 543.682,
+      "y": 71.997,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 351.997
+    },
+    {
+      "t": 45.156,
+      "stage": 1,
+      "x": 553.696,
+      "y": 65.216,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 345.216
+    },
+    {
+      "t": 45.206,
+      "stage": 1,
+      "x": 563.634,
+      "y": 58.486,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 338.486
+    },
+    {
+      "t": 45.256,
+      "stage": 1,
+      "x": 573.688,
+      "y": 51.678,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 331.678
+    },
+    {
+      "t": 45.307,
+      "stage": 1,
+      "x": 583.663,
+      "y": 44.923,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 324.923
+    },
+    {
+      "t": 45.357,
+      "stage": 1,
+      "x": 593.624,
+      "y": 38.177,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 318.177
+    },
+    {
+      "t": 45.407,
+      "stage": 1,
+      "x": 603.567,
+      "y": 31.444,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 311.444
+    },
+    {
+      "t": 45.457,
+      "stage": 1,
+      "x": 613.544,
+      "y": 24.687,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 304.687
+    },
+    {
+      "t": 45.507,
+      "stage": 1,
+      "x": 623.485,
+      "y": 17.956,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 297.956
+    },
+    {
+      "t": 45.557,
+      "stage": 1,
+      "x": 633.421,
+      "y": 11.227,
+      "z": 62.15,
+      "velocity": 240.0,
+      "speed": 240.0,
+      "clearance": 291.247
+    },
+    {
+      "t": 45.607,
+      "stage": 1,
+      "x": 635.077,
+      "y": 10.106,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 240.0,
+      "clearance": 290.15
+    },
+    {
+      "t": 45.658,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 45.709,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 45.76,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 45.81,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 45.86,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 45.91,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 45.96,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.01,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.06,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.11,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.16,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.21,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.26,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.31,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.361,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.411,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.461,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.511,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.562,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.612,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.665,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.716,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.767,
+      "stage": 2,
+      "x": -1050.0,
+      "y": -500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 46.817,
+      "stage": 2,
+      "x": -1049.75,
+      "y": -500.006,
+      "z": 62.15,
+      "velocity": 20.0,
+      "speed": 300.0,
+      "clearance": 885.776
+    },
+    {
+      "t": 46.868,
+      "stage": 2,
+      "x": -1046.961,
+      "y": -500.072,
+      "z": 62.15,
+      "velocity": 80.527,
+      "speed": 300.0,
+      "clearance": 884.516
+    },
+    {
+      "t": 46.918,
+      "stage": 2,
+      "x": -1041.179,
+      "y": -500.208,
+      "z": 62.15,
+      "velocity": 140.583,
+      "speed": 300.0,
+      "clearance": 881.926
+    },
+    {
+      "t": 46.968,
+      "stage": 2,
+      "x": -1032.403,
+      "y": -500.416,
+      "z": 62.15,
+      "velocity": 200.584,
+      "speed": 300.0,
+      "clearance": 878.053
+    },
+    {
+      "t": 47.018,
+      "stage": 2,
+      "x": -1020.626,
+      "y": -500.694,
+      "z": 62.15,
+      "velocity": 260.585,
+      "speed": 300.0,
+      "clearance": 872.968
+    },
+    {
+      "t": 47.068,
+      "stage": 2,
+      "x": -1006.116,
+      "y": -501.037,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 866.881
+    },
+    {
+      "t": 47.118,
+      "stage": 2,
+      "x": -991.12,
+      "y": -501.392,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 860.802
+    },
+    {
+      "t": 47.168,
+      "stage": 2,
+      "x": -976.077,
+      "y": -501.747,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 854.925
+    },
+    {
+      "t": 47.218,
+      "stage": 2,
+      "x": -961.073,
+      "y": -502.102,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 849.289
+    },
+    {
+      "t": 47.268,
+      "stage": 2,
+      "x": -946.001,
+      "y": -502.458,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 843.858
+    },
+    {
+      "t": 47.318,
+      "stage": 2,
+      "x": -931.005,
+      "y": -502.812,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 831.13
+    },
+    {
+      "t": 47.368,
+      "stage": 2,
+      "x": -915.931,
+      "y": -503.169,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 816.608
+    },
+    {
+      "t": 47.418,
+      "stage": 2,
+      "x": -900.934,
+      "y": -503.523,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 802.182
+    },
+    {
+      "t": 47.468,
+      "stage": 2,
+      "x": -885.91,
+      "y": -503.878,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 787.75
+    },
+    {
+      "t": 47.518,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.568,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.618,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.668,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.718,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.768,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.818,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.868,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.918,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 47.968,
+      "stage": 3,
+      "x": 1050.0,
+      "y": 500.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 885.889
+    },
+    {
+      "t": 48.018,
+      "stage": 3,
+      "x": 1049.751,
+      "y": 500.02,
+      "z": 62.15,
+      "velocity": 20.0,
+      "speed": 300.0,
+      "clearance": 885.789
+    },
+    {
+      "t": 48.068,
+      "stage": 3,
+      "x": 1047.01,
+      "y": 500.244,
+      "z": 62.15,
+      "velocity": 80.001,
+      "speed": 300.0,
+      "clearance": 884.691
+    },
+    {
+      "t": 48.118,
+      "stage": 3,
+      "x": 1041.272,
+      "y": 500.712,
+      "z": 62.15,
+      "velocity": 140.054,
+      "speed": 300.0,
+      "clearance": 882.415
+    },
+    {
+      "t": 48.168,
+      "stage": 3,
+      "x": 1032.548,
+      "y": 501.424,
+      "z": 62.15,
+      "velocity": 200.054,
+      "speed": 300.0,
+      "clearance": 879.015
+    },
+    {
+      "t": 48.218,
+      "stage": 3,
+      "x": 1020.835,
+      "y": 502.379,
+      "z": 62.15,
+      "velocity": 260.055,
+      "speed": 300.0,
+      "clearance": 874.568
+    },
+    {
+      "t": 48.268,
+      "stage": 3,
+      "x": 1006.381,
+      "y": 503.558,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 869.268
+    },
+    {
+      "t": 48.318,
+      "stage": 3,
+      "x": 991.428,
+      "y": 504.778,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 864.006
+    },
+    {
+      "t": 48.368,
+      "stage": 3,
+      "x": 976.478,
+      "y": 505.998,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 858.976
+    },
+    {
+      "t": 48.418,
+      "stage": 3,
+      "x": 961.527,
+      "y": 507.217,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 854.179
+    },
+    {
+      "t": 48.468,
+      "stage": 3,
+      "x": 946.577,
+      "y": 508.437,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 847.605
+    },
+    {
+      "t": 48.518,
+      "stage": 3,
+      "x": 931.626,
+      "y": 509.657,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 833.428
+    },
+    {
+      "t": 48.568,
+      "stage": 3,
+      "x": 916.674,
+      "y": 510.876,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 819.278
+    },
+    {
+      "t": 48.619,
+      "stage": 3,
+      "x": 901.716,
+      "y": 512.096,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 805.154
+    },
+    {
+      "t": 48.669,
+      "stage": 3,
+      "x": 886.733,
+      "y": 513.319,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 791.038
+    },
+    {
+      "t": 48.719,
+      "stage": 4,
+      "x": -600.0,
+      "y": -950.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 805.062
+    },
+    {
+      "t": 48.769,
+      "stage": 4,
+      "x": -600.0,
+      "y": -950.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 805.062
+    },
+    {
+      "t": 48.819,
+      "stage": 4,
+      "x": -599.806,
+      "y": -949.843,
+      "z": 62.15,
+      "velocity": 20.0,
+      "speed": 300.0,
+      "clearance": 804.82
+    },
+    {
+      "t": 48.869,
+      "stage": 4,
+      "x": -597.667,
+      "y": -948.114,
+      "z": 62.15,
+      "velocity": 80.001,
+      "speed": 300.0,
+      "clearance": 802.163
+    },
+    {
+      "t": 48.919,
+      "stage": 4,
+      "x": -593.196,
+      "y": -944.499,
+      "z": 62.15,
+      "velocity": 140.002,
+      "speed": 300.0,
+      "clearance": 796.609
+    },
+    {
+      "t": 48.969,
+      "stage": 4,
+      "x": -586.389,
+      "y": -938.995,
+      "z": 62.15,
+      "velocity": 200.017,
+      "speed": 300.0,
+      "clearance": 788.159
+    },
+    {
+      "t": 49.019,
+      "stage": 4,
+      "x": -577.251,
+      "y": -931.607,
+      "z": 62.15,
+      "velocity": 260.018,
+      "speed": 300.0,
+      "clearance": 776.826
+    },
+    {
+      "t": 49.069,
+      "stage": 4,
+      "x": -565.975,
+      "y": -922.49,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 762.859
+    },
+    {
+      "t": 49.119,
+      "stage": 4,
+      "x": -554.308,
+      "y": -913.057,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 748.428
+    },
+    {
+      "t": 49.169,
+      "stage": 4,
+      "x": -542.643,
+      "y": -903.626,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 734.023
+    },
+    {
+      "t": 49.219,
+      "stage": 4,
+      "x": -530.978,
+      "y": -894.195,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 719.643
+    },
+    {
+      "t": 49.269,
+      "stage": 4,
+      "x": -519.314,
+      "y": -884.764,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 705.289
+    },
+    {
+      "t": 49.319,
+      "stage": 4,
+      "x": -507.646,
+      "y": -875.331,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 690.959
+    },
+    {
+      "t": 49.369,
+      "stage": 4,
+      "x": -495.982,
+      "y": -865.9,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 676.661
+    },
+    {
+      "t": 49.419,
+      "stage": 4,
+      "x": -484.317,
+      "y": -856.469,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 662.395
+    },
+    {
+      "t": 49.469,
+      "stage": 4,
+      "x": -472.653,
+      "y": -847.038,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 648.161
+    },
+    {
+      "t": 49.519,
+      "stage": 4,
+      "x": -460.988,
+      "y": -837.607,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 633.963
+    },
+    {
+      "t": 49.569,
+      "stage": 4,
+      "x": -449.323,
+      "y": -828.176,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 619.803
+    },
+    {
+      "t": 49.619,
+      "stage": 4,
+      "x": -437.659,
+      "y": -818.745,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 605.683
+    },
+    {
+      "t": 49.669,
+      "stage": 4,
+      "x": -425.994,
+      "y": -809.314,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 591.607
+    },
+    {
+      "t": 49.719,
+      "stage": 4,
+      "x": -414.329,
+      "y": -799.883,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 577.577
+    },
+    {
+      "t": 49.769,
+      "stage": 4,
+      "x": -402.664,
+      "y": -790.452,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 563.596
+    },
+    {
+      "t": 49.819,
+      "stage": 4,
+      "x": -390.998,
+      "y": -781.02,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 549.668
+    },
+    {
+      "t": 49.869,
+      "stage": 5,
+      "x": 600.0,
+      "y": 950.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 805.062
+    },
+    {
+      "t": 49.919,
+      "stage": 5,
+      "x": 600.0,
+      "y": 950.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 805.062
+    },
+    {
+      "t": 49.969,
+      "stage": 5,
+      "x": 600.0,
+      "y": 950.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 300.0,
+      "clearance": 805.062
+    },
+    {
+      "t": 50.019,
+      "stage": 5,
+      "x": 599.764,
+      "y": 949.917,
+      "z": 62.15,
+      "velocity": 20.0,
+      "speed": 300.0,
+      "clearance": 804.856
+    },
+    {
+      "t": 50.069,
+      "stage": 5,
+      "x": 597.169,
+      "y": 949.008,
+      "z": 62.15,
+      "velocity": 80.001,
+      "speed": 300.0,
+      "clearance": 802.593
+    },
+    {
+      "t": 50.119,
+      "stage": 5,
+      "x": 591.742,
+      "y": 947.108,
+      "z": 62.15,
+      "velocity": 140.001,
+      "speed": 300.0,
+      "clearance": 797.87
+    },
+    {
+      "t": 50.169,
+      "stage": 5,
+      "x": 583.483,
+      "y": 944.216,
+      "z": 62.15,
+      "velocity": 200.002,
+      "speed": 300.0,
+      "clearance": 790.709
+    },
+    {
+      "t": 50.219,
+      "stage": 5,
+      "x": 572.393,
+      "y": 940.333,
+      "z": 62.15,
+      "velocity": 260.003,
+      "speed": 300.0,
+      "clearance": 781.144
+    },
+    {
+      "t": 50.269,
+      "stage": 5,
+      "x": 558.708,
+      "y": 935.54,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 769.424
+    },
+    {
+      "t": 50.319,
+      "stage": 5,
+      "x": 544.55,
+      "y": 930.583,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 757.402
+    },
+    {
+      "t": 50.369,
+      "stage": 5,
+      "x": 530.393,
+      "y": 925.626,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 745.487
+    },
+    {
+      "t": 50.419,
+      "stage": 5,
+      "x": 516.236,
+      "y": 920.668,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 733.685
+    },
+    {
+      "t": 50.469,
+      "stage": 5,
+      "x": 502.078,
+      "y": 915.71,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 722.002
+    },
+    {
+      "t": 50.519,
+      "stage": 5,
+      "x": 487.921,
+      "y": 910.753,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 710.444
+    },
+    {
+      "t": 50.569,
+      "stage": 5,
+      "x": 473.764,
+      "y": 905.795,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 699.017
+    },
+    {
+      "t": 50.619,
+      "stage": 5,
+      "x": 459.606,
+      "y": 900.838,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 687.727
+    },
+    {
+      "t": 50.669,
+      "stage": 5,
+      "x": 445.449,
+      "y": 895.88,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 676.581
+    },
+    {
+      "t": 50.719,
+      "stage": 5,
+      "x": 431.291,
+      "y": 890.923,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 665.585
+    },
+    {
+      "t": 50.769,
+      "stage": 5,
+      "x": 417.134,
+      "y": 885.965,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 654.75
+    },
+    {
+      "t": 50.819,
+      "stage": 5,
+      "x": 402.977,
+      "y": 881.008,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 644.081
+    },
+    {
+      "t": 50.869,
+      "stage": 5,
+      "x": 388.819,
+      "y": 876.05,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 633.589
+    },
+    {
+      "t": 50.919,
+      "stage": 5,
+      "x": 374.662,
+      "y": 871.093,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 623.28
+    },
+    {
+      "t": 50.969,
+      "stage": 5,
+      "x": 360.505,
+      "y": 866.135,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 613.165
+    },
+    {
+      "t": 51.019,
+      "stage": 5,
+      "x": 346.348,
+      "y": 861.178,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 603.254
+    },
+    {
+      "t": 51.069,
+      "stage": 5,
+      "x": 332.19,
+      "y": 856.22,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 593.556
+    },
+    {
+      "t": 51.119,
+      "stage": 5,
+      "x": 318.033,
+      "y": 851.263,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 584.082
+    },
+    {
+      "t": 51.169,
+      "stage": 5,
+      "x": 303.876,
+      "y": 846.305,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 574.844
+    },
+    {
+      "t": 51.219,
+      "stage": 5,
+      "x": 289.718,
+      "y": 841.348,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 565.853
+    },
+    {
+      "t": 51.269,
+      "stage": 5,
+      "x": 275.561,
+      "y": 836.39,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 557.12
+    },
+    {
+      "t": 51.319,
+      "stage": 5,
+      "x": 261.404,
+      "y": 831.433,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 548.659
+    },
+    {
+      "t": 51.369,
+      "stage": 5,
+      "x": 247.246,
+      "y": 826.475,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 540.482
+    },
+    {
+      "t": 51.419,
+      "stage": 5,
+      "x": 233.089,
+      "y": 821.518,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 532.601
+    },
+    {
+      "t": 51.469,
+      "stage": 5,
+      "x": 218.932,
+      "y": 816.56,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 525.031
+    },
+    {
+      "t": 51.519,
+      "stage": 5,
+      "x": 204.774,
+      "y": 811.603,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 517.785
+    },
+    {
+      "t": 51.569,
+      "stage": 5,
+      "x": 190.608,
+      "y": 806.642,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 510.872
+    },
+    {
+      "t": 51.619,
+      "stage": 5,
+      "x": 176.435,
+      "y": 801.679,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 504.309
+    },
+    {
+      "t": 51.67,
+      "stage": 5,
+      "x": 162.194,
+      "y": 796.692,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 498.083
+    },
+    {
+      "t": 51.72,
+      "stage": 5,
+      "x": 148.007,
+      "y": 791.724,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 492.262
+    },
+    {
+      "t": 51.77,
+      "stage": 5,
+      "x": 133.805,
+      "y": 786.751,
+      "z": 62.15,
+      "velocity": 300.0,
+      "speed": 300.0,
+      "clearance": 486.831
+    },
+    {
+      "t": 51.82,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 51.87,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 51.92,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 51.97,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.02,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.07,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.12,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.17,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.22,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.27,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.32,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.37,
+      "stage": 6,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 52.42,
+      "stage": 6,
+      "x": -649.75,
+      "y": -450.015,
+      "z": 62.15,
+      "velocity": 20.0,
+      "speed": 100.0,
+      "clearance": 545.772
+    },
+    {
+      "t": 52.47,
+      "stage": 6,
+      "x": -647.005,
+      "y": -450.178,
+      "z": 62.15,
+      "velocity": 80.001,
+      "speed": 100.0,
+      "clearance": 543.179
+    },
+    {
+      "t": 52.52,
+      "stage": 6,
+      "x": -642.089,
+      "y": -450.471,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 538.538
+    },
+    {
+      "t": 52.57,
+      "stage": 6,
+      "x": -637.098,
+      "y": -450.769,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 533.831
+    },
+    {
+      "t": 52.62,
+      "stage": 6,
+      "x": -632.107,
+      "y": -451.066,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 529.13
+    },
+    {
+      "t": 52.67,
+      "stage": 6,
+      "x": -627.115,
+      "y": -451.364,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 524.434
+    },
+    {
+      "t": 52.72,
+      "stage": 6,
+      "x": -622.114,
+      "y": -451.662,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 519.734
+    },
+    {
+      "t": 52.77,
+      "stage": 6,
+      "x": -617.123,
+      "y": -451.959,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 515.05
+    },
+    {
+      "t": 52.82,
+      "stage": 6,
+      "x": -612.132,
+      "y": -452.257,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 510.372
+    },
+    {
+      "t": 52.87,
+      "stage": 6,
+      "x": -607.141,
+      "y": -452.554,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 505.7
+    },
+    {
+      "t": 52.92,
+      "stage": 6,
+      "x": -602.149,
+      "y": -452.852,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 501.034
+    },
+    {
+      "t": 52.97,
+      "stage": 6,
+      "x": -597.156,
+      "y": -453.149,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 496.372
+    },
+    {
+      "t": 53.02,
+      "stage": 6,
+      "x": -592.164,
+      "y": -453.447,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 491.72
+    },
+    {
+      "t": 53.07,
+      "stage": 6,
+      "x": -587.155,
+      "y": -453.745,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 487.057
+    },
+    {
+      "t": 53.12,
+      "stage": 6,
+      "x": -582.164,
+      "y": -454.043,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 482.419
+    },
+    {
+      "t": 53.17,
+      "stage": 6,
+      "x": -577.173,
+      "y": -454.34,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 477.787
+    },
+    {
+      "t": 53.22,
+      "stage": 6,
+      "x": -572.181,
+      "y": -454.637,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 473.164
+    },
+    {
+      "t": 53.27,
+      "stage": 6,
+      "x": -567.19,
+      "y": -454.935,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 468.548
+    },
+    {
+      "t": 53.32,
+      "stage": 6,
+      "x": -562.199,
+      "y": -455.232,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 463.94
+    },
+    {
+      "t": 53.37,
+      "stage": 6,
+      "x": -557.208,
+      "y": -455.53,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 459.34
+    },
+    {
+      "t": 53.42,
+      "stage": 6,
+      "x": -552.217,
+      "y": -455.827,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 454.748
+    },
+    {
+      "t": 53.47,
+      "stage": 6,
+      "x": -547.223,
+      "y": -456.125,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 450.164
+    },
+    {
+      "t": 53.52,
+      "stage": 6,
+      "x": -542.232,
+      "y": -456.422,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 445.59
+    },
+    {
+      "t": 53.571,
+      "stage": 6,
+      "x": -537.205,
+      "y": -456.722,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 440.993
+    },
+    {
+      "t": 53.621,
+      "stage": 6,
+      "x": -532.214,
+      "y": -457.019,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 436.438
+    },
+    {
+      "t": 53.671,
+      "stage": 6,
+      "x": -527.223,
+      "y": -457.317,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 431.893
+    },
+    {
+      "t": 53.721,
+      "stage": 6,
+      "x": -522.232,
+      "y": -457.614,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 427.358
+    },
+    {
+      "t": 53.771,
+      "stage": 6,
+      "x": -517.24,
+      "y": -457.911,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 422.834
+    },
+    {
+      "t": 53.821,
+      "stage": 6,
+      "x": -512.249,
+      "y": -458.209,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 418.32
+    },
+    {
+      "t": 53.871,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 53.921,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 53.971,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.021,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.071,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.121,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.171,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.221,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.271,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.321,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.371,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.421,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.471,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.521,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.571,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.621,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.671,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.721,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.771,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.821,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.871,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.921,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 54.971,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 55.021,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 55.071,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 55.121,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 55.171,
+      "stage": 6,
+      "x": -510.585,
+      "y": -458.308,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 100.0,
+      "clearance": 416.818
+    },
+    {
+      "t": 55.221,
+      "stage": 6,
+      "x": -510.483,
+      "y": -458.08,
+      "z": 62.15,
+      "velocity": 20.0,
+      "speed": 100.0,
+      "clearance": 416.637
+    },
+    {
+      "t": 55.271,
+      "stage": 6,
+      "x": -509.359,
+      "y": -455.57,
+      "z": 62.15,
+      "velocity": 80.001,
+      "speed": 100.0,
+      "clearance": 414.649
+    },
+    {
+      "t": 55.321,
+      "stage": 6,
+      "x": -507.348,
+      "y": -451.083,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 411.116
+    },
+    {
+      "t": 55.371,
+      "stage": 6,
+      "x": -505.304,
+      "y": -446.52,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 407.553
+    },
+    {
+      "t": 55.421,
+      "stage": 6,
+      "x": -503.259,
+      "y": -441.957,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 404.02
+    },
+    {
+      "t": 55.471,
+      "stage": 6,
+      "x": -501.215,
+      "y": -437.394,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 400.518
+    },
+    {
+      "t": 55.521,
+      "stage": 6,
+      "x": -499.17,
+      "y": -432.831,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 397.049
+    },
+    {
+      "t": 55.571,
+      "stage": 6,
+      "x": -497.126,
+      "y": -428.268,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 393.612
+    },
+    {
+      "t": 55.621,
+      "stage": 6,
+      "x": -495.081,
+      "y": -423.705,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 390.209
+    },
+    {
+      "t": 55.671,
+      "stage": 6,
+      "x": -493.037,
+      "y": -419.142,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 386.841
+    },
+    {
+      "t": 55.721,
+      "stage": 6,
+      "x": -490.992,
+      "y": -414.579,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 383.509
+    },
+    {
+      "t": 55.771,
+      "stage": 6,
+      "x": -488.948,
+      "y": -410.016,
+      "z": 62.15,
+      "velocity": 100.0,
+      "speed": 100.0,
+      "clearance": 380.213
+    },
+    {
+      "t": 55.821,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 55.871,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 55.921,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 55.971,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.021,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.071,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.121,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.171,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.221,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.271,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.321,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.371,
+      "stage": 7,
+      "x": -650.0,
+      "y": -450.0,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 360.0,
+      "clearance": 546.008
+    },
+    {
+      "t": 56.421,
+      "stage": 7,
+      "x": -649.877,
+      "y": -449.782,
+      "z": 62.15,
+      "velocity": 20.0,
+      "speed": 360.0,
+      "clearance": 545.83
+    },
+    {
+      "t": 56.471,
+      "stage": 7,
+      "x": -648.526,
+      "y": -447.387,
+      "z": 62.15,
+      "velocity": 80.001,
+      "speed": 360.0,
+      "clearance": 543.877
+    },
+    {
+      "t": 56.521,
+      "stage": 7,
+      "x": -645.7,
+      "y": -442.379,
+      "z": 62.15,
+      "velocity": 140.002,
+      "speed": 360.0,
+      "clearance": 539.815
+    },
+    {
+      "t": 56.571,
+      "stage": 7,
+      "x": -641.4,
+      "y": -434.758,
+      "z": 62.15,
+      "velocity": 200.003,
+      "speed": 360.0,
+      "clearance": 533.693
+    },
+    {
+      "t": 56.621,
+      "stage": 7,
+      "x": -635.626,
+      "y": -424.525,
+      "z": 62.15,
+      "velocity": 260.004,
+      "speed": 360.0,
+      "clearance": 525.59
+    },
+    {
+      "t": 56.671,
+      "stage": 7,
+      "x": -628.377,
+      "y": -411.678,
+      "z": 62.15,
+      "velocity": 320.005,
+      "speed": 360.0,
+      "clearance": 515.616
+    },
+    {
+      "t": 56.721,
+      "stage": 7,
+      "x": -619.777,
+      "y": -396.437,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 504.088
+    },
+    {
+      "t": 56.771,
+      "stage": 7,
+      "x": -610.931,
+      "y": -380.759,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 492.596
+    },
+    {
+      "t": 56.821,
+      "stage": 7,
+      "x": -602.085,
+      "y": -365.082,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 481.504
+    },
+    {
+      "t": 56.871,
+      "stage": 7,
+      "x": -593.24,
+      "y": -349.405,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 470.839
+    },
+    {
+      "t": 56.921,
+      "stage": 7,
+      "x": -584.394,
+      "y": -333.729,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 460.631
+    },
+    {
+      "t": 56.971,
+      "stage": 7,
+      "x": -575.548,
+      "y": -318.052,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 450.91
+    },
+    {
+      "t": 57.021,
+      "stage": 7,
+      "x": -566.702,
+      "y": -302.374,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 441.709
+    },
+    {
+      "t": 57.071,
+      "stage": 7,
+      "x": -557.857,
+      "y": -286.697,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 432.857
+    },
+    {
+      "t": 57.121,
+      "stage": 7,
+      "x": -549.011,
+      "y": -271.02,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 424.011
+    },
+    {
+      "t": 57.171,
+      "stage": 7,
+      "x": -540.165,
+      "y": -255.344,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 415.165
+    },
+    {
+      "t": 57.221,
+      "stage": 7,
+      "x": -531.32,
+      "y": -239.667,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 406.32
+    },
+    {
+      "t": 57.271,
+      "stage": 7,
+      "x": -522.474,
+      "y": -223.99,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 397.474
+    },
+    {
+      "t": 57.321,
+      "stage": 7,
+      "x": -513.629,
+      "y": -208.313,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 388.629
+    },
+    {
+      "t": 57.371,
+      "stage": 7,
+      "x": -504.782,
+      "y": -192.634,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 379.782
+    },
+    {
+      "t": 57.421,
+      "stage": 7,
+      "x": -495.936,
+      "y": -176.958,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 370.936
+    },
+    {
+      "t": 57.471,
+      "stage": 7,
+      "x": -487.091,
+      "y": -161.281,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 362.091
+    },
+    {
+      "t": 57.521,
+      "stage": 7,
+      "x": -478.245,
+      "y": -145.604,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 353.245
+    },
+    {
+      "t": 57.571,
+      "stage": 7,
+      "x": -469.397,
+      "y": -129.922,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 344.397
+    },
+    {
+      "t": 57.621,
+      "stage": 7,
+      "x": -460.551,
+      "y": -114.246,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 335.551
+    },
+    {
+      "t": 57.671,
+      "stage": 7,
+      "x": -451.704,
+      "y": -98.565,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 326.704
+    },
+    {
+      "t": 57.721,
+      "stage": 7,
+      "x": -442.846,
+      "y": -82.867,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 317.846
+    },
+    {
+      "t": 57.771,
+      "stage": 7,
+      "x": -433.994,
+      "y": -67.18,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 308.994
+    },
+    {
+      "t": 57.821,
+      "stage": 7,
+      "x": -425.149,
+      "y": -51.503,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 300.149
+    },
+    {
+      "t": 57.871,
+      "stage": 7,
+      "x": -416.303,
+      "y": -35.826,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 291.303
+    },
+    {
+      "t": 57.921,
+      "stage": 7,
+      "x": -407.457,
+      "y": -20.149,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 282.457
+    },
+    {
+      "t": 57.971,
+      "stage": 7,
+      "x": -398.612,
+      "y": -4.473,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 273.612
+    },
+    {
+      "t": 58.021,
+      "stage": 7,
+      "x": -389.766,
+      "y": 11.204,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 264.766
+    },
+    {
+      "t": 58.071,
+      "stage": 7,
+      "x": -380.921,
+      "y": 26.881,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 253.119
+    },
+    {
+      "t": 58.121,
+      "stage": 7,
+      "x": -372.075,
+      "y": 42.558,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 237.442
+    },
+    {
+      "t": 58.171,
+      "stage": 7,
+      "x": -363.229,
+      "y": 58.235,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 221.765
+    },
+    {
+      "t": 58.221,
+      "stage": 7,
+      "x": -354.38,
+      "y": 73.917,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 206.083
+    },
+    {
+      "t": 58.271,
+      "stage": 7,
+      "x": -345.535,
+      "y": 89.594,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 190.406
+    },
+    {
+      "t": 58.321,
+      "stage": 7,
+      "x": -336.689,
+      "y": 105.271,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 174.729
+    },
+    {
+      "t": 58.371,
+      "stage": 7,
+      "x": -327.844,
+      "y": 120.948,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 159.067
+    },
+    {
+      "t": 58.421,
+      "stage": 7,
+      "x": -318.998,
+      "y": 136.625,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 143.797
+    },
+    {
+      "t": 58.471,
+      "stage": 7,
+      "x": -310.151,
+      "y": 152.304,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 129.229
+    },
+    {
+      "t": 58.521,
+      "stage": 7,
+      "x": -301.292,
+      "y": 168.004,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 115.616
+    },
+    {
+      "t": 58.571,
+      "stage": 7,
+      "x": -292.418,
+      "y": 183.731,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 103.345
+    },
+    {
+      "t": 58.622,
+      "stage": 7,
+      "x": -283.541,
+      "y": 199.465,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 92.975
+    },
+    {
+      "t": 58.672,
+      "stage": 7,
+      "x": -274.695,
+      "y": 215.142,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 85.236
+    },
+    {
+      "t": 58.722,
+      "stage": 7,
+      "x": -265.816,
+      "y": 230.877,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 80.825
+    },
+    {
+      "t": 58.772,
+      "stage": 7,
+      "x": -256.868,
+      "y": 246.735,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 80.342
+    },
+    {
+      "t": 58.822,
+      "stage": 7,
+      "x": -248.015,
+      "y": 262.426,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 83.848
+    },
+    {
+      "t": 58.872,
+      "stage": 7,
+      "x": -239.162,
+      "y": 278.116,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 90.858
+    },
+    {
+      "t": 58.922,
+      "stage": 7,
+      "x": -230.316,
+      "y": 293.793,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 99.684
+    },
+    {
+      "t": 58.972,
+      "stage": 7,
+      "x": -221.47,
+      "y": 309.47,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 96.934
+    },
+    {
+      "t": 59.023,
+      "stage": 7,
+      "x": -212.554,
+      "y": 325.273,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 91.128
+    },
+    {
+      "t": 59.073,
+      "stage": 7,
+      "x": -203.708,
+      "y": 340.95,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 88.723
+    },
+    {
+      "t": 59.123,
+      "stage": 7,
+      "x": -194.862,
+      "y": 356.627,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 89.929
+    },
+    {
+      "t": 59.173,
+      "stage": 7,
+      "x": -186.016,
+      "y": 372.304,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 94.609
+    },
+    {
+      "t": 59.223,
+      "stage": 7,
+      "x": -177.171,
+      "y": 387.981,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 102.286
+    },
+    {
+      "t": 59.273,
+      "stage": 7,
+      "x": -168.325,
+      "y": 403.657,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 112.347
+    },
+    {
+      "t": 59.323,
+      "stage": 7,
+      "x": -159.479,
+      "y": 419.334,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 124.215
+    },
+    {
+      "t": 59.373,
+      "stage": 7,
+      "x": -150.634,
+      "y": 435.011,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 137.423
+    },
+    {
+      "t": 59.423,
+      "stage": 7,
+      "x": -141.788,
+      "y": 450.688,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 151.62
+    },
+    {
+      "t": 59.473,
+      "stage": 7,
+      "x": -132.943,
+      "y": 466.365,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 166.554
+    },
+    {
+      "t": 59.523,
+      "stage": 7,
+      "x": -124.097,
+      "y": 482.042,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 182.042
+    },
+    {
+      "t": 59.573,
+      "stage": 7,
+      "x": -115.251,
+      "y": 497.718,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 197.718
+    },
+    {
+      "t": 59.623,
+      "stage": 7,
+      "x": -106.398,
+      "y": 513.408,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 213.408
+    },
+    {
+      "t": 59.673,
+      "stage": 7,
+      "x": -97.553,
+      "y": 529.085,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 229.085
+    },
+    {
+      "t": 59.723,
+      "stage": 7,
+      "x": -88.707,
+      "y": 544.762,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 244.762
+    },
+    {
+      "t": 59.773,
+      "stage": 7,
+      "x": -79.845,
+      "y": 560.469,
+      "z": 62.15,
+      "velocity": 360.0,
+      "speed": 360.0,
+      "clearance": 260.469
+    },
+    {
+      "t": 59.823,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 59.873,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 59.923,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 59.973,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.023,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.073,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.123,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.173,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.223,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.273,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.323,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.373,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.423,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.473,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.523,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.573,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.623,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.673,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.723,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.773,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.823,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.873,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.923,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 60.973,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.023,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.073,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.123,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.173,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.223,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.273,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.323,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.373,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.423,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.473,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.523,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.573,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.623,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.673,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.723,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.773,
+      "stage": 8,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.823,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.873,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.923,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 61.973,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.023,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.073,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.123,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.173,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.223,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.273,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.323,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.373,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.423,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.473,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.523,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.573,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.623,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.673,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.723,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    },
+    {
+      "t": 62.773,
+      "stage": 9,
+      "x": -73.948,
+      "y": 570.92,
+      "z": 62.15,
+      "velocity": 0.0,
+      "speed": 0,
+      "clearance": 270.92
+    }
+  ]
+}
