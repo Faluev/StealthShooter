@@ -1,0 +1,376 @@
+{
+  "map": "L_MazeMechanics",
+  "mode": "Play In Editor",
+  "checks": [
+    {
+      "check": "Custom character spawned",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reusable health component attached",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Health starts at 100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "HUD is on screen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Round timer runs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Exit without trophy does not win",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Trophy image initially hidden",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Damage amount subtracts health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Healing clamps at 100",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Damage clamps at zero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Negative amounts are ignored",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "HUD health bar reflects component",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "E action outside interactable areas is safe",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Locked door does not open",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Door still needs the lever",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Lever receives interface interaction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Lever unlocks its linked door",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Unlocked door opens on its own interaction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Door rotates by 90 degrees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Repeated door interaction cannot rotate it twice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Healing pickup restores health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Healing pickup is consumed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Consumed interactable reference is safe",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Plate does not open the gate immediately",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Plate opens the gate after three seconds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Gate blocking mesh physically lifts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Gate stays open during the exit delay",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Gate closes after leaving the plate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Closed gate returns to its initial position",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Rapid plate re-entry keeps the latest open request",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Turret detects an exposed player",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Turret fires real shots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Turret ApplyDamage reaches player health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cover blocks the turret visibility trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Turret does not shoot through cover",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Cover prevents further health loss",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Trophy overlap sets character ownership",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Trophy pickup disappears",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "HUD displays the trophy image",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Returning trophy to exit wins",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Victory screen appears",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Gameplay HUD is removed on result",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Result screen shows mouse cursor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Finished round outcome is idempotent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Round clock stops after victory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Finished round ignores later damage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload creates a new round 20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores full health 20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload clears trophy 20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores closed door 20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload recreates HUD 20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores game input cursor 20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Time expiration loses the round",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Timeout displays loss screen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Remaining time clamps at zero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload creates a new round 22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores full health 22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload clears trophy 22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores closed door 22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload recreates HUD 22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores game input cursor 22",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Damage loss setup at 5 HP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Lethal AnyDamage clamps health to zero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Lethal damage loses the round",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Damage loss displays the loss screen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload creates a new round 24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores full health 24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload clears trophy 24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores closed door 24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload recreates HUD 24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reload restores game input cursor 24",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Restart restores the round duration",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": 72,
+  "failed": 0,
+  "elapsed_seconds": 21.09,
+  "native_input": {
+    "three_physical_E_presses": true,
+    "locked_door_ignored": true,
+    "lever_unlocked": true,
+    "door_rotated_90": true,
+    "InteractCount": 3
+  }
+}
