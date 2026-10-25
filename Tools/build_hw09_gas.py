@@ -174,7 +174,7 @@ def build_ability():
     offset=m.op(e,'Multiply_VectorFloat',forward,member(e,avatar,'DashDistance'))
     dest=m.op(e,'Add_VectorVector',loc,offset)
     move=target_call(e,'/Script/Engine.Actor.K2_SetActorLocation',avatar)
-    g.wire(dest,g.pin(move,'NewLocation'));g.value(move,'bSweep','false');g.value(move,'bTeleport','true')
+    g.wire(dest,g.pin(move,'NewLocation'));g.value(move,'bSweep','true');g.value(move,'bTeleport','true')
     flow=after(flow,move)
     end=g.call(e,'/Script/GameplayAbilities.GameplayAbility.K2_EndAbility');after(flow,end)
     g.compile_bp(bp)
@@ -182,7 +182,7 @@ def build_ability():
     cdo.set_editor_property('instancing_policy',unreal.GameplayAbilityInstancingPolicy.INSTANCED_PER_ACTOR)
     tags=unreal.GameplayTagContainer();tags.import_text('(GameplayTags=((TagName="Ability.Dash")))')
     cdo.set_editor_property('ability_tags',tags)
-    finish(bp,'Commit -> GE_Dash / GameplayCue at departure -> instant forward teleport -> EndAbility. Exactly preserve DashDistance=300, no sweep, teleport=true, no cost or cooldown. Every Started press can activate again.')
+    finish(bp,'Commit -> GE_Dash / GameplayCue at departure -> swept forward movement -> EndAbility. Sweep the full capsule and stop at blocking geometry. DashDistance=300 is the maximum; teleport=true preserves velocity. No cost or cooldown.')
 
 
 def run():

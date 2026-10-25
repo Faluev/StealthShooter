@@ -1,0 +1,11 @@
+{
+  "native_right_mouse": true,
+  "distance_cm": 118.70006024837494,
+  "expected_contact_error_cm": 3.975162508140784e-05,
+  "cue_delta": 1,
+  "position": [
+    1181.085860248375,
+    1189.9601,
+    96.0
+  ]
+}

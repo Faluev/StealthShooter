@@ -1,0 +1,31 @@
+{
+  "version": "Collision fix and local Fab presentation",
+  "sweep": true,
+  "maximum_dash_cm": 300,
+  "teleport_preserves_velocity": true,
+  "reports": {
+    "DashCollisionValidation.json": {
+      "passed": 32,
+      "failed": 0
+    },
+    "DashRuinsValidation.json": {
+      "passed": 116,
+      "failed": 0
+    }
+  },
+  "total_checks": 148,
+  "native_mouse_check": {
+    "native_right_mouse": true,
+    "distance_cm": 118.70006024837494,
+    "expected_contact_error_cm": 3.975162508140784e-05,
+    "cue_delta": 1,
+    "position": [
+      1181.085860248375,
+      1189.9601,
+      96.0
+    ]
+  },
+  "local_fab_map": "/Game/HW09Local/Maps/L_DashRuins",
+  "fab_source_assets_excluded_from_public_git": true,
+  "previous_game_projects_modified": false
+}

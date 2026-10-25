@@ -1,0 +1,1089 @@
+{
+  "map": "/Game/HW09Local/Maps/UEDPIE_0_L_DashRuins.L_DashRuins",
+  "checks": [
+    {
+      "check": "Four Fab rocks are present",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "check": "Ruins_DashRock_0_west: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_west: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_west: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        118.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_0_west: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1181.0859,
+          1189.9601,
+          96.0
+        ],
+        "expected": [
+          1182.3859,
+          1189.9601,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_0_west: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_west: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_west: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_east: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_east: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_east: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        -118.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_0_east: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1659.6479,
+          1189.9601,
+          96.0
+        ],
+        "expected": [
+          1658.3479,
+          1189.9601,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_0_east: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_east: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_east: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_south: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_south: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_south: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_0_south: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1429.9103,
+          970.7179,
+          96.0
+        ],
+        "expected": [
+          1429.9103,
+          972.0179,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_0_south: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_south: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_south: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_north: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_north: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_north: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        -118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_0_north: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1429.9103,
+          1416.5608,
+          96.0
+        ],
+        "expected": [
+          1429.9103,
+          1415.2608,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_0_north: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_north: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_0_north: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_west: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_west: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_west: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        118.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_1_west: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1512.7876,
+          2370.0,
+          96.0
+        ],
+        "expected": [
+          1514.0876,
+          2370.0,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_1_west: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_west: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_west: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_east: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_east: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_east: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        -118.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_1_east: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1967.7465,
+          2370.0,
+          96.0
+        ],
+        "expected": [
+          1966.4465,
+          2370.0,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_1_east: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_east: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_east: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_south: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_south: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_south: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_1_south: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1740.0,
+          2152.7108,
+          96.0
+        ],
+        "expected": [
+          1740.0,
+          2154.0108,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_1_south: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_south: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_south: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_north: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_north: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_north: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        -118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_1_north: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1740.0,
+          2593.9961,
+          96.0
+        ],
+        "expected": [
+          1740.0,
+          2592.6961,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_1_north: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_north: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_1_north: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_west: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_west: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_west: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        118.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_2_west: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          929.0019,
+          2712.8722,
+          96.0
+        ],
+        "expected": [
+          930.3019,
+          2712.8722,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_2_west: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_west: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_west: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_east: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_east: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_east: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        -118.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_2_east: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1201.8453,
+          2712.8722,
+          96.0
+        ],
+        "expected": [
+          1200.5453,
+          2712.8722,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_2_east: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_east: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_east: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_south: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_south: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_south: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_2_south: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1068.0724,
+          2583.6099,
+          96.0
+        ],
+        "expected": [
+          1068.0724,
+          2584.9099,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_2_south: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_south: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_south: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_north: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_north: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_north: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        -118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_2_north: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1068.0724,
+          2831.5968,
+          96.0
+        ],
+        "expected": [
+          1068.0724,
+          2830.2968,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_2_north: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_north: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_2_north: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_west: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_west: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_west: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        118.7,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_3_west: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          2310.8993,
+          904.624,
+          96.0
+        ],
+        "expected": [
+          2312.1993,
+          904.624,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_3_west: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_west: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_west: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_east: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_east: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_east: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        -118.7,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_3_east: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          2675.0368,
+          904.624,
+          96.0
+        ],
+        "expected": [
+          2673.7368,
+          904.624,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_3_east: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_east: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_east: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_south: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_south: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_south: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_3_south: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          2479.2793,
+          673.8717,
+          96.0
+        ],
+        "expected": [
+          2479.2793,
+          675.1717,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_3_south: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_south: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_south: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_north: visible obstacle has blocking collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_north: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_north: dash is shortened by collision",
+      "passed": true,
+      "detail": [
+        0.0,
+        -118.7,
+        0.0
+      ]
+    },
+    {
+      "check": "Ruins_DashRock_3_north: pawn stops at the swept capsule contact",
+      "passed": true,
+      "detail": {
+        "actual": [
+          2479.2793,
+          1081.182,
+          96.0
+        ],
+        "expected": [
+          2479.2793,
+          1079.882,
+          96.0
+        ]
+      }
+    },
+    {
+      "check": "Ruins_DashRock_3_north: final capsule does not penetrate the surface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_north: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ruins_DashRock_3_north: repeated press cannot enter obstacle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Gateway_opening: fixture starts outside blocking geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Gateway_opening: clear arch opening permits the full dash",
+      "passed": true,
+      "detail": [
+        300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "check": "Gateway_opening: one Gameplay Cue per press",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "trials": [
+    {
+      "case": "Ruins_DashRock_0_west",
+      "start": [
+        1062.3858,
+        1189.9601,
+        96.0
+      ],
+      "finish": [
+        1181.0859,
+        1189.9601,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_0_east",
+      "start": [
+        1778.348,
+        1189.9601,
+        96.0
+      ],
+      "finish": [
+        1659.6479,
+        1189.9601,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_0_south",
+      "start": [
+        1429.9103,
+        852.0179,
+        96.0
+      ],
+      "finish": [
+        1429.9103,
+        970.7179,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_0_north",
+      "start": [
+        1429.9103,
+        1535.2608,
+        96.0
+      ],
+      "finish": [
+        1429.9103,
+        1416.5608,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_1_west",
+      "start": [
+        1394.0876,
+        2370.0,
+        96.0
+      ],
+      "finish": [
+        1512.7876,
+        2370.0,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_1_east",
+      "start": [
+        2086.4465,
+        2370.0,
+        96.0
+      ],
+      "finish": [
+        1967.7465,
+        2370.0,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_1_south",
+      "start": [
+        1740.0,
+        2034.0108,
+        96.0
+      ],
+      "finish": [
+        1740.0,
+        2152.7108,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_1_north",
+      "start": [
+        1740.0,
+        2712.6961,
+        96.0
+      ],
+      "finish": [
+        1740.0,
+        2593.9961,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_2_west",
+      "start": [
+        810.3019,
+        2712.8722,
+        96.0
+      ],
+      "finish": [
+        929.0019,
+        2712.8722,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_2_east",
+      "start": [
+        1320.5453,
+        2712.8722,
+        96.0
+      ],
+      "finish": [
+        1201.8453,
+        2712.8722,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_2_south",
+      "start": [
+        1068.0724,
+        2464.9099,
+        96.0
+      ],
+      "finish": [
+        1068.0724,
+        2583.6099,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_2_north",
+      "start": [
+        1068.0724,
+        2950.2968,
+        96.0
+      ],
+      "finish": [
+        1068.0724,
+        2831.5968,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_3_west",
+      "start": [
+        2192.1994,
+        904.624,
+        96.0
+      ],
+      "finish": [
+        2310.8993,
+        904.624,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_3_east",
+      "start": [
+        2793.7368,
+        904.624,
+        96.0
+      ],
+      "finish": [
+        2675.0368,
+        904.624,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_3_south",
+      "start": [
+        2479.2793,
+        555.1717,
+        96.0
+      ],
+      "finish": [
+        2479.2793,
+        673.8717,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Ruins_DashRock_3_north",
+      "start": [
+        2479.2793,
+        1199.882,
+        96.0
+      ],
+      "finish": [
+        2479.2793,
+        1081.182,
+        96.0
+      ],
+      "displacement": 118.7,
+      "blocked": true
+    },
+    {
+      "case": "Gateway_opening",
+      "start": [
+        2100.0,
+        1738.0,
+        96.0
+      ],
+      "finish": [
+        2400.0,
+        1738.0,
+        96.0
+      ],
+      "displacement": 300.0,
+      "blocked": false
+    }
+  ],
+  "passed": 116,
+  "failed": 0,
+  "error": null
+}

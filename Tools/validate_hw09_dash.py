@@ -28,9 +28,13 @@ def settings():
 def finish(error=None):
  global handle
  if handle:unreal.unregister_slate_post_tick_callback(handle);handle=None
+ if error and world and pawn and input_system and origin:
+  inject(0);pawn.character_movement.stop_movement_immediately();pawn.set_actor_location(origin,False,True);pawn.character_movement.set_movement_mode(unreal.MovementMode.MOVE_WALKING)
+  unreal.AudioMixerLibrary.stop_recording_output(world,unreal.AudioRecordingExportType.WAV_FILE,mode+'_failed',str(PROJECT/'Saved/DashAudio'))
  ROOT_DOCS.mkdir(parents=True,exist_ok=True)
  report={'mode':mode,'checks':checks,'trials':trials,'settings':records.get('settings'),'passed':sum(c['passed'] for c in checks),'failed':sum(not c['passed'] for c in checks),'error':error,'elapsed_seconds':round(time.monotonic()-wall,2)}
- (ROOT_DOCS/('DashBaseline.json' if mode=='baseline' else 'DashGASValidation.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+ filename={'baseline':'DashBaseline.json','refactored':'DashGASValidation.json','collision':'DashCollisionValidation.json'}[mode]
+ (ROOT_DOCS/filename).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
  unreal.log('HW09_DASH_VALIDATION_FINISHED '+mode)
 
 def setup_case():
@@ -56,11 +60,11 @@ def tick(dt):
    if not worlds:return
    world=worlds[0];pawn=unreal.GameplayStatics.get_player_pawn(world,0);controller=unreal.GameplayStatics.get_player_controller(world,0)
    if not pawn or not controller:return
-   systems=[s for s in unreal.ObjectIterator(unreal.EnhancedInputLocalPlayerSubsystem) if not s.get_name().startswith('Default__')]
+   systems=[s for s in unreal.ObjectIterator(unreal.EnhancedInputLocalPlayerSubsystem) if not s.get_name().startswith('Default__') and s.get_outer().get_world()==world]
    if len(systems)!=1:raise RuntimeError('Ambiguous Enhanced Input subsystem: '+str(systems))
    input_system=systems[0];origin=pawn.get_actor_location();records['settings']=settings()
    check('Dash distance remains 300 cm',abs(pawn.get_editor_property('DashDistance')-300)<.001)
-   if mode=='refactored':
+   if mode!='baseline':
     base=json.loads((ROOT_DOCS/'DashBaseline.json').read_text());check('Character and camera settings equal baseline',records['settings']==base['settings'],records['settings'])
     check('Ability System Component is present',len(pawn.get_components_by_class(unreal.AbilitySystemComponent))==1)
    else:check('Original character has no Ability System Component',not pawn.get_components_by_class(unreal.AbilitySystemComponent))
@@ -71,7 +75,11 @@ def tick(dt):
    delta=pawn.get_actor_location()-before;expected=pawn.get_actor_forward_vector()*pawn.get_editor_property('DashDistance')
    if delta.length()<1 and clock()-started<.3:return
    name=cases[case_index][0];new=[p for p in particles() if p.get_path_name() not in before_particles]
-   check(name+': instantaneous displacement matches forward distance',(delta-expected).length()<.1,vector(delta))
+   if mode=='collision' and name=='wall_no_sweep':
+    check('wall: sweep shortens the dash at the obstacle',0<delta.length()<299,vector(delta))
+    radius=pawn.capsule_component.get_scaled_capsule_radius();gap=100-delta.x
+    check('wall: capsule retains its radius of clearance',radius-.05<=gap<=radius+3,{'gap':gap,'radius':radius})
+   else:check(name+': instantaneous displacement matches forward distance',(delta-expected).length()<.1,vector(delta))
    check(name+': one original emitter is spawned',len(new)==1,len(new))
    emitter=new[0];check(name+': effect stays at the pre-dash position',(emitter.get_world_location()-before).length()<.1,vector(emitter.get_world_location()))
    scale=emitter.get_world_scale();check(name+': effect scale remains 0.6',max(abs(scale.x-.6),abs(scale.y-.6),abs(scale.z-.6))<.001,vector(scale))
@@ -93,12 +101,12 @@ def tick(dt):
    else:stage=7;started=clock()
   elif stage==7 and clock()-started>.6:
    unreal.AudioMixerLibrary.stop_recording_output(world,unreal.AudioRecordingExportType.WAV_FILE,mode+'_dash',str(PROJECT/'Saved/DashAudio'))
-   if mode=='refactored':
+   if mode!='baseline':
     asc=pawn.get_components_by_class(unreal.AbilitySystemComponent)[0];check('Gameplay Cue handles every accepted dash',pawn.get_editor_property('DashCueCount')==len(cases)+1+5,pawn.get_editor_property('DashCueCount'))
    pawn.character_movement.stop_movement_immediately();pawn.set_actor_location(origin,False,True);pawn.character_movement.set_movement_mode(unreal.MovementMode.MOVE_WALKING);finish()
  except Exception:finish(traceback.format_exc())
 
-def run(kind='baseline'):
+def run(kind='collision'):
  global mode,checks,trials,stage,case_index,records,wall,handle
  assert handle is None
  mode=kind;checks=[];trials=[];stage=0;case_index=0;records={};wall=time.monotonic();handle=unreal.register_slate_post_tick_callback(tick);return 'Started '+kind+' dash parity scenarios'
