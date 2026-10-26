@@ -1,0 +1,242 @@
+{
+  "map": "/Game/StealthShooter/Maps/L_CombatGAS",
+  "passed": 43,
+  "failed": 0,
+  "error": null,
+  "checks": [
+    {
+      "name": "Health starts at 100",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "MaxHealth is 100",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player exposes a real ASC",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player owns a real AttributeSet",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "HUD created",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "HUD percentage starts at 1",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Sight blocked by cover",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Hidden target cannot activate shooting",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No shots through cover",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No damage through cover",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Guard patrol moves with navigation",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Weapon is holstered during patrol",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Guard drew weapon",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Guard entered combat",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "First shot is exactly one activation",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot caused exactly one cue",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot hit player",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Damage GE changed Health to 90",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Health bar updated from attribute delegate",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Cooldown Gameplay Effect active",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Rapid repeated requests blocked",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Blocked requests do not emit cues",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Blocked requests do not cause damage",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Cooldown enforces at least 1.25 seconds",
+      "passed": true,
+      "data": [
+        1.263723373413086,
+        1.2601919174194336
+      ]
+    },
+    {
+      "name": "One cue per committed shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "10 Health damage per successful hit",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No activation after sight loss",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No damage after target takes cover",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No shooting through wall after loss",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Guard returned to patrol",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Guard holstered weapon after loss",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Patrol resumed movement",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Guard reacquired player and fired again",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Reacquisition drew weapon",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Health and HUD remain synchronized",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Health reaches exactly zero",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Health bar reaches zero",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player is no longer alive",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Dead target cannot be shot again",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No extra shots after death",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No negative health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Final cue/shot parity",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Final cooldown cadence",
+      "passed": true,
+      "data": null
+    }
+  ],
+  "shot_times": [
+    10.966959953308105,
+    12.230683326721191,
+    13.490875244140625,
+    17.46147918701172,
+    18.721891403198242,
+    19.983449935913086,
+    21.24897575378418,
+    22.509645462036133,
+    23.774438858032227,
+    25.035072326660156
+  ],
+  "shot_count": 10,
+  "cue_count": 10,
+  "hit_count": 10,
+  "final_health": 0.0
+}

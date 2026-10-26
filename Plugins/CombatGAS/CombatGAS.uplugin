@@ -1,0 +1,12 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Combat GAS",
+  "Description": "Practical 10.5: health attributes and bot shooting abilities.",
+  "Category": "Gameplay",
+  "EnabledByDefault": false,
+  "CanContainContent": false,
+  "Modules": [{"Name": "CombatGAS", "Type": "Runtime", "LoadingPhase": "PreDefault"}],
+  "Plugins": [{"Name": "GameplayAbilities", "Enabled": true}]
+}

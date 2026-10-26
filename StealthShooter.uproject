@@ -3,7 +3,10 @@
   "EngineAssociation": "5.8",
   "Category": "Games",
   "Description": "StealthShooter — учебные примеры продвинутых Blueprint",
+  "Modules": [{"Name":"StealthShooter","Type":"Runtime","LoadingPhase":"Default"}],
   "Plugins": [
+    {"Name":"CombatGAS","Enabled":true},
+    {"Name":"GameplayAbilities","Enabled":true},
     {"Name":"PythonScriptPlugin","Enabled":false},
     {"Name":"EditorScriptingUtilities","Enabled":false},
     {"Name":"EditorToolset","Enabled":false},

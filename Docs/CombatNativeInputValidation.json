@@ -1,0 +1,8 @@
+{
+  "keyboard_restart": {
+    "passed": true,
+    "evidence": "Native R press reloaded the Play map, returned the player from the exposed lane to the covered start and reset Health to 100.",
+    "world_time_after": 0.7536453
+  },
+  "axis_note": "Instant synthetic D down/up occurs within one frame and did not produce a held-axis movement; not counted as a passed hardware movement test."
+}

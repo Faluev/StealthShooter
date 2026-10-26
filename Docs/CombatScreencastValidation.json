@@ -1,0 +1,33 @@
+{
+  "error": null,
+  "checks": [
+    {
+      "name": "Cover protects player",
+      "passed": true
+    },
+    {
+      "name": "Shots damage player through GAS",
+      "passed": true
+    },
+    {
+      "name": "Cue executes for every shot",
+      "passed": true
+    },
+    {
+      "name": "Cover stops further damage",
+      "passed": true
+    },
+    {
+      "name": "Guard holsters and resumes patrol",
+      "passed": true
+    },
+    {
+      "name": "Guard reengages after cover",
+      "passed": true
+    }
+  ],
+  "shots": 7,
+  "cues": 7,
+  "hits": 7,
+  "health": 30.0
+}

@@ -1,0 +1,37 @@
+{
+  "blueprints": [
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/Abilities/Cues/GC_Bot_Shoot.GC_Bot_Shoot",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/Abilities/Effects/GE_BotShotCooldown.GE_BotShotCooldown",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/Abilities/Effects/GE_BotShotDamage.GE_BotShotDamage",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/Abilities/GA_BotShoot.GA_BotShoot",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/Characters/BP_CombatBot.BP_CombatBot",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/Characters/BP_CombatPlayer.BP_CombatPlayer",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/Core/BP_CombatGameMode.BP_CombatGameMode",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/CombatGAS/UI/WBP_CombatHUD.WBP_CombatHUD",
+      "compiled": true
+    }
+  ],
+  "all_passed": true
+}
