@@ -1,5 +1,7 @@
 #include "QuestCombat.h"
 #include "QuestSystem.h"
+#include "Engine/AssetManager.h"
+#include "Engine/StreamableManager.h"
 #include "Animation/AnimSingleNodeInstance.h"
 #include "Animation/BlendSpace.h"
 #include "Animation/AnimSequence.h"
@@ -29,6 +31,8 @@
 #include "TimerManager.h"
 #include "UObject/ConstructorHelpers.h"
 
+UE_DEFINE_GAMEPLAY_TAG_STATIC(TAG_QuestWeaponDamage,"Data.Quest.WeaponDamage");
+UE_DEFINE_GAMEPLAY_TAG_STATIC(TAG_QuestWeaponInterval,"Data.Quest.WeaponInterval");
 UE_DEFINE_GAMEPLAY_TAG_STATIC(TAG_QuestShotCue,"GameplayCue.Quest.Shot");
 UE_DEFINE_GAMEPLAY_TAG_STATIC(TAG_QuestShotCooldown,"Cooldown.Player.QuestShot");
 
@@ -51,6 +55,16 @@ AQuestPlayer::AQuestPlayer()
 void AQuestPlayer::BeginPlay()
 {
     Super::BeginPlay();
+    if (const auto* Mode=Cast<AQuestGameMode>(GetWorld()->GetAuthGameMode()))
+    {
+        Mode->ReadWeaponRow(Mode->PlayerWeaponRow,ActiveWeapon);
+        if (Mode->RoundDefinition && Mode->RoundDefinition->IsUsable())
+        {
+            AbilitySystem->SetNumericAttributeBase(UCombatAttributeSet::GetMaxHealthAttribute(),Mode->RoundDefinition->PlayerHealth);
+            AbilitySystem->SetNumericAttributeBase(UCombatAttributeSet::GetHealthAttribute(),Mode->RoundDefinition->PlayerHealth);
+        }
+    }
+    LoadWeaponPresentation();
     if (ArmedLocomotion) { GetMesh()->PlayAnimation(ArmedLocomotion,true); }
     AbilitySystem->GetGameplayAttributeValueChangeDelegate(UCombatAttributeSet::GetHealthAttribute()).AddUObject(this,&AQuestPlayer::OnPlayerHealthChanged);
     if (HasAuthority() && FireAbility) AbilitySystem->GiveAbility(FGameplayAbilitySpec(FireAbility,1));
@@ -75,8 +89,23 @@ void AQuestPlayer::Tick(float DeltaSeconds)
     Super::Tick(DeltaSeconds);
     if (ArmedLocomotion) UpdateRiflePose(this,ArmedLocomotion,ArmedFall,DeltaSeconds);
 }
+void AQuestPlayer::LoadWeaponPresentation()
+{
+    TArray<FSoftObjectPath> Paths;
+    if (!ActiveWeapon.Mesh.IsNull()) Paths.Add(ActiveWeapon.Mesh.ToSoftObjectPath());
+    if (!ActiveWeapon.Sound.IsNull()) Paths.Add(ActiveWeapon.Sound.ToSoftObjectPath());
+    if (Paths.IsEmpty()) { bWeaponPresentationReady=true;return; }
+    // A weak callback cannot mutate a destroyed pawn after replay or level travel.
+    PresentationLoad=UAssetManager::GetStreamableManager().RequestAsyncLoad(Paths,FStreamableDelegate::CreateWeakLambda(this,[this]()
+    {
+        if (auto* Mesh=ActiveWeapon.Mesh.Get()) Rifle->SetStaticMesh(Mesh);
+        if (auto* Sound=ActiveWeapon.Sound.Get()) ShotSound=Sound;
+        bWeaponPresentationReady=true;
+    }));
+}
 void AQuestPlayer::EndPlay(const EEndPlayReason::Type Reason)
 {
+    if (PresentationLoad) { PresentationLoad->CancelHandle();PresentationLoad.Reset(); }
     if (HUD) HUD->RemoveFromParent();
     Super::EndPlay(Reason);
 }
@@ -115,7 +144,7 @@ bool AQuestPlayer::TraceAim(FHitResult& Hit) const
 {
     const FVector Start=FollowCamera->GetComponentLocation();
     FCollisionQueryParams Query(SCENE_QUERY_STAT(QuestAim),false,this);
-    return GetWorld()->LineTraceSingleByChannel(Hit,Start,Start+FollowCamera->GetForwardVector()*6000.f,ECC_Visibility,Query);
+    return GetWorld()->LineTraceSingleByChannel(Hit,Start,Start+FollowCamera->GetForwardVector()*ActiveWeapon.Range,ECC_Visibility,Query);
 }
 void AQuestPlayer::OnPlayerHealthChanged(const FOnAttributeChangeData& Change)
 {
@@ -148,6 +177,11 @@ void AQuestBot::BeginPlay()
     AbilitySystem->AddAttributeSetSubobject(BotAttributes.Get());
     Super::BeginPlay();
     AbilitySystem->GetGameplayAttributeValueChangeDelegate(UCombatAttributeSet::GetHealthAttribute()).AddUObject(this,&AQuestBot::OnHealthChanged);
+    if (const auto* Mode=Cast<AQuestGameMode>(GetWorld()->GetAuthGameMode()); Mode && Mode->RoundDefinition && Mode->RoundDefinition->IsUsable())
+    {
+        AbilitySystem->SetNumericAttributeBase(UCombatAttributeSet::GetMaxHealthAttribute(),Mode->RoundDefinition->BotHealth);
+        AbilitySystem->SetNumericAttributeBase(UCombatAttributeSet::GetHealthAttribute(),Mode->RoundDefinition->BotHealth);
+    }
     HealthLabel->SetText(FText::AsNumber(FMath::RoundToInt(GetBotHealth())));
     if (ArmedLocomotion) GetMesh()->PlayAnimation(ArmedLocomotion,true);
     WeaponBarrel->SetVisibility(false);
@@ -266,9 +300,35 @@ void AQuestGameMode::BeginPlay()
     Super::BeginPlay();
     for (TActorIterator<AQuestDirector> It(GetWorld());It;++It) { Director=*It;break; }
     if (!Director) return;
+    ApplyRoundDefinition();
     Director->OnRunEnded.AddUniqueDynamic(this,&AQuestGameMode::OnRunEnded);
     Director->StartRun();
     for (TActorIterator<AQuestBotSpawner> It(GetWorld());It;++It) It->SetSpawning(true);
+}
+bool AQuestGameMode::ReadWeaponRow(FName RowName,FQuestWeaponRow& OutRow) const
+{
+    OutRow=FQuestWeaponRow(); // Stable legacy fallback for an unconfigured or invalid table.
+    if (!WeaponDefinitions || WeaponDefinitions->GetRowStruct()!=FQuestWeaponRow::StaticStruct()) return false;
+    const auto* Row=WeaponDefinitions->FindRow<FQuestWeaponRow>(RowName,TEXT("QuestWeapon"),false);
+    if (!Row || !Row->IsUsable()) return false;
+    OutRow=*Row;return true;
+}
+TArray<FName> AQuestGameMode::GetWeaponRowNames() const
+{
+    return WeaponDefinitions ? WeaponDefinitions->GetRowNames() : TArray<FName>();
+}
+bool AQuestGameMode::ApplyRoundDefinition()
+{
+    if (!RoundDefinition || !RoundDefinition->IsUsable() || (Director && Director->IsRunActive())) return false;
+    for (TActorIterator<AQuestKillBots> It(GetWorld());It;++It)
+    {
+        It->RequiredKills=RoundDefinition->RequiredKills;It->TimeLimit=RoundDefinition->TimeLimit;
+    }
+    for (TActorIterator<AQuestBotSpawner> It(GetWorld());It;++It)
+    {
+        It->MaxAlive=RoundDefinition->MaxAlive;It->SpawnInterval=RoundDefinition->SpawnInterval;
+    }
+    return true;
 }
 void AQuestGameMode::OnRunEnded(bool bSuccess,FText Reason)
 {
@@ -307,6 +367,17 @@ UQuestShootAbility::UQuestShootAbility()
     NetExecutionPolicy=EGameplayAbilityNetExecutionPolicy::ServerOnly;
     CooldownGameplayEffectClass=UQuestShotCooldown::StaticClass();
 }
+void UQuestShootAbility::ApplyCooldown(const FGameplayAbilitySpecHandle Handle,const FGameplayAbilityActorInfo* Info,const FGameplayAbilityActivationInfo Activation) const
+{
+    const auto* Player=Info ? Cast<AQuestPlayer>(Info->AvatarActor.Get()) : nullptr;
+    if (!Player || !CooldownGameplayEffectClass) return;
+    auto Spec=Player->AbilitySystem->MakeOutgoingSpec(CooldownGameplayEffectClass,GetAbilityLevel(Handle,Info),Player->AbilitySystem->MakeEffectContext());
+    if (Spec.IsValid())
+    {
+        Spec.Data->SetSetByCallerMagnitude(TAG_QuestWeaponInterval,Player->ActiveWeapon.ShotInterval);
+        Player->AbilitySystem->ApplyGameplayEffectSpecToSelf(*Spec.Data.Get());
+    }
+}
 bool UQuestShootAbility::CanActivateAbility(const FGameplayAbilitySpecHandle Handle,const FGameplayAbilityActorInfo* Info,
     const FGameplayTagContainer* SourceTags,const FGameplayTagContainer* TargetTags,FGameplayTagContainer* RelevantTags) const
 {
@@ -321,7 +392,7 @@ void UQuestShootAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
     if (!Player || !CommitAbility(Handle,Info,Activation)) { EndAbility(Handle,Info,Activation,true,true);return; }
     ++Player->ShotsFired;
     FHitResult AimHit; Player->TraceAim(AimHit);
-    const FVector AimEnd=AimHit.bBlockingHit ? AimHit.ImpactPoint : Player->FollowCamera->GetComponentLocation()+Player->FollowCamera->GetForwardVector()*6000.f;
+    const FVector AimEnd=AimHit.bBlockingHit ? AimHit.ImpactPoint : Player->FollowCamera->GetComponentLocation()+Player->FollowCamera->GetForwardVector()*Player->ActiveWeapon.Range;
     FCollisionQueryParams Query(SCENE_QUERY_STAT(QuestShot),false,Player);
     FHitResult ActualHit;
     GetWorld()->LineTraceSingleByChannel(ActualHit,Player->GetShotStart(),AimEnd+((AimEnd-Player->GetShotStart()).GetSafeNormal()*10.f),ECC_Visibility,Query);
@@ -331,7 +402,7 @@ void UQuestShootAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle
     {
         auto Context=Player->AbilitySystem->MakeEffectContext();Context.AddHitResult(ActualHit);
         auto Spec=Player->AbilitySystem->MakeOutgoingSpec(Player->ShotDamageEffect,1.f,Context);
-        if (Spec.IsValid()) { Player->AbilitySystem->ApplyGameplayEffectSpecToTarget(*Spec.Data.Get(),Bot->GetAbilitySystemComponent());++Player->Hits; }
+        if (Spec.IsValid()) { Spec.Data->SetSetByCallerMagnitude(TAG_QuestWeaponDamage,-Player->ActiveWeapon.Damage);Player->AbilitySystem->ApplyGameplayEffectSpecToTarget(*Spec.Data.Get(),Bot->GetAbilitySystemComponent());++Player->Hits; }
     }
     EndAbility(Handle,Info,Activation,true,false);
 }
@@ -339,11 +410,11 @@ UQuestDamageEffect::UQuestDamageEffect()
 {
     DurationPolicy=EGameplayEffectDurationType::Instant;
     FGameplayModifierInfo Modifier;Modifier.Attribute=UCombatAttributeSet::GetHealthAttribute();
-    Modifier.ModifierOp=EGameplayModOp::Additive;Modifier.ModifierMagnitude=FScalableFloat(-25.f);Modifiers.Add(Modifier);
+    Modifier.ModifierOp=EGameplayModOp::Additive;FSetByCallerFloat Damage;Damage.DataTag=TAG_QuestWeaponDamage;Modifier.ModifierMagnitude=FGameplayEffectModifierMagnitude(Damage);Modifiers.Add(Modifier);
 }
 UQuestShotCooldown::UQuestShotCooldown()
 {
-    DurationPolicy=EGameplayEffectDurationType::HasDuration;DurationMagnitude=FScalableFloat(.35f);
+    DurationPolicy=EGameplayEffectDurationType::HasDuration;FSetByCallerFloat Interval;Interval.DataTag=TAG_QuestWeaponInterval;DurationMagnitude=FGameplayEffectModifierMagnitude(Interval);
     auto* Component=CreateDefaultSubobject<UTargetTagsGameplayEffectComponent>(TEXT("QuestShotCooldownTags"));
     GEComponents.Add(Component);FInheritedTagContainer Changes;Changes.AddTag(TAG_QuestShotCooldown);Component->SetAndApplyTargetTagChanges(Changes);
 }

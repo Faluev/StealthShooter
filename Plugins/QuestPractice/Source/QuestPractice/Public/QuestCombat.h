@@ -1,8 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CombatPractice.h"
+#include "QuestData.h"
 #include "QuestCombat.generated.h"
 
+struct FStreamableHandle;
 class AQuestDirector;
 class AQuestBot;
 class UBoxComponent;
@@ -31,6 +33,8 @@ public:
     UFUNCTION(BlueprintPure, Category="Combat") bool TraceAim(FHitResult& Hit) const;
     UFUNCTION(BlueprintPure, Category="Quest") AQuestDirector* GetQuestDirector() const;
     void PresentShot(const FVector& End);
+    UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category="Weapon|Data") FQuestWeaponRow ActiveWeapon;
+    UPROPERTY(BlueprintReadOnly, Category="Weapon|Data") bool bWeaponPresentationReady=false;
     UPROPERTY(EditDefaultsOnly, Category="Combat") TSubclassOf<UGameplayAbility> FireAbility;
     UPROPERTY(EditDefaultsOnly, Category="Combat") TSubclassOf<UGameplayEffect> ShotDamageEffect;
     UPROPERTY(EditDefaultsOnly, Category="Combat") TSubclassOf<UGameplayCueNotify_Static> ShotCueClass;
@@ -44,6 +48,8 @@ public:
     UPROPERTY(BlueprintReadOnly, Category="Diagnostics") int32 ShotCues = 0;
 private:
     void FirePressed();
+    void LoadWeaponPresentation();
+    TSharedPtr<FStreamableHandle> PresentationLoad;
     void OnPlayerHealthChanged(const FOnAttributeChangeData& Change);
     bool bDeathReported = false;
 };
@@ -99,6 +105,12 @@ class QUESTPRACTICE_API AQuestGameMode : public AGameModeBase
 public:
     virtual void BeginPlay() override;
     UFUNCTION(BlueprintCallable, Category="Quest") void RestartRun();
+    UFUNCTION(BlueprintPure, Category="Data") bool ReadWeaponRow(FName RowName,FQuestWeaponRow& OutRow) const;
+    UFUNCTION(BlueprintPure, Category="Data") TArray<FName> GetWeaponRowNames() const;
+    UFUNCTION(BlueprintCallable, Category="Data") bool ApplyRoundDefinition();
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Data") TObjectPtr<UDataTable> WeaponDefinitions;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Data") FName PlayerWeaponRow=TEXT("Rifle");
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Data") TObjectPtr<UQuestRoundDefinition> RoundDefinition;
     UFUNCTION(BlueprintPure, Category="Quest") AQuestDirector* GetDirector() const { return Director; }
     UPROPERTY(BlueprintReadOnly, Category="Quest") TObjectPtr<AQuestDirector> Director;
     UPROPERTY(BlueprintReadOnly, Category="Diagnostics") int32 RestartCount = 0;
@@ -112,6 +124,7 @@ class QUESTPRACTICE_API UQuestShootAbility : public UGameplayAbility
     GENERATED_BODY()
 public:
     UQuestShootAbility();
+    virtual void ApplyCooldown(const FGameplayAbilitySpecHandle Handle,const FGameplayAbilityActorInfo* Info,const FGameplayAbilityActivationInfo Activation) const override;
     virtual bool CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* Info,
         const FGameplayTagContainer* SourceTags=nullptr, const FGameplayTagContainer* TargetTags=nullptr,
         FGameplayTagContainer* RelevantTags=nullptr) const override;

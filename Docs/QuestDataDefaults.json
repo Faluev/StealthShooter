@@ -1,0 +1,23 @@
+{
+  "weapon_rows": [
+    {
+      "Name": "Rifle",
+      "DisplayName": "NSLOCTEXT(\"DT_QuestWeapons [E3F7B7DFD251D40231ECBEB4F43BC60E]\", \"Rifle_DisplayName\", \"Винтовка\")",
+      "Damage": 25,
+      "ShotInterval": 0.35,
+      "Range": 6000,
+      "Mesh": "/Game/Weapons/Rifle/Meshes/SM_Rifle.SM_Rifle",
+      "Sound": "/Game/StealthShooter/CombatGAS/Audio/S_BotShot.S_BotShot"
+    }
+  ],
+  "round": {
+    "required_kills": 3,
+    "time_limit": 90.0,
+    "max_alive": 2,
+    "spawn_interval": 2.0,
+    "player_health": 100.0,
+    "bot_health": 50.0
+  },
+  "game_mode": "BP_QuestGameMode",
+  "row": "Rifle"
+}

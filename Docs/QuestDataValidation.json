@@ -1,0 +1,175 @@
+{
+  "passed": 33,
+  "failed": 0,
+  "error": null,
+  "phase": "restored",
+  "checks": [
+    {
+      "name": "DataTable row names can be read",
+      "passed": true,
+      "data": [
+        "Rifle"
+      ]
+    },
+    {
+      "name": "DataTable row resolves",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Weapon snapshot matches original balance",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Asynchronous presentation finished",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Soft mesh resolved to rifle",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Soft sound resolved",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Default round preserved",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Default health preserved",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Missing row rejected safely",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Active round configuration cannot change mid-objective",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Round definition applies between rounds",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Alternate row drives player",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Alternate health reaches GAS and HUD",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Alternate objective and deadline apply",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Alternate spawn cap and interval apply",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Alternate bot health reaches GAS",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Configured shot activates",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "DataTable Damage reaches Gameplay Effect",
+      "passed": true,
+      "data": 62.0
+    },
+    {
+      "name": "Configured cooldown blocks immediate shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Longer table cooldown still blocks at 0.45 seconds",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot allowed after configured cooldown",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Second shot uses same configured damage",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Range is read from alternate row",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Short range still permits firing",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Out of range bot receives no damage",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Invalid weapon row is rejected",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Invalid row falls back to original balance",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Invalid round definition rejected without partial application",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Source round values restored",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Source player and bot health restored",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Source table remains unchanged",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Source DataAsset remains unchanged",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Presentation resolves after repeated respawns",
+      "passed": true,
+      "data": null
+    }
+  ]
+}
