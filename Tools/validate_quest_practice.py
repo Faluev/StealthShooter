@@ -38,7 +38,7 @@ class Validation:
     def finish(self):
         unreal.unregister_slate_post_tick_callback(self.handle)
         out=Path(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()))/'Docs/QuestPracticeValidation.json'
-        report={'map':'/Game/StealthShooter/Maps/L_QuestArena','passed':sum(c['passed'] for c in self.checks),'failed':sum(not c['passed'] for c in self.checks),'error':self.error,'phase':self.phase,'checks':self.checks}
+        report={'map':'/Game/StealthShooter/Maps/'+unreal.GameplayStatics.get_current_level_name(self.world,True),'passed':sum(c['passed'] for c in self.checks),'failed':sum(not c['passed'] for c in self.checks),'error':self.error,'phase':self.phase,'checks':self.checks}
         out.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
         unreal.log('QUEST_VALIDATION_FINISHED '+str(report['passed']))
     def tick(self,delta):

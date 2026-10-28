@@ -6,6 +6,8 @@
 class AQuestDirector;
 class AQuestBot;
 class UBoxComponent;
+class UBlendSpace;
+class UAnimSequence;
 class UTextRenderComponent;
 class UCombatAttributeSet;
 
@@ -19,6 +21,7 @@ class QUESTPRACTICE_API AQuestPlayer : public ACombatPlayer
 public:
     AQuestPlayer();
     virtual void BeginPlay() override;
+    virtual void Tick(float DeltaSeconds) override;
     virtual void PossessedBy(AController* NewController) override;
     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
     virtual void SetupPlayerInputComponent(UInputComponent* Input) override;
@@ -34,6 +37,8 @@ public:
     UPROPERTY(EditDefaultsOnly, Category="Presentation") TObjectPtr<USoundBase> ShotSound;
     UPROPERTY(EditDefaultsOnly, Category="Presentation") TObjectPtr<UMaterialInterface> TracerMaterial;
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Weapon") TObjectPtr<UStaticMeshComponent> Rifle;
+    UPROPERTY(EditDefaultsOnly, Category="Presentation") TObjectPtr<UBlendSpace> ArmedLocomotion;
+    UPROPERTY(EditDefaultsOnly, Category="Presentation") TObjectPtr<UAnimSequence> ArmedFall;
     UPROPERTY(BlueprintReadOnly, Category="Diagnostics") int32 ShotsFired = 0;
     UPROPERTY(BlueprintReadOnly, Category="Diagnostics") int32 Hits = 0;
     UPROPERTY(BlueprintReadOnly, Category="Diagnostics") int32 ShotCues = 0;
@@ -57,6 +62,8 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Attributes") TObjectPtr<UCombatAttributeSet> BotAttributes;
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Health") TObjectPtr<UTextRenderComponent> HealthLabel;
     UPROPERTY(BlueprintReadOnly, Category="Health") bool bDead = false;
+    UPROPERTY(EditDefaultsOnly, Category="Presentation") TObjectPtr<UBlendSpace> ArmedLocomotion;
+    UPROPERTY(EditDefaultsOnly, Category="Presentation") TObjectPtr<UAnimSequence> ArmedFall;
     UPROPERTY(BlueprintAssignable, Category="Health") FQuestBotDied OnDied;
 private:
     void OnHealthChanged(const FOnAttributeChangeData& Change);

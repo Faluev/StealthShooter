@@ -1,5 +1,8 @@
 #include "QuestCombat.h"
 #include "QuestSystem.h"
+#include "Animation/AnimSingleNodeInstance.h"
+#include "Animation/BlendSpace.h"
+#include "Animation/AnimSequence.h"
 #include "CombatAttributeSet.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemGlobals.h"
@@ -35,8 +38,9 @@ AQuestPlayer::AQuestPlayer()
     Rifle->SetupAttachment(GetMesh(),TEXT("hand_r"));
     static ConstructorHelpers::FObjectFinder<UStaticMesh> Shape(TEXT("/Engine/BasicShapes/Cube.Cube"));
     Rifle->SetStaticMesh(Shape.Object);
-    Rifle->SetRelativeLocation(FVector(20,0,0));
-    Rifle->SetRelativeScale3D(FVector(.6,.07,.1));
+    Rifle->SetRelativeLocation(FVector::ZeroVector);
+    Rifle->SetRelativeRotation(FRotator(18,82,9));
+    Rifle->SetRelativeScale3D(FVector(1,1,1));
     Rifle->SetCollisionEnabled(ECollisionEnabled::NoCollision);
     Rifle->SetGenerateOverlapEvents(false);
     CameraBoom->TargetArmLength=350.f;
@@ -47,10 +51,29 @@ AQuestPlayer::AQuestPlayer()
 void AQuestPlayer::BeginPlay()
 {
     Super::BeginPlay();
+    if (ArmedLocomotion) { GetMesh()->PlayAnimation(ArmedLocomotion,true); }
     AbilitySystem->GetGameplayAttributeValueChangeDelegate(UCombatAttributeSet::GetHealthAttribute()).AddUObject(this,&AQuestPlayer::OnPlayerHealthChanged);
     if (HasAuthority() && FireAbility) AbilitySystem->GiveAbility(FGameplayAbilitySpec(FireAbility,1));
     if (ShotCueClass)
         UAbilitySystemGlobals::Get().GetGameplayCueManager()->GetRuntimeCueSet()->AddCues({FGameplayCueReferencePair(TAG_QuestShotCue,FSoftObjectPath(ShotCueClass.Get()))});
+}
+// Full-body Epic rifle poses blend by local velocity, keeping both hands on the weapon.
+// Acceleration and braking feed continuous velocity instead of hard pose changes.
+static void UpdateRiflePose(ACharacter* Character,UBlendSpace* Locomotion,UAnimSequence* Fall,float DeltaSeconds)
+{
+    if (auto* Instance=Character->GetMesh()->GetSingleNodeInstance())
+    {
+        UAnimationAsset* Desired=Character->GetCharacterMovement()->IsFalling() && Fall ? static_cast<UAnimationAsset*>(Fall) : static_cast<UAnimationAsset*>(Locomotion);
+        if (Instance->CurrentAsset!=Desired) Instance->SetAnimationAsset(Desired,true,1.f);
+        const FVector Velocity=Character->GetActorRotation().UnrotateVector(Character->GetVelocity());
+        const FVector Position(Velocity.X,Velocity.Y,0);
+        Instance->SetBlendSpacePosition(Position);
+    }
+}
+void AQuestPlayer::Tick(float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+    if (ArmedLocomotion) UpdateRiflePose(this,ArmedLocomotion,ArmedFall,DeltaSeconds);
 }
 void AQuestPlayer::EndPlay(const EEndPlayReason::Type Reason)
 {
@@ -87,7 +110,7 @@ void AQuestPlayer::RestartQuestRun()
 {
     if (auto* Mode=Cast<AQuestGameMode>(GetWorld()->GetAuthGameMode())) Mode->RestartRun();
 }
-FVector AQuestPlayer::GetShotStart() const { return Rifle->GetComponentLocation()+GetActorForwardVector()*45.f; }
+FVector AQuestPlayer::GetShotStart() const { return Rifle->GetSocketLocation(TEXT("Muzzle")); }
 bool AQuestPlayer::TraceAim(FHitResult& Hit) const
 {
     const FVector Start=FollowCamera->GetComponentLocation();
@@ -126,6 +149,13 @@ void AQuestBot::BeginPlay()
     Super::BeginPlay();
     AbilitySystem->GetGameplayAttributeValueChangeDelegate(UCombatAttributeSet::GetHealthAttribute()).AddUObject(this,&AQuestBot::OnHealthChanged);
     HealthLabel->SetText(FText::AsNumber(FMath::RoundToInt(GetBotHealth())));
+    if (ArmedLocomotion) GetMesh()->PlayAnimation(ArmedLocomotion,true);
+    WeaponBarrel->SetVisibility(false);
+    GetCharacterMovement()->RotationRate=FRotator(0,240,0);
+    GetCharacterMovement()->MaxAcceleration=650.f;
+    GetCharacterMovement()->BrakingDecelerationWalking=650.f;
+    GetCharacterMovement()->bUseRVOAvoidance=true;
+    GetCharacterMovement()->AvoidanceConsiderationRadius=240.f;
 }
 float AQuestBot::GetBotHealth() const { return BotAttributes->GetHealth(); }
 void AQuestBot::Tick(float DeltaSeconds)
@@ -134,6 +164,14 @@ void AQuestBot::Tick(float DeltaSeconds)
     const auto* Mode=Cast<AQuestGameMode>(GetWorld()->GetAuthGameMode());
     if (Mode && Mode->GetDirector() && !Mode->GetDirector()->IsRunActive()) return;
     Super::Tick(DeltaSeconds);
+    // The inherited combat logic controls sight, damage and cooldown. Presentation
+    // follows the hand socket instead of rotating a floating gun independently.
+    WeaponRoot->AttachToComponent(GetMesh(),FAttachmentTransformRules::SnapToTargetNotIncludingScale,TEXT("hand_r"));
+    WeaponRoot->SetRelativeLocationAndRotation(FVector::ZeroVector,FRotator::ZeroRotator);
+    WeaponBody->SetRelativeLocationAndRotation(FVector::ZeroVector,FRotator(18,82,9));
+    WeaponBody->SetRelativeScale3D(FVector::OneVector);
+    Muzzle->SetWorldLocation(WeaponBody->GetSocketLocation(TEXT("Muzzle")));
+    if (ArmedLocomotion) UpdateRiflePose(this,ArmedLocomotion,ArmedFall,DeltaSeconds);
     const auto* Camera=UGameplayStatics::GetPlayerCameraManager(this,0);
     if (Camera) HealthLabel->SetWorldRotation((Camera->GetCameraLocation()-HealthLabel->GetComponentLocation()).Rotation());
 }
@@ -195,7 +233,15 @@ AQuestBot* AQuestBotSpawner::TrySpawnBot()
         FActorSpawnParameters Params; Params.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
         auto* Bot=GetWorld()->SpawnActor<AQuestBot>(BotClass,Location,FRotator(0,180,0),Params);
         if (!Bot) continue;
-        Bot->PatrolPoints={Surface.Location+FVector(0,-120,95),Surface.Location+FVector(0,120,95)};
+        // Reachable navigation points give varied patrols rather than a short shuttle.
+        Bot->PatrolPoints.Empty();
+        for (int32 Point=0;Point<4;++Point)
+        {
+            FNavLocation Patrol;
+            if (Navigation->GetRandomReachablePointInRadius(Surface.Location,550.f,Patrol))
+                Bot->PatrolPoints.Add(Patrol.Location);
+        }
+        if (Bot->PatrolPoints.IsEmpty()) Bot->PatrolPoints.Add(Surface.Location);
         Bot->OnDied.AddUniqueDynamic(this,&AQuestBotSpawner::HandleBotDied);
         LivingBots.Add(Bot); ++TotalSpawned; return Bot;
     }

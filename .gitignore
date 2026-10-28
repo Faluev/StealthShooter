@@ -50,3 +50,6 @@ Desktop.ini
 /Practicals/HW09_GAS/Content/HW09Local/
 /Practicals/HW09_GAS/Content/__ExternalActors__/HW09Local/
 /Practicals/HW09_GAS/Content/__ExternalObjects__/HW09Local/
+
+# Optional local Fab arena; restore using Tools/upgrade_quest_presentation.py
+/Content/StealthShooter/Maps/L_QuestArena_Ruins.umap

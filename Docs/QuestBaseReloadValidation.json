@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "public_map": true,
+    "player_health": true,
+    "player_rifle": true,
+    "player_animation": true,
+    "bots_spawned": true,
+    "bot_weapons": true,
+    "active_quest": true,
+    "zero_progress": true
+  },
+  "passed": 8,
+  "failed": 0
+}

@@ -8,6 +8,6 @@ public class QuestPractice : ModuleRules
             "Core", "CoreUObject", "Engine", "CombatGAS", "GameplayAbilities", "GameplayTags",
             "GameplayTasks", "AIModule", "NavigationSystem", "UMG", "InputCore"
         });
-        PrivateDependencyModuleNames.AddRange(new[] { "Slate", "SlateCore" });
+        PrivateDependencyModuleNames.AddRange(new[] { "Slate", "SlateCore", "AssetRegistry" });
     }
 }

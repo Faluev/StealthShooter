@@ -1,0 +1,143 @@
+{
+  "passed": 26,
+  "failed": 0,
+  "error": null,
+  "checks": [
+    {
+      "name": "Player uses Epic rifle mesh",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Rifle follows right hand",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player rifle has material",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Saved directional locomotion is active",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Barrel points forward with character",
+      "passed": true,
+      "data": 0.9962151766838929
+    },
+    {
+      "name": "Rifle retains visual-only collision",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player locomotion responds to actual movement",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Original jump remains functional",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Airborne rifle pose is used",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Landing restores directional locomotion",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Dynamic bots are present",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bots patrol through navigation",
+      "passed": true,
+      "data": {
+        "BP_QuestBot_C_10": 409.43044025697924,
+        "BP_QuestBot_C_11": 467.8738557057211
+      }
+    },
+    {
+      "name": "Bot feet animate while moving",
+      "passed": true,
+      "data": {
+        "BP_QuestBot_C_10": 97.8069705655309,
+        "BP_QuestBot_C_11": 79.27777673137388
+      }
+    },
+    {
+      "name": "Bot 0 holds rifle at right hand",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 0 muzzle matches barrel",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 0 avoids nearby agents",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 0 has varied patrol route",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 0 retains GAS health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 1 holds rifle at right hand",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 1 muzzle matches barrel",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 1 avoids nearby agents",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 1 has varied patrol route",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot 1 retains GAS health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Fab courtyard dressing is present",
+      "passed": true,
+      "data": 122
+    },
+    {
+      "name": "Decoration does not obstruct navigation or shots",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Quest and health remain unchanged",
+      "passed": true,
+      "data": null
+    }
+  ]
+}
