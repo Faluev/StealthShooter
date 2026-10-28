@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "name": "Actual RMB starts one full dash",
+      "passed": true,
+      "data": [
+        300.0,
+        0.0,
+        -3.7874984741210938
+      ]
+    },
+    {
+      "name": "Holding input produces a single dash",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "New press has no added cooldown",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Rock shortens dash without penetration",
+      "passed": true,
+      "data": 114.15929983663442
+    },
+    {
+      "name": "Blocked dash still executes original Cue",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Repeated dash cannot enter the rock",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Original jump remains functional",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Airborne dash preserves horizontal range",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Character lands normally",
+      "passed": true,
+      "data": null
+    }
+  ],
+  "error": null,
+  "passed": 9,
+  "failed": 0
+}

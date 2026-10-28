@@ -1,0 +1,211 @@
+{
+  "checks": [
+    {
+      "check": "base exists",
+      "passed": true
+    },
+    {
+      "check": "base compiles",
+      "passed": true
+    },
+    {
+      "check": "base: UserConstructionScript has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "base: EventGraph has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "character exists",
+      "passed": true
+    },
+    {
+      "check": "character compiles",
+      "passed": true
+    },
+    {
+      "check": "character: UserConstructionScript has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "character: EventGraph has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "ability exists",
+      "passed": true
+    },
+    {
+      "check": "ability compiles",
+      "passed": true
+    },
+    {
+      "check": "ability: EventGraph has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "effect exists",
+      "passed": true
+    },
+    {
+      "check": "effect compiles",
+      "passed": true
+    },
+    {
+      "check": "effect: EventGraph has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "cue exists",
+      "passed": true
+    },
+    {
+      "check": "cue compiles",
+      "passed": true
+    },
+    {
+      "check": "cue: OnExecute has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "cue: EventGraph has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "Concrete character inherits shared base",
+      "passed": true
+    },
+    {
+      "check": "Input requests ability activation",
+      "passed": true
+    },
+    {
+      "check": "Base contains no direct dash particle or sound spawning",
+      "passed": true
+    },
+    {
+      "check": "Ability commits and applies Gameplay Effect",
+      "passed": true
+    },
+    {
+      "check": "Ability ends after execution",
+      "passed": true
+    },
+    {
+      "check": "Gameplay Effect is instant",
+      "passed": true
+    },
+    {
+      "check": "Gameplay Effect references dash Cue",
+      "passed": true
+    },
+    {
+      "check": "Gameplay Cue has correct tag",
+      "passed": true
+    },
+    {
+      "check": "Cue owns both particle and sound",
+      "passed": true
+    },
+    {
+      "check": "No new ability cost or cooldown",
+      "passed": true
+    },
+    {
+      "check": "Blueprints have explanatory comments",
+      "passed": true
+    }
+  ],
+  "passed": 29,
+  "failed": 0,
+  "graphs": {
+    "base": {
+      "nodes": [
+        "Construction Script",
+        "Jump",
+        "AddControllerPitchInput",
+        "AddControllerYawInput",
+        "AddMovementInput",
+        "AddMovementInput",
+        "GetControlRotation",
+        "StopJumping",
+        "GetForwardVector",
+        "GetRightVector",
+        "GetControlRotation",
+        "EnhancedInputAction IA_Jump",
+        "Cast To PlayerController",
+        "AddMappingContext",
+        "Получить EnhancedInputLocalPlayerSubsystem",
+        "EnhancedInputAction IA_Move",
+        "EnhancedInputAction IA_Look",
+        "Узел переадресации",
+        "Узел переадресации",
+        "Узел переадресации",
+        "Узел переадресации",
+        "Узел переадресации",
+        "Событие BeginPlay",
+        "GetController",
+        "Is Valid",
+        "Узел переадресации",
+        "EnhancedInputAction IA_Dash",
+        "Get AbilitySystem",
+        "TryActivateAbilityByClass",
+        "Get AbilitySystem",
+        "Get AbilitySystem",
+        "TryActivateAbilityByClass",
+        "Get AbilitySystem",
+        "Give Ability"
+      ],
+      "comments": 1
+    },
+    "character": {
+      "nodes": [
+        "Construction Script"
+      ],
+      "comments": 0
+    },
+    "ability": {
+      "nodes": [
+        "Событие ActivateAbility",
+        "CommitAbility",
+        "Ответвление",
+        "End Ability",
+        "GetAvatarActorFromActorInfo",
+        "Cast To BP_DashCharacterBase",
+        "ApplyGameplayEffectToOwner",
+        "Get Actor Location",
+        "GetActorForwardVector",
+        "Get DashDistance",
+        "vector * vector",
+        "vector + vector",
+        "Set Actor Location",
+        "End Ability"
+      ],
+      "comments": 1
+    },
+    "effect": {
+      "nodes": [],
+      "comments": 0
+    },
+    "cue": {
+      "nodes": [
+        "OnExecute",
+        "Узел возврата",
+        "Cast To BP_DashCharacterBase",
+        "Get Actor Location",
+        "Get Actor Rotation",
+        "SpawnEmitterAtLocation",
+        "Get DashEmitter",
+        "Get DashEffectScale",
+        "PlaySoundAtLocation",
+        "Get DashSound",
+        "Get DashSoundVolume",
+        "Set DashCueCount",
+        "Get DashCueCount",
+        "int + int"
+      ],
+      "comments": 1
+    }
+  }
+}

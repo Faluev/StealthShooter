@@ -1,0 +1,14 @@
+{
+  "seconds": 18.88,
+  "peak": 7826,
+  "non_silent_onsets": [
+    1.5,
+    5.02,
+    6.72,
+    9.96,
+    11.96,
+    15.88
+  ],
+  "sample_rate": 48000,
+  "channels": 2
+}

@@ -1,0 +1,27 @@
+{
+  "seconds": 18.888364553451538,
+  "bytes": 7307373,
+  "segments_from_recording": [
+    [
+      9.407851457595825,
+      18.077966451644897
+    ],
+    [
+      18.881805896759033,
+      24.61767578125
+    ],
+    [
+      25.423504114151,
+      29.9058837890625
+    ]
+  ],
+  "speed": 1.0,
+  "audio": {
+    "seconds": 30.016,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak": 7833,
+    "rms": 558.5746198377071
+  },
+  "scene": "L_DashRuins (local Fab dressing); gameplay matches public ThirdPersonMap"
+}
