@@ -1,0 +1,52 @@
+{
+  "blueprints": [
+    {
+      "asset": "/Game/StealthShooter/Quests/Abilities/Cues/GC_Quest_Shot.GC_Quest_Shot",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Abilities/Effects/GE_QuestDamage.GE_QuestDamage",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Abilities/Effects/GE_QuestShotCooldown.GE_QuestShotCooldown",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Abilities/GA_QuestShoot.GA_QuestShoot",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Characters/BP_QuestBot.BP_QuestBot",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Characters/BP_QuestPlayer.BP_QuestPlayer",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Core/BP_QuestDirector.BP_QuestDirector",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Core/BP_QuestGameMode.BP_QuestGameMode",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Objectives/BP_QuestKillBots.BP_QuestKillBots",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/Spawning/BP_QuestBotSpawner.BP_QuestBotSpawner",
+      "compiled": true
+    },
+    {
+      "asset": "/Game/StealthShooter/Quests/UI/WBP_QuestHUD.WBP_QuestHUD",
+      "compiled": true
+    }
+  ],
+  "all_passed": true,
+  "source_time_limit": 90.0,
+  "source_required_kills": 3,
+  "source_spawner_class": "/Game/StealthShooter/Quests/Characters/BP_QuestBot.BP_QuestBot_C"
+}

@@ -5,6 +5,7 @@
   "Description": "StealthShooter — учебные примеры продвинутых Blueprint",
   "Modules": [{"Name":"StealthShooter","Type":"Runtime","LoadingPhase":"Default"}],
   "Plugins": [
+    {"Name":"QuestPractice","Enabled":true},
     {"Name":"CombatGAS","Enabled":true},
     {"Name":"GameplayAbilities","Enabled":true},
     {"Name":"PythonScriptPlugin","Enabled":false},

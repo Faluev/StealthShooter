@@ -1,0 +1,8 @@
+{
+  "map_reloaded": true,
+  "living_bots": 2,
+  "player_health": 100.0,
+  "hud_progress": "Уничтожено ботов: 0 / 3",
+  "quest_state": "<QuestState.ACTIVE: 1>",
+  "fire_ability": "<Object '/Game/StealthShooter/Quests/Abilities/GA_QuestShoot.GA_QuestShoot_C' (0x000002868FA52300) Class 'BlueprintGeneratedClass'>"
+}

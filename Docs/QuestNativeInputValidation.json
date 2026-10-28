@@ -1,0 +1,9 @@
+{
+  "native_R_created_new_player": true,
+  "native_LMB_shots": 1,
+  "cues": 1,
+  "bots_undamaged": true,
+  "progress": "Уничтожено ботов: 0 / 3",
+  "native_replay_button_respawned_player": true,
+  "replay_evidence": "Native mouse click on the observed Replay button; the recorded scenario detected a new pawn with Health=100 and quest count=0."
+}

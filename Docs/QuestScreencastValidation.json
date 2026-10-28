@@ -1,0 +1,38 @@
+{
+  "error": null,
+  "checks": [
+    {
+      "name": "Initial quest counter and health",
+      "passed": true
+    },
+    {
+      "name": "Actual bot fire caused player death",
+      "passed": true
+    },
+    {
+      "name": "Failure form is visible",
+      "passed": true
+    },
+    {
+      "name": "Replay respawned player and reset progress",
+      "passed": true
+    },
+    {
+      "name": "Three actual kills completed quest",
+      "passed": true
+    },
+    {
+      "name": "Success form is visible",
+      "passed": true
+    },
+    {
+      "name": "Shots/cues match",
+      "passed": true
+    }
+  ],
+  "kills": 3,
+  "player_health": 70.0,
+  "shots": 6,
+  "hits": 6,
+  "cues": 6
+}

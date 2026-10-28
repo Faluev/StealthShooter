@@ -1,0 +1,409 @@
+{
+  "map": "/Game/StealthShooter/Maps/L_QuestArena",
+  "passed": 80,
+  "failed": 0,
+  "error": null,
+  "phase": "timeout",
+  "checks": [
+    {
+      "name": "Quest active at round start",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Own kill counter starts at zero",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Required kills editable and configured",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player GAS Health starts at 100",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "HUD health matches GAS",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "HUD displays quest progress",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "No result panel during active quest",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bots spawn dynamically to living cap",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Timer spawned a second bot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Overflow spawn rejected",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bots own real GAS AttributeSets",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot Health starts at 50",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Destroying a live bot does not credit a kill",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Invalid weak references free spawn capacity",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot activates through Gameplay Ability",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Gameplay Effect subtracts exactly 25 Health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "One Gameplay Cue per player shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Partial damage does not complete a kill",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Cooldown prevents immediate extra shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot activates through Gameplay Ability",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Gameplay Effect subtracts exactly 25 Health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "One Gameplay Cue per player shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot death credited once",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Dead bot cannot shoot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Duplicate death notification ignored",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "UI follows kill progress",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Death opens a replacement slot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Replacement still respects cap",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot activates through Gameplay Ability",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Gameplay Effect subtracts exactly 25 Health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "One Gameplay Cue per player shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Partial damage does not complete a kill",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Cooldown prevents immediate extra shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot activates through Gameplay Ability",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Gameplay Effect subtracts exactly 25 Health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "One Gameplay Cue per player shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot death credited once",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Dead bot cannot shoot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Duplicate death notification ignored",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "UI follows kill progress",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Death opens a replacement slot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Replacement still respects cap",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot activates through Gameplay Ability",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Gameplay Effect subtracts exactly 25 Health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "One Gameplay Cue per player shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Partial damage does not complete a kill",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Cooldown prevents immediate extra shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Shot activates through Gameplay Ability",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Gameplay Effect subtracts exactly 25 Health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "One Gameplay Cue per player shot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bot death credited once",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Dead bot cannot shoot",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Duplicate death notification ignored",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "UI follows kill progress",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Kill objective completed",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Run succeeded at required count",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Completion form visible",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Completion form has correct text",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Spawning stops on completion",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player cannot fire after completion",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Completed quest cannot fail later",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Replay creates a new player pawn",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Respawn keeps same world",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Respawn restores Health",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Replay resets counter",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Replay clears result panel",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Replay clears stale corpses",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Bots damage player through normal combat",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Player death fails active quest",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Failed run is not successful",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Failure reason identifies player death",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Failure form visible with correct title",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Spawning stops on failure",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Failure terminal state is idempotent",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Deadline fails an incomplete objective",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Timeout has its own reason",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Timeout displays failure form",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Failure does not fabricate progress",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Restart after timeout works",
+      "passed": true,
+      "data": null
+    },
+    {
+      "name": "Final UI has no stale result",
+      "passed": true,
+      "data": null
+    }
+  ]
+}
