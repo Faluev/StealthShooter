@@ -1,0 +1,189 @@
+{
+  "map": "/Game/StealthShooter/Maps/L_QuestArena_Ruins",
+  "error": null,
+  "checks": [
+    {
+      "name": "Existing Quest player has the Epic rifle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Player rifle follows right hand",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Player rifle has no gameplay collision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Two existing bots are spawned",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Bots use Epic rifle meshes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Bot rifles follow animated hands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Muzzles follow real barrel sockets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Existing Fab dressing is present",
+      "passed": true,
+      "detail": 122
+    },
+    {
+      "name": "Fab dressing keeps collision unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Cover protects Health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Bots patrol through navigation",
+      "passed": true,
+      "detail": 444.78599697989495
+    },
+    {
+      "name": "Bot feet visibly animate during patrol",
+      "passed": true,
+      "detail": 74.97241044976047
+    },
+    {
+      "name": "Inherited GAS bot fire damages player",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Quest health bar follows GAS Health",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Gameplay Cue executes once per bot shot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Combat draw state is activated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Cooldown Gameplay Effect is active",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Returning to cover stops further damage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "No extra shots through cover",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Bots leave combat and resume patrol",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Bots reacquire player after cover",
+      "passed": true,
+      "detail": {
+        "before": 80.0,
+        "after": 70.0,
+        "shots": 3
+      }
+    },
+    {
+      "name": "Player moved through CharacterMovement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All bot shot intervals respect GAS cooldown",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Player remains alive",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Quest was not altered or completed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Final shot / cue parity",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "shots": 3,
+  "cues": 3,
+  "hits": 3,
+  "health": 70.0,
+  "quest": "<QuestState.ACTIVE: 1>",
+  "kills": 0,
+  "audio_started": 1793634526.669814,
+  "audio_error": null,
+  "play_seconds": 26.34122909978032,
+  "purpose": "Screencast of existing later development after practical 10.5, on the practical 12.7 map. Original L_CombatGAS remains unchanged.",
+  "recorded_on": "2026-11-02",
+  "video": {
+    "path": "Docs/Screencasts/Practical105_Updated.mp4",
+    "duration_seconds": 26.317528009414673,
+    "bytes": 7942016,
+    "sha256": "423160fad12747fe3c1e1dfc61cc196a874625eee2e1f6e1194fb0e49c480bc1",
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 30,
+    "playback_speed": 1.0,
+    "audio": false,
+    "audio_note": "Recorded submix was shorter than the footage and was omitted to avoid misleading synchronization. Captions explain the demonstration.",
+    "captured_submix_seconds": 0.832
+  },
+  "original_files_unchanged": [
+    "Docs/Screencasts/Practical105.mp4",
+    "Content/StealthShooter/Maps/L_CombatGAS.umap",
+    "Plugins/CombatGAS/Source/CombatGAS/Private/CombatPractice.cpp",
+    "Plugins/CombatGAS/Source/CombatGAS/Public/CombatPractice.h",
+    "Content/StealthShooter/CombatGAS/Abilities/Cues/GC_Bot_Shoot.uasset",
+    "Content/StealthShooter/CombatGAS/Abilities/Effects/GE_BotShotCooldown.uasset",
+    "Content/StealthShooter/CombatGAS/Abilities/Effects/GE_BotShotDamage.uasset",
+    "Content/StealthShooter/CombatGAS/Abilities/GA_BotShoot.uasset",
+    "Content/StealthShooter/CombatGAS/Audio/S_BotShot.uasset",
+    "Content/StealthShooter/CombatGAS/Characters/BP_CombatBot.uasset",
+    "Content/StealthShooter/CombatGAS/Characters/BP_CombatPlayer.uasset",
+    "Content/StealthShooter/CombatGAS/Core/BP_CombatGameMode.uasset",
+    "Content/StealthShooter/CombatGAS/Materials/M_CombatConcrete.uasset",
+    "Content/StealthShooter/CombatGAS/Materials/M_CombatFloor.uasset",
+    "Content/StealthShooter/CombatGAS/Materials/M_CombatLight.uasset",
+    "Content/StealthShooter/CombatGAS/Materials/M_CombatMetal.uasset",
+    "Content/StealthShooter/CombatGAS/Materials/M_CombatOrange.uasset",
+    "Content/StealthShooter/CombatGAS/Materials/M_CombatTracer.uasset",
+    "Content/StealthShooter/CombatGAS/UI/WBP_CombatHUD.uasset"
+  ],
+  "scenario": "Existing map, characters and settings. Temporary cameras in the Play world; scripted player movement through CharacterMovement; no firing by the player, no quest kills.",
+  "visual_review": "Eight decoded frames reviewed: overview, unobstructed rifle close-up, cover, combat, protected pause and reengagement. Actual HUD identifies practical 12.7."
+}
