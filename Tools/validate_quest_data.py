@@ -27,7 +27,9 @@ class DataCheck:
   unreal.unregister_slate_post_tick_callback(self.handle)
   try:self.restore()
   except Exception:self.error=(self.error or '')+'\nCleanup: '+traceback.format_exc()
-  Path('C:/Users/Aluev/StealthShooter/Docs/QuestDataValidation.json').write_text(json.dumps({'passed':sum(c['passed'] for c in self.checks),'failed':sum(not c['passed'] for c in self.checks),'error':self.error,'phase':self.phase,'checks':self.checks},ensure_ascii=False,indent=2),encoding='utf8')
+  report=Path(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()))/'Docs'/'QuestDataValidation.json'
+  report.parent.mkdir(parents=True,exist_ok=True)
+  report.write_text(json.dumps({'passed':sum(c['passed'] for c in self.checks),'failed':sum(not c['passed'] for c in self.checks),'error':self.error,'phase':self.phase,'checks':self.checks},ensure_ascii=False,indent=2),encoding='utf8')
  def target(self):
   b=self.live()[0];b.set_actor_tick_enabled(False);b.character_movement.stop_movement_immediately();b.set_actor_location(unreal.Vector(550,-500,95),False,True)
   self.p.set_actor_location(unreal.Vector(-350,-500,95),False,True);self.p.character_movement.stop_movement_immediately();return b

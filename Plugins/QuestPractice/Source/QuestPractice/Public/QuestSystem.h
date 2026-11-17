@@ -35,6 +35,7 @@ public:
     UPROPERTY(BlueprintReadOnly, Category="Quest") FText FailureReason;
     UPROPERTY(BlueprintAssignable, Category="Quest") FQuestChanged OnChanged;
 protected:
+    bool FailIfExpired();
     void CompleteQuest();
     float Deadline = 0.f;
 };

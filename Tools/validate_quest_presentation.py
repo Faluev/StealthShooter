@@ -13,7 +13,9 @@ class PresentationCheck:
   if not value:raise AssertionError(name+': '+str(data))
  def finish(self):
   unreal.unregister_slate_post_tick_callback(self.handle)
-  Path('C:/Users/Aluev/StealthShooter/Docs/QuestPresentationValidation.json').write_text(json.dumps({'passed':sum(c['passed'] for c in self.checks),'failed':sum(not c['passed'] for c in self.checks),'error':self.error,'checks':self.checks},ensure_ascii=False,indent=2),encoding='utf8')
+  report=Path(unreal.Paths.convert_relative_path_to_full(unreal.Paths.project_dir()))/'Docs'/'QuestPresentationValidation.json'
+  report.parent.mkdir(parents=True,exist_ok=True)
+  report.write_text(json.dumps({'passed':sum(c['passed'] for c in self.checks),'failed':sum(not c['passed'] for c in self.checks),'error':self.error,'checks':self.checks},ensure_ascii=False,indent=2),encoding='utf8')
   self.mode.restart_run()
  def tick(self,delta):
   try:

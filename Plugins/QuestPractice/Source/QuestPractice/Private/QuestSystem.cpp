@@ -26,8 +26,14 @@ float AQuestObjective::GetRemainingSeconds() const
 void AQuestObjective::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
-    if (State==EQuestState::Active && TimeLimit>0.f && GetRemainingSeconds()<=0.f)
-        FailQuest(FText::FromString(TEXT("Время вышло. Цель не достигнута.")));
+    FailIfExpired();
+}
+bool AQuestObjective::FailIfExpired()
+{
+    if (State!=EQuestState::Active || TimeLimit<=0.f || GetRemainingSeconds()>0.f)
+        return false;
+    FailQuest(FText::FromString(TEXT("Время вышло. Цель не достигнута.")));
+    return true;
 }
 void AQuestObjective::FailQuest(FText Reason)
 {
@@ -36,7 +42,7 @@ void AQuestObjective::FailQuest(FText Reason)
 }
 void AQuestObjective::CompleteQuest()
 {
-    if (State!=EQuestState::Active) return;
+    if (State!=EQuestState::Active || FailIfExpired()) return;
     State=EQuestState::Completed; OnChanged.Broadcast(this);
 }
 FText AQuestObjective::GetProgressText() const { return Title; }
@@ -56,6 +62,7 @@ void AQuestKillBots::NotifyBotKilled(AQuestBot* Victim,AActor* Killer)
 {
     if (State!=EQuestState::Active || !IsValid(Victim) || !Victim->IsDead() ||
         !IsValid(Killer) || !Killer->IsA<AQuestPlayer>() || CountedVictims.Contains(Victim)) return;
+    if (FailIfExpired()) return;
     CountedVictims.Add(Victim);
     CurrentKills=FMath::Min(CurrentKills+1,RequiredKills);
     if (CurrentKills>=RequiredKills) CompleteQuest();
